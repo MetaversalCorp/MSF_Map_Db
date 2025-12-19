@@ -22,6 +22,7 @@
    For now, anyone in this table is considered an admin and can do all adminy stuff
 */
 
+IF OBJECT_ID (N'dbo.Admin', 'U') IS NULL
 CREATE TABLE dbo.Admin
 (
    twRPersonaIx                        BIGINT          NOT NULL,
@@ -32,11 +33,6 @@ CREATE TABLE dbo.Admin
    )
 )
 ON [PRIMARY]
-GO
-
-INSERT dbo.Admin
-       ( twRPersonaIx )
-VALUES ( 0            )
 GO
 
 /******************************************************************************************************************************/

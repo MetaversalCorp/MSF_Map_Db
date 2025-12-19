@@ -18,7 +18,7 @@
 
 /* ************************************************************************************************************************** */
 
-CREATE TABLE RMTType
+CREATE TABLE IF NOT EXISTS RMTType
 (
    bType                               TINYINT UNSIGNED  NOT NULL,
    sType                               VARCHAR (31)      NOT NULL,
@@ -30,24 +30,9 @@ CREATE TABLE RMTType
 )
 ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-INSERT INTO RMTType
-       (bType, sType)
-VALUES ( 0, ''         ),
-       ( 1, 'Root'     ),
-       ( 2, 'Water'    ),
-       ( 3, 'Land'     ),
-       ( 4, 'Country'  ),
-       ( 5, 'Territory'),
-       ( 6, 'State'    ),
-       ( 7, 'County'   ),
-       ( 8, 'City'     ),
-       ( 9, 'Community'),
-       (10, 'Sector'   ),
-       (11, 'Parcel'   );
-
 /* ************************************************************************************************************************** */
 
-CREATE TABLE RMTObject
+CREATE TABLE IF NOT EXISTS RMTObject
 (
    ObjectHead_Parent_wClass            SMALLINT          NOT NULL,
    ObjectHead_Parent_twObjectIx        BIGINT            NOT NULL,
@@ -115,7 +100,7 @@ ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 -- 10      RMTObject_Bound
 -- 11      RMTObject_Properties
 
-CREATE TABLE RMTObjectLog
+CREATE TABLE IF NOT EXISTS RMTObjectLog
 (
    dtCreated                           DATETIME          NOT NULL    DEFAULT CURRENT_TIMESTAMP,
    twLogIx                             BIGINT            NOT NULL    AUTO_INCREMENT,

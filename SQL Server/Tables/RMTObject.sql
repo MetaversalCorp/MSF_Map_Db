@@ -18,6 +18,7 @@
 
 /******************************************************************************************************************************/
 
+IF OBJECT_ID (N'dbo.RMTType', 'U') IS NULL
 CREATE TABLE dbo.RMTType
 (
    bType                     TINYINT         NOT NULL,
@@ -31,24 +32,9 @@ CREATE TABLE dbo.RMTType
 ON [PRIMARY]
 GO
 
-INSERT dbo.RMTType
-       (bType, sType)
-VALUES ( 0, ''         ),
-       ( 1, 'Root'     ),
-       ( 2, 'Water'    ),
-       ( 3, 'Land'     ),
-       ( 4, 'Country'  ),
-       ( 5, 'Territory'),
-       ( 6, 'State'    ),
-       ( 7, 'County'   ),
-       ( 8, 'City'     ),
-       ( 9, 'Community'),
-       (10, 'Sector'   ),
-       (11, 'Parcel'   )
-GO
-
 /******************************************************************************************************************************/
 
+IF OBJECT_ID (N'dbo.RMTObject', 'U') IS NULL
 CREATE TABLE dbo.RMTObject
 (
    ObjectHead_Parent_wClass            SMALLINT        NOT NULL,
@@ -118,6 +104,7 @@ GO
 -- 10      RMTObject_Bound
 -- 11      RMTObject_Properties
 
+IF OBJECT_ID (N'dbo.RMTObjectLog', 'U') IS NULL
 CREATE TABLE dbo.RMTObjectLog
 (
    dtCreated                    DATETIME2       NOT NULL    CONSTRAINT DF_RMTObjectLog_dtCreated     DEFAULT SYSUTCDATETIME (),
@@ -133,6 +120,7 @@ CREATE TABLE dbo.RMTObjectLog
       twLogIx                   ASC
    ),
 )
+ON [PRIMARY]
 GO
 
 /******************************************************************************************************************************/

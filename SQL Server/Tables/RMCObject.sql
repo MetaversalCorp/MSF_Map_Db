@@ -18,6 +18,7 @@
 
 /******************************************************************************************************************************/
 
+IF OBJECT_ID (N'dbo.RMCType', 'U') IS NULL
 CREATE TABLE dbo.RMCType
 (
    bType                     TINYINT         NOT NULL,
@@ -31,31 +32,9 @@ CREATE TABLE dbo.RMCType
 ON [PRIMARY]
 GO
 
-INSERT dbo.RMCType
-       (bType, sType)
-VALUES ( 0, ''              ),
-       ( 1, 'Universe'      ),
-       ( 2, 'Supercluster'  ),
-       ( 3, 'Galaxy Cluster'),
-       ( 4, 'Galaxy'        ),
-       ( 5, 'Black Hole'    ),
-       ( 6, 'Nebula'        ),
-       ( 7, 'Star Cluster'  ),
-       ( 8, 'Constellation' ),
-       ( 9, 'Star System'   ),
-       (10, 'Star'          ),
-       (11, 'Planet System' ),
-       (12, 'Planet'        ),
-       (13, 'Moon'          ),
-       (14, 'Debris'        ),
-       (15, 'Satellite'     ),
-       (16, 'Transport'     ),
-       (17, 'Surface'       )
-
-GO
-
 /******************************************************************************************************************************/
 
+IF OBJECT_ID (N'dbo.RMCObject', 'U') IS NULL
 CREATE TABLE dbo.RMCObject
 (
    ObjectHead_Parent_wClass            SMALLINT        NOT NULL,
@@ -130,6 +109,7 @@ GO
 -- 10      RMCObject_Bound
 -- 11      RMCObject_Properties
 
+IF OBJECT_ID (N'dbo.RMCObjectLog', 'U') IS NULL
 CREATE TABLE dbo.RMCObjectLog
 (
    dtCreated                    DATETIME2       NOT NULL    CONSTRAINT DF_RMCObjectLog_dtCreated     DEFAULT SYSUTCDATETIME (),
@@ -145,6 +125,7 @@ CREATE TABLE dbo.RMCObjectLog
       twLogIx                   ASC
    ),
 )
+ON [PRIMARY]
 GO
 
 /******************************************************************************************************************************/

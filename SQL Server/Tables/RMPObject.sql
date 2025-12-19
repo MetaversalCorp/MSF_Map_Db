@@ -18,6 +18,7 @@
 
 /******************************************************************************************************************************/
 
+IF OBJECT_ID (N'dbo.RMPType', 'U') IS NULL
 CREATE TABLE dbo.RMPType
 (
    bType                     TINYINT         NOT NULL,
@@ -31,16 +32,9 @@ CREATE TABLE dbo.RMPType
 ON [PRIMARY]
 GO
 
-INSERT dbo.RMPType
-       (bType, sType)
-VALUES ( 0, ''         ),
-       ( 1, 'Transport'),
-       ( 2, 'Other'    )
-
-GO
-
 /******************************************************************************************************************************/
 
+IF OBJECT_ID (N'dbo.RMPObject', 'U') IS NULL
 CREATE TABLE dbo.RMPObject
 (
    ObjectHead_Parent_wClass            SMALLINT        NOT NULL,
@@ -102,6 +96,7 @@ GO
 -- 10      RMPObject_Bound
 -- 11   -- RMPObject_Properties
 
+IF OBJECT_ID (N'dbo.RMPObjectLog', 'U') IS NULL
 CREATE TABLE dbo.RMPObjectLog
 (
    dtCreated                    DATETIME2       NOT NULL    CONSTRAINT DF_RMPObjectLog_dtCreated     DEFAULT SYSUTCDATETIME (),
@@ -117,6 +112,7 @@ CREATE TABLE dbo.RMPObjectLog
       twLogIx                   ASC
    ),
 )
+ON [PRIMARY]
 GO
 
 /******************************************************************************************************************************/

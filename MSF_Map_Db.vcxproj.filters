@@ -221,6 +221,12 @@
     <Filter Include="MySQL\Procedures\RMRoot\Call\Validate">
       <UniqueIdentifier>{58a08d4c-c94a-410e-a73d-365aa4df820f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="MySQL\Procedures\Version">
+      <UniqueIdentifier>{5475d2a2-f0a1-4552-af91-9402421ef569}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MS SQL\Version">
+      <UniqueIdentifier>{764f0b82-7f60-4f18-8139-529886fc6932}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="SQL Server\_Create\Create.bat">
@@ -328,20 +334,11 @@
     <None Include="SQL Server\Tables\RMRoot.sql">
       <Filter>MS SQL\Tables</Filter>
     </None>
-    <None Include="SQL Server\Tables\RMTBuilding.sql">
-      <Filter>MS SQL\Tables</Filter>
-    </None>
     <None Include="SQL Server\Tables\RMTMatrix.sql">
       <Filter>MS SQL\Tables</Filter>
     </None>
     <None Include="SQL Server\Tables\RMTObject.sql">
       <Filter>MS SQL\Tables</Filter>
-    </None>
-    <None Include="SQL Server\Users\MapService.sql">
-      <Filter>MS SQL\Users</Filter>
-    </None>
-    <None Include="SQL Server\Users\WebService.sql">
-      <Filter>MS SQL\Users</Filter>
     </None>
     <None Include="SQL Server\Procedures\ETL\call_Event_Push.sql">
       <Filter>MS SQL\Procedures\ETL</Filter>
@@ -862,9 +859,6 @@
     <None Include="MySQL\Tables\RMRoot.sql">
       <Filter>MySQL\Tables</Filter>
     </None>
-    <None Include="MySQL\Tables\RMTBuilding.sql">
-      <Filter>MySQL\Tables</Filter>
-    </None>
     <None Include="MySQL\Tables\RMTMatrix.sql">
       <Filter>MySQL\Tables</Filter>
     </None>
@@ -1330,12 +1324,6 @@
     <None Include="SQL Server\Procedures\RMTObject\set_RMTObject_Fabric_Configure.sql">
       <Filter>MS SQL\Procedures\RMTObject\Set</Filter>
     </None>
-    <None Include="SQL Server\Jobs\init_DefaultScene.sql">
-      <Filter>MS SQL\Jobs</Filter>
-    </None>
-    <None Include="MySQL\Jobs\init_DefaultScene.sql">
-      <Filter>MySQL\Jobs</Filter>
-    </None>
     <None Include="SQL Server\Procedures\RMPObject\set_RMPObject_Parent.sql">
       <Filter>MS SQL\Procedures\RMPObject\Set</Filter>
     </None>
@@ -1365,6 +1353,24 @@
     </None>
     <None Include="MySQL\NOTICE">
       <Filter>MySQL</Filter>
+    </None>
+    <None Include="MySQL\Tables\Version.sql">
+      <Filter>MySQL\Tables</Filter>
+    </None>
+    <None Include="MySQL\Version\001-Copy_data_from_old_database.sql">
+      <Filter>MySQL\Procedures\Version</Filter>
+    </None>
+    <None Include="MySQL\Version\000-Initialize_database.sql">
+      <Filter>MySQL\Procedures\Version</Filter>
+    </None>
+    <None Include="SQL Server\Version\000-Initialize_database.sql">
+      <Filter>MS SQL\Version</Filter>
+    </None>
+    <None Include="SQL Server\Version\001-Copy_data_from_old_database.sql">
+      <Filter>MS SQL\Version</Filter>
+    </None>
+    <None Include="SQL Server\Tables\Version.sql">
+      <Filter>MS SQL\Tables</Filter>
     </None>
   </ItemGroup>
 </Project>

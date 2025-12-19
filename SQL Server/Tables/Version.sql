@@ -18,7 +18,23 @@
 
 /******************************************************************************************************************************/
 
-CREATE USER WebService FOR LOGIN [MV\WebService] WITH DEFAULT_SCHEMA = dbo
+/*
+   Version history of database updates
+*/
+
+IF OBJECT_ID (N'dbo.Version', 'U') IS NULL
+CREATE TABLE dbo.Version
+(
+   dtStamp                             DATETIME2       NOT NULL    CONSTRAINT DF_Version_dtStamp     DEFAULT SYSUTCDATETIME (),
+   nVersion                            INT             NOT NULL,
+   sDescription                        VARCHAR (255)   NOT NULL,
+
+   CONSTRAINT PK_Version PRIMARY KEY CLUSTERED
+   (
+      nVersion                         ASC
+   )
+)
+ON [PRIMARY]
 GO
 
 /******************************************************************************************************************************/

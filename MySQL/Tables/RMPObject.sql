@@ -18,7 +18,7 @@
 
 /* ************************************************************************************************************************** */
 
-CREATE TABLE RMPType
+CREATE TABLE IF NOT EXISTS RMPType
 (
    bType                               TINYINT UNSIGNED  NOT NULL,
    sType                               VARCHAR (31)      NOT NULL,
@@ -30,15 +30,9 @@ CREATE TABLE RMPType
 )
 ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-INSERT INTO RMPType
-       (bType, sType)
-VALUES ( 0, ''         ),
-       ( 1, 'Transport'),
-       ( 2, 'Other'    );
-
 /* ************************************************************************************************************************** */
 
-CREATE TABLE RMPObject
+CREATE TABLE IF NOT EXISTS RMPObject
 (
    ObjectHead_Parent_wClass            SMALLINT          NOT NULL,
    ObjectHead_Parent_twObjectIx        BIGINT            NOT NULL,
@@ -98,7 +92,7 @@ ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 -- 10      RMPObject_Bound
 -- 11   -- RMPObject_Properties
 
-CREATE TABLE RMPObjectLog
+CREATE TABLE IF NOT EXISTS RMPObjectLog
 (
    dtCreated                           DATETIME          NOT NULL    DEFAULT CURRENT_TIMESTAMP,
    twLogIx                             BIGINT            NOT NULL    AUTO_INCREMENT,

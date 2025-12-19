@@ -18,6 +18,7 @@
 
 /******************************************************************************************************************************/
 
+IF OBJECT_ID (N'dbo.RMRoot', 'U') IS NULL
 CREATE TABLE dbo.RMRoot
 (
    ObjectHead_Parent_wClass            SMALLINT        NOT NULL,
@@ -36,11 +37,6 @@ CREATE TABLE dbo.RMRoot
    )
 )
 ON [PRIMARY]
-GO
-
-INSERT dbo.RMRoot
-       ( ObjectHead_Parent_wClass, ObjectHead_Parent_twObjectIx, ObjectHead_Self_wClass, ObjectHead_twEventIz, ObjectHead_wFlags, Name_wsRMRootId, Owner_twRPersonaIx )
-VALUES ( 52,                       1,                            70,                     0,                    32,                'Root',          1                  )
 GO
 
 /******************************************************************************************************************************/
@@ -67,6 +63,7 @@ GO
 -- 18      RMRoot_RMPObject_Open
 -- 19      RMRoot_RMPObject_Close
 
+IF OBJECT_ID (N'dbo.RMRootLog', 'U') IS NULL
 CREATE TABLE dbo.RMRootLog
 (
    dtCreated                    DATETIME2       NOT NULL    CONSTRAINT DF_RMRootLog_dtCreated     DEFAULT SYSUTCDATETIME (),
@@ -82,6 +79,7 @@ CREATE TABLE dbo.RMRootLog
       twLogIx                   ASC
    ),
 )
+ON [PRIMARY]
 GO
 
 /******************************************************************************************************************************/

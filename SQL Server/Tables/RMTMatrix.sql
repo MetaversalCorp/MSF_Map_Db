@@ -18,6 +18,7 @@
 
 /******************************************************************************************************************************/
 
+IF OBJECT_ID (N'dbo.RMTSubsurface', 'U') IS NULL
 CREATE TABLE dbo.RMTSubsurface
 (
    twRMTObjectIx                       BIGINT     NOT NULL,
@@ -35,8 +36,10 @@ CREATE TABLE dbo.RMTSubsurface
       twRMTObjectIx                    ASC
    ),
 )
+ON [PRIMARY]
 GO
 
+IF OBJECT_ID (N'dbo.RMTMatrix', 'U') IS NULL
 CREATE TABLE dbo.RMTMatrix
 (
    bnMatrix                            BIGINT     NOT NULL,
@@ -66,6 +69,7 @@ CREATE TABLE dbo.RMTMatrix
       bnMatrix                         ASC
    ),
 )
+ON [PRIMARY]
 GO
 
 /******************************************************************************************************************************/

@@ -22,7 +22,7 @@
    For now, anyone in this table is considered an admin and can do all adminy stuff
 */
 
-CREATE TABLE Admin
+CREATE TABLE IF NOT EXISTS Admin
 (
    twRPersonaIx                        BIGINT            NOT NULL,
 
@@ -32,9 +32,5 @@ CREATE TABLE Admin
    )
 )
 ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
-INSERT INTO Admin
-       ( twRPersonaIx )
-VALUES ( 1            );
 
 /* ************************************************************************************************************************** */

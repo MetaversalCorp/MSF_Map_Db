@@ -18,15 +18,19 @@
 
 /* ************************************************************************************************************************** */
 
-CREATE TABLE RMTBuilding
-(
-   twRMTObjectIx                       BIGINT            NOT NULL,  -- sector
-   bnOSMWay                            BIGINT            NOT NULL,  -- building
+/*
+   Version history of database updates
+*/
 
-   PRIMARY KEY
+CREATE TABLE IF NOT EXISTS Version
+(
+   dtStamp                             DATETIME          NOT NULL DEFAULT CURRENT_TIMESTAMP,
+   nVersion                            INT               NOT NULL,
+   sDescription                        VARCHAR (255)     NOT NULL,
+
+   CONSTRAINT PK_Version PRIMARY KEY
    (
-      twRMTObjectIx                    ASC,
-      bnOSMWay                         ASC
+      nVersion                         ASC
    )
 )
 ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

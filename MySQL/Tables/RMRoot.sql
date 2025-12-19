@@ -18,7 +18,7 @@
 
 /* ************************************************************************************************************************** */
 
-CREATE TABLE RMRoot
+CREATE TABLE IF NOT EXISTS RMRoot
 (
    ObjectHead_Parent_wClass            SMALLINT          NOT NULL,
    ObjectHead_Parent_twObjectIx        BIGINT            NOT NULL,
@@ -36,10 +36,6 @@ CREATE TABLE RMRoot
    )
 )
 ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
-INSERT INTO RMRoot
-       ( ObjectHead_Parent_wClass, ObjectHead_Parent_twObjectIx, ObjectHead_Self_wClass, ObjectHead_twEventIz, ObjectHead_wFlags, Name_wsRMRootId, Owner_twRPersonaIx )
-VALUES ( 52,                       1,                            70,                     0,                    32,                'Root',          1                  );
 
 /* ************************************************************************************************************************** */
 
@@ -65,7 +61,7 @@ VALUES ( 52,                       1,                            70,            
 -- 18      RMRoot_RMPObject_Open
 -- 19      RMRoot_RMPObject_Close
 
-CREATE TABLE RMRootLog
+CREATE TABLE IF NOT EXISTS RMRootLog
 (
    dtCreated                           DATETIME          NOT NULL    DEFAULT CURRENT_TIMESTAMP,
    twLogIx                             BIGINT            NOT NULL    AUTO_INCREMENT,

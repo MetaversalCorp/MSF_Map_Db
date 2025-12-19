@@ -40,7 +40,6 @@
     <None Include="MySQL\Functions\Table_Results.sql" />
     <None Include="MySQL\Functions\Time_Current.sql" />
     <None Include="MySQL\Functions\Time_DateTime2.sql" />
-    <None Include="MySQL\Jobs\init_DefaultScene.sql" />
     <None Include="MySQL\LICENSE" />
     <None Include="MySQL\NOTICE" />
     <None Include="MySQL\Procedures\call_Error.sql" />
@@ -189,9 +188,11 @@
     <None Include="MySQL\Tables\RMEvent.sql" />
     <None Include="MySQL\Tables\RMPObject.sql" />
     <None Include="MySQL\Tables\RMRoot.sql" />
-    <None Include="MySQL\Tables\RMTBuilding.sql" />
     <None Include="MySQL\Tables\RMTMatrix.sql" />
     <None Include="MySQL\Tables\RMTObject.sql" />
+    <None Include="MySQL\Tables\Version.sql" />
+    <None Include="MySQL\Version\000-Initialize_database.sql" />
+    <None Include="MySQL\Version\001-Copy_data_from_old_database.sql" />
     <None Include="MySQL\_Create\Create.bat" />
     <None Include="MySQL\_Create\Database.sql" />
     <None Include="MySQL\_Notes\Constants.sql" />
@@ -226,7 +227,6 @@
     <None Include="SQL Server\Functions\Table_Results.sql" />
     <None Include="SQL Server\Functions\Time_Current.sql" />
     <None Include="SQL Server\Functions\Time_DateTime2.sql" />
-    <None Include="SQL Server\Jobs\init_DefaultScene.sql" />
     <None Include="SQL Server\LICENSE" />
     <None Include="SQL Server\NOTICE" />
     <None Include="SQL Server\Procedures\call_Error.sql" />
@@ -384,11 +384,11 @@
     <None Include="SQL Server\Tables\RMEvent.sql" />
     <None Include="SQL Server\Tables\RMPObject.sql" />
     <None Include="SQL Server\Tables\RMRoot.sql" />
-    <None Include="SQL Server\Tables\RMTBuilding.sql" />
     <None Include="SQL Server\Tables\RMTMatrix.sql" />
     <None Include="SQL Server\Tables\RMTObject.sql" />
-    <None Include="SQL Server\Users\MapService.sql" />
-    <None Include="SQL Server\Users\WebService.sql" />
+    <None Include="SQL Server\Tables\Version.sql" />
+    <None Include="SQL Server\Version\000-Initialize_database.sql" />
+    <None Include="SQL Server\Version\001-Copy_data_from_old_database.sql" />
     <None Include="SQL Server\_Create\Create.bat" />
     <None Include="SQL Server\_Create\Database.sql" />
     <None Include="SQL Server\_Notes\Constants.sql" />

@@ -18,11 +18,11 @@
 
 /* ************************************************************************************************************************** */
 
-CREATE TABLE RMEvent
+CREATE TABLE IF NOT EXISTS RMEvent
 (
    twEventIx                           BIGINT            NOT NULL AUTO_INCREMENT,
 
-   sType                               VARCHAR (32)       NOT NULL,
+   sType                               VARCHAR (32)      NOT NULL,
 
    Self_wClass                         TINYINT UNSIGNED  NOT NULL,
    Self_twObjectIx                     BIGINT            NOT NULL,

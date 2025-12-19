@@ -18,7 +18,7 @@
 
 /* ************************************************************************************************************************** */
 
-CREATE TABLE RMTSubsurface
+CREATE TABLE IF NOT EXISTS RMTSubsurface
 (
    twRMTObjectIx                       BIGINT            NOT NULL,
                                                                  --                        Nul      Car      Cyl      Geo
@@ -37,7 +37,7 @@ CREATE TABLE RMTSubsurface
 )
 ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-CREATE TABLE RMTMatrix
+CREATE TABLE IF NOT EXISTS RMTMatrix
 (
    bnMatrix                            BIGINT            NOT NULL,
 

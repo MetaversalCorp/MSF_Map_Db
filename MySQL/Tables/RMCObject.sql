@@ -18,7 +18,7 @@
 
 /* ************************************************************************************************************************** */
 
-CREATE TABLE RMCType
+CREATE TABLE IF NOT EXISTS RMCType
 (
    bType                               TINYINT UNSIGNED  NOT NULL,
    sType                               VARCHAR (31)      NOT NULL,
@@ -30,30 +30,9 @@ CREATE TABLE RMCType
 )
 ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-INSERT INTO RMCType
-       (bType, sType)
-VALUES ( 0, ''              ),
-       ( 1, 'Universe'      ),
-       ( 2, 'Supercluster'  ),
-       ( 3, 'Galaxy Cluster'),
-       ( 4, 'Galaxy'        ),
-       ( 5, 'Black Hole'    ),
-       ( 6, 'Nebula'        ),
-       ( 7, 'Star Cluster'  ),
-       ( 8, 'Constellation' ),
-       ( 9, 'Star System'   ),
-       (10, 'Star'          ),
-       (11, 'Planet System' ),
-       (12, 'Planet'        ),
-       (13, 'Moon'          ),
-       (14, 'Debris'        ),
-       (15, 'Satellite'     ),
-       (16, 'Transport'     ),
-       (17, 'Surface'       );
-
 /* ************************************************************************************************************************** */
 
-CREATE TABLE RMCObject
+CREATE TABLE IF NOT EXISTS RMCObject
 (
    ObjectHead_Parent_wClass            SMALLINT          NOT NULL,
    ObjectHead_Parent_twObjectIx        BIGINT            NOT NULL,
@@ -126,7 +105,7 @@ ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 -- 10      RMCObject_Bound
 -- 11      RMCObject_Properties
 
-CREATE TABLE RMCObjectLog
+CREATE TABLE IF NOT EXISTS RMCObjectLog
 (
    dtCreated                           DATETIME          NOT NULL    DEFAULT CURRENT_TIMESTAMP,
    twLogIx                             BIGINT            NOT NULL    AUTO_INCREMENT,
