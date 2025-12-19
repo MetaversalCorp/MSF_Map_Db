@@ -396,7 +396,7 @@
   <PropertyGroup Label="Globals">
     <RootNamespace>MSF_Format</RootNamespace>
     <ProjectGuid>{82CB1D7E-404B-4F06-BBA9-399411EA3F96}</ProjectGuid>
-    <ProjectName>MSF_DB_Map</ProjectName>
+    <ProjectName>MSF_Map_Db</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
