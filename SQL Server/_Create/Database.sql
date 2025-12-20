@@ -41,7 +41,6 @@ BEGIN
             MAXSIZE    = 2048GB,
             FILEGROWTH = 10%
          )
-         GO
          
          ALTER DATABASE [{MSF_Map}] SET ANSI_NULL_DEFAULT             OFF
          ALTER DATABASE [{MSF_Map}] SET ANSI_NULLS                    ON
@@ -71,11 +70,10 @@ BEGIN
          ALTER DATABASE [{MSF_Map}] SET MULTI_USER
          ALTER DATABASE [{MSF_Map}] SET PAGE_VERIFY                   CHECKSUM
          ALTER DATABASE [{MSF_Map}] SET DB_CHAINING                   ON
-         GO
          
          ALTER AUTHORIZATION ON DATABASE::[{MSF_Map}] TO sa
+		 End
          GO
-  END
 
 USE [{MSF_Map}]
 GO
