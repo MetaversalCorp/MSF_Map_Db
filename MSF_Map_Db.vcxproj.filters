@@ -1,112 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="MS SQL">
-      <UniqueIdentifier>{36113cea-c3ea-4be1-a640-b6188696335f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="MS SQL\Views" />
-    <Filter Include="MS SQL\_Create" />
-    <Filter Include="MS SQL\_Notes">
-      <UniqueIdentifier>{0e68e833-c640-402b-bcca-5b568f531149}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="MS SQL\Functions" />
-    <Filter Include="MS SQL\Functions\Format">
-      <UniqueIdentifier>{1680392a-5c82-4550-b53d-bae02b0dfda1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="MS SQL\Functions\Table">
-      <UniqueIdentifier>{c70cc8b2-a47f-4061-890a-2182d2467b67}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="MS SQL\Jobs" />
-    <Filter Include="MS SQL\Procedures" />
-    <Filter Include="MS SQL\Procedures\ETL">
-      <UniqueIdentifier>{ea80cf7a-5ca8-4112-bb6e-08216698d43d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="MS SQL\Procedures\RMRoot">
-      <UniqueIdentifier>{7c194a5a-c772-4c5e-b934-3a0fec3fedb7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="MS SQL\Procedures\RMRoot\Call">
-      <UniqueIdentifier>{ec295300-f11b-4e0a-b358-23ebd7423cd0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="MS SQL\Procedures\RMRoot\Call\Event">
-      <UniqueIdentifier>{c54b6791-5a66-4b00-b5ae-08e981b0a6ca}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="MS SQL\Procedures\RMRoot\Call\Validate">
-      <UniqueIdentifier>{d6aa9a56-a5c6-4b71-a86e-ab60d811f35f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="MS SQL\Procedures\RMRoot\Get">
-      <UniqueIdentifier>{60b33f1b-899c-4197-a0c1-85990d1fb257}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="MS SQL\Procedures\RMRoot\Set">
-      <UniqueIdentifier>{0cee2dfb-9324-4278-8888-3074af54ba9e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="MS SQL\Procedures\RMCObject">
-      <UniqueIdentifier>{03559233-a859-45b1-86da-c49dcf191387}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="MS SQL\Procedures\RMCObject\Call">
-      <UniqueIdentifier>{6226b042-0f86-4d7f-8728-9c79b893aeae}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="MS SQL\Procedures\RMCObject\Call\Event">
-      <UniqueIdentifier>{bc88d619-7bb2-4038-a08e-513e067ff17a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="MS SQL\Procedures\RMCObject\Call\Validate">
-      <UniqueIdentifier>{cf63e0b0-b65e-4063-8d14-6b21fa182261}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="MS SQL\Procedures\RMCObject\Get">
-      <UniqueIdentifier>{3758ad73-2b6e-486d-9f0c-b1d87975a74f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="MS SQL\Procedures\RMCObject\Set">
-      <UniqueIdentifier>{295305c1-9057-446e-8ee3-5f419ddaaecf}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="MS SQL\Procedures\RMCObject\Search">
-      <UniqueIdentifier>{9bbc606b-d1bb-455c-8103-581b64a0d675}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="MS SQL\Procedures\RMTObject">
-      <UniqueIdentifier>{528a2e8f-cbc0-4d03-bb0d-cc9b8c9ffe07}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="MS SQL\Procedures\RMTObject\Call">
-      <UniqueIdentifier>{ab4a7885-2049-48c1-901b-dae31971da98}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="MS SQL\Procedures\RMTObject\Call\Event">
-      <UniqueIdentifier>{95b5219f-2a94-4685-88ef-96d1b87634df}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="MS SQL\Procedures\RMTObject\Call\Validate">
-      <UniqueIdentifier>{2cb68b24-6416-4d59-937b-809525215bc4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="MS SQL\Procedures\RMTObject\Get">
-      <UniqueIdentifier>{fd9ce1a3-5abe-4e91-a1ac-443831c9cdf1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="MS SQL\Procedures\RMTObject\Set">
-      <UniqueIdentifier>{9c6968ff-bb99-460e-8b5d-ccf9548babd1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="MS SQL\Procedures\RMTObject\Search">
-      <UniqueIdentifier>{34572d1d-4974-477f-9616-ffea69510eaa}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="MS SQL\Procedures\RMPObject">
-      <UniqueIdentifier>{74b41d7f-7581-4f98-a1fc-1e4d1a184217}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="MS SQL\Procedures\RMPObject\Call">
-      <UniqueIdentifier>{c6ccf4c1-1ac6-4fee-8548-d66882a57b33}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="MS SQL\Procedures\RMPObject\Call\Event">
-      <UniqueIdentifier>{6a985168-bc26-478d-bfa1-c2a1c53d4dd5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="MS SQL\Procedures\RMPObject\Call\Validate">
-      <UniqueIdentifier>{e0e9ae0b-3918-493b-b7ae-7a28a454bcfd}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="MS SQL\Procedures\RMPObject\Get">
-      <UniqueIdentifier>{b03e780f-d105-4637-a3cf-0c40508cccde}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="MS SQL\Procedures\RMPObject\Set">
-      <UniqueIdentifier>{d08dc033-5c50-484c-bbef-151f356210a2}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="MS SQL\Procedures\RMTMatrix">
-      <UniqueIdentifier>{20979691-cc2b-43f5-b5dd-d460764eeb69}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="MS SQL\Procedures\RMTMatrix\Call">
-      <UniqueIdentifier>{e1ea43b5-2ba9-4426-a703-ec6ad27d1092}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="MS SQL\Tables" />
-    <Filter Include="MS SQL\Users" />
     <Filter Include="MySQL">
       <UniqueIdentifier>{f5ff8a09-986f-4829-b16b-ccca5abae2d1}</UniqueIdentifier>
     </Filter>
@@ -224,544 +118,650 @@
     <Filter Include="MySQL\Procedures\Version">
       <UniqueIdentifier>{5475d2a2-f0a1-4552-af91-9402421ef569}</UniqueIdentifier>
     </Filter>
-    <Filter Include="MS SQL\Version">
+    <Filter Include="SQL_Server">
+      <UniqueIdentifier>{36113cea-c3ea-4be1-a640-b6188696335f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQL_Server\Views" />
+    <Filter Include="SQL_Server\_Create" />
+    <Filter Include="SQL_Server\_Notes">
+      <UniqueIdentifier>{0e68e833-c640-402b-bcca-5b568f531149}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQL_Server\Functions" />
+    <Filter Include="SQL_Server\Functions\Format">
+      <UniqueIdentifier>{1680392a-5c82-4550-b53d-bae02b0dfda1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQL_Server\Functions\Table">
+      <UniqueIdentifier>{c70cc8b2-a47f-4061-890a-2182d2467b67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQL_Server\Jobs" />
+    <Filter Include="SQL_Server\Procedures" />
+    <Filter Include="SQL_Server\Procedures\ETL">
+      <UniqueIdentifier>{ea80cf7a-5ca8-4112-bb6e-08216698d43d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQL_Server\Procedures\RMRoot">
+      <UniqueIdentifier>{7c194a5a-c772-4c5e-b934-3a0fec3fedb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQL_Server\Procedures\RMRoot\Call">
+      <UniqueIdentifier>{ec295300-f11b-4e0a-b358-23ebd7423cd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQL_Server\Procedures\RMRoot\Call\Event">
+      <UniqueIdentifier>{c54b6791-5a66-4b00-b5ae-08e981b0a6ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQL_Server\Procedures\RMRoot\Call\Validate">
+      <UniqueIdentifier>{d6aa9a56-a5c6-4b71-a86e-ab60d811f35f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQL_Server\Procedures\RMRoot\Get">
+      <UniqueIdentifier>{60b33f1b-899c-4197-a0c1-85990d1fb257}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQL_Server\Procedures\RMRoot\Set">
+      <UniqueIdentifier>{0cee2dfb-9324-4278-8888-3074af54ba9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQL_Server\Procedures\RMCObject">
+      <UniqueIdentifier>{03559233-a859-45b1-86da-c49dcf191387}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQL_Server\Procedures\RMCObject\Call">
+      <UniqueIdentifier>{6226b042-0f86-4d7f-8728-9c79b893aeae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQL_Server\Procedures\RMCObject\Call\Event">
+      <UniqueIdentifier>{bc88d619-7bb2-4038-a08e-513e067ff17a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQL_Server\Procedures\RMCObject\Call\Validate">
+      <UniqueIdentifier>{cf63e0b0-b65e-4063-8d14-6b21fa182261}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQL_Server\Procedures\RMCObject\Get">
+      <UniqueIdentifier>{3758ad73-2b6e-486d-9f0c-b1d87975a74f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQL_Server\Procedures\RMCObject\Set">
+      <UniqueIdentifier>{295305c1-9057-446e-8ee3-5f419ddaaecf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQL_Server\Procedures\RMCObject\Search">
+      <UniqueIdentifier>{9bbc606b-d1bb-455c-8103-581b64a0d675}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQL_Server\Procedures\RMTObject">
+      <UniqueIdentifier>{528a2e8f-cbc0-4d03-bb0d-cc9b8c9ffe07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQL_Server\Procedures\RMTObject\Call">
+      <UniqueIdentifier>{ab4a7885-2049-48c1-901b-dae31971da98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQL_Server\Procedures\RMTObject\Call\Event">
+      <UniqueIdentifier>{95b5219f-2a94-4685-88ef-96d1b87634df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQL_Server\Procedures\RMTObject\Call\Validate">
+      <UniqueIdentifier>{2cb68b24-6416-4d59-937b-809525215bc4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQL_Server\Procedures\RMTObject\Get">
+      <UniqueIdentifier>{fd9ce1a3-5abe-4e91-a1ac-443831c9cdf1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQL_Server\Procedures\RMTObject\Set">
+      <UniqueIdentifier>{9c6968ff-bb99-460e-8b5d-ccf9548babd1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQL_Server\Procedures\RMTObject\Search">
+      <UniqueIdentifier>{34572d1d-4974-477f-9616-ffea69510eaa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQL_Server\Procedures\RMPObject">
+      <UniqueIdentifier>{74b41d7f-7581-4f98-a1fc-1e4d1a184217}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQL_Server\Procedures\RMPObject\Call">
+      <UniqueIdentifier>{c6ccf4c1-1ac6-4fee-8548-d66882a57b33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQL_Server\Procedures\RMPObject\Call\Event">
+      <UniqueIdentifier>{6a985168-bc26-478d-bfa1-c2a1c53d4dd5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQL_Server\Procedures\RMPObject\Call\Validate">
+      <UniqueIdentifier>{e0e9ae0b-3918-493b-b7ae-7a28a454bcfd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQL_Server\Procedures\RMPObject\Get">
+      <UniqueIdentifier>{b03e780f-d105-4637-a3cf-0c40508cccde}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQL_Server\Procedures\RMPObject\Set">
+      <UniqueIdentifier>{d08dc033-5c50-484c-bbef-151f356210a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQL_Server\Procedures\RMTMatrix">
+      <UniqueIdentifier>{20979691-cc2b-43f5-b5dd-d460764eeb69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQL_Server\Procedures\RMTMatrix\Call">
+      <UniqueIdentifier>{e1ea43b5-2ba9-4426-a703-ec6ad27d1092}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQL_Server\Tables" />
+    <Filter Include="SQL_Server\Users" />
+    <Filter Include="SQL_Server\Version">
       <UniqueIdentifier>{764f0b82-7f60-4f18-8139-529886fc6932}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="SQL Server\_Create\Create.bat">
-      <Filter>MS SQL\_Create</Filter>
+    <None Include="SQL_Server\_Create\Create.bat">
+      <Filter>SQL_Server\_Create</Filter>
     </None>
-    <None Include="SQL Server\_Create\Database.sql">
-      <Filter>MS SQL\_Create</Filter>
+    <None Include="SQL_Server\_Create\Database.sql">
+      <Filter>SQL_Server\_Create</Filter>
     </None>
-    <None Include="SQL Server\_Notes\Constants.sql">
-      <Filter>MS SQL\_Notes</Filter>
+    <None Include="SQL_Server\_Notes\Constants.sql">
+      <Filter>SQL_Server\_Notes</Filter>
     </None>
-    <None Include="SQL Server\Functions\Format_Bound.sql">
-      <Filter>MS SQL\Functions\Format</Filter>
+    <None Include="SQL_Server\Functions\Format_Bound.sql">
+      <Filter>SQL_Server\Functions\Format</Filter>
     </None>
-    <None Include="SQL Server\Functions\Format_Control.sql">
-      <Filter>MS SQL\Functions\Format</Filter>
+    <None Include="SQL_Server\Functions\Format_Control.sql">
+      <Filter>SQL_Server\Functions\Format</Filter>
     </None>
-    <None Include="SQL Server\Functions\Format_Double.sql">
-      <Filter>MS SQL\Functions\Format</Filter>
+    <None Include="SQL_Server\Functions\Format_Double.sql">
+      <Filter>SQL_Server\Functions\Format</Filter>
     </None>
-    <None Include="SQL Server\Functions\Format_Double3.sql">
-      <Filter>MS SQL\Functions\Format</Filter>
+    <None Include="SQL_Server\Functions\Format_Double3.sql">
+      <Filter>SQL_Server\Functions\Format</Filter>
     </None>
-    <None Include="SQL Server\Functions\Format_Double4.sql">
-      <Filter>MS SQL\Functions\Format</Filter>
+    <None Include="SQL_Server\Functions\Format_Double4.sql">
+      <Filter>SQL_Server\Functions\Format</Filter>
     </None>
-    <None Include="SQL Server\Functions\Format_Float.sql">
-      <Filter>MS SQL\Functions\Format</Filter>
+    <None Include="SQL_Server\Functions\Format_Float.sql">
+      <Filter>SQL_Server\Functions\Format</Filter>
     </None>
-    <None Include="SQL Server\Functions\Format_Name_C.sql">
-      <Filter>MS SQL\Functions\Format</Filter>
+    <None Include="SQL_Server\Functions\Format_Name_C.sql">
+      <Filter>SQL_Server\Functions\Format</Filter>
     </None>
-    <None Include="SQL Server\Functions\Format_Name_R.sql">
-      <Filter>MS SQL\Functions\Format</Filter>
+    <None Include="SQL_Server\Functions\Format_Name_R.sql">
+      <Filter>SQL_Server\Functions\Format</Filter>
     </None>
-    <None Include="SQL Server\Functions\Format_Name_T.sql">
-      <Filter>MS SQL\Functions\Format</Filter>
+    <None Include="SQL_Server\Functions\Format_Name_T.sql">
+      <Filter>SQL_Server\Functions\Format</Filter>
     </None>
-    <None Include="SQL Server\Functions\Format_ObjectHead.sql">
-      <Filter>MS SQL\Functions\Format</Filter>
+    <None Include="SQL_Server\Functions\Format_ObjectHead.sql">
+      <Filter>SQL_Server\Functions\Format</Filter>
     </None>
-    <None Include="SQL Server\Functions\Format_Orbit_Spin.sql">
-      <Filter>MS SQL\Functions\Format</Filter>
+    <None Include="SQL_Server\Functions\Format_Orbit_Spin.sql">
+      <Filter>SQL_Server\Functions\Format</Filter>
     </None>
-    <None Include="SQL Server\Functions\Format_Owner.sql">
-      <Filter>MS SQL\Functions\Format</Filter>
+    <None Include="SQL_Server\Functions\Format_Owner.sql">
+      <Filter>SQL_Server\Functions\Format</Filter>
     </None>
-    <None Include="SQL Server\Functions\Format_Properties_C.sql">
-      <Filter>MS SQL\Functions\Format</Filter>
+    <None Include="SQL_Server\Functions\Format_Properties_C.sql">
+      <Filter>SQL_Server\Functions\Format</Filter>
     </None>
-    <None Include="SQL Server\Functions\Format_Properties_T.sql">
-      <Filter>MS SQL\Functions\Format</Filter>
+    <None Include="SQL_Server\Functions\Format_Properties_T.sql">
+      <Filter>SQL_Server\Functions\Format</Filter>
     </None>
-    <None Include="SQL Server\Functions\Format_Resource.sql">
-      <Filter>MS SQL\Functions\Format</Filter>
+    <None Include="SQL_Server\Functions\Format_Resource.sql">
+      <Filter>SQL_Server\Functions\Format</Filter>
     </None>
-    <None Include="SQL Server\Functions\Format_Transform.sql">
-      <Filter>MS SQL\Functions\Format</Filter>
+    <None Include="SQL_Server\Functions\Format_Transform.sql">
+      <Filter>SQL_Server\Functions\Format</Filter>
     </None>
-    <None Include="SQL Server\Functions\Format_Type_C.sql">
-      <Filter>MS SQL\Functions\Format</Filter>
+    <None Include="SQL_Server\Functions\Format_Type_C.sql">
+      <Filter>SQL_Server\Functions\Format</Filter>
     </None>
-    <None Include="SQL Server\Functions\Format_Type_P.sql">
-      <Filter>MS SQL\Functions\Format</Filter>
+    <None Include="SQL_Server\Functions\Format_Type_P.sql">
+      <Filter>SQL_Server\Functions\Format</Filter>
     </None>
-    <None Include="SQL Server\Functions\Format_Type_T.sql">
-      <Filter>MS SQL\Functions\Format</Filter>
+    <None Include="SQL_Server\Functions\Format_Type_T.sql">
+      <Filter>SQL_Server\Functions\Format</Filter>
     </None>
-    <None Include="SQL Server\Functions\Table_Error.sql">
-      <Filter>MS SQL\Functions\Table</Filter>
+    <None Include="SQL_Server\Functions\Table_Error.sql">
+      <Filter>SQL_Server\Functions\Table</Filter>
     </None>
-    <None Include="SQL Server\Functions\Table_Event.sql">
-      <Filter>MS SQL\Functions\Table</Filter>
+    <None Include="SQL_Server\Functions\Table_Event.sql">
+      <Filter>SQL_Server\Functions\Table</Filter>
     </None>
-    <None Include="SQL Server\Functions\Table_Results.sql">
-      <Filter>MS SQL\Functions\Table</Filter>
+    <None Include="SQL_Server\Functions\Table_Results.sql">
+      <Filter>SQL_Server\Functions\Table</Filter>
     </None>
-    <None Include="SQL Server\Functions\ArcLength.sql">
-      <Filter>MS SQL\Functions</Filter>
+    <None Include="SQL_Server\Functions\ArcLength.sql">
+      <Filter>SQL_Server\Functions</Filter>
     </None>
-    <None Include="SQL Server\Functions\Date_DateTime2.sql">
-      <Filter>MS SQL\Functions</Filter>
+    <None Include="SQL_Server\Functions\Date_DateTime2.sql">
+      <Filter>SQL_Server\Functions</Filter>
     </None>
-    <None Include="SQL Server\Functions\DateTime2_Time.sql">
-      <Filter>MS SQL\Functions</Filter>
+    <None Include="SQL_Server\Functions\DateTime2_Time.sql">
+      <Filter>SQL_Server\Functions</Filter>
     </None>
-    <None Include="SQL Server\Functions\IPstob.sql">
-      <Filter>MS SQL\Functions</Filter>
+    <None Include="SQL_Server\Functions\IPstob.sql">
+      <Filter>SQL_Server\Functions</Filter>
     </None>
-    <None Include="SQL Server\Functions\Time_Current.sql">
-      <Filter>MS SQL\Functions</Filter>
+    <None Include="SQL_Server\Functions\Time_Current.sql">
+      <Filter>SQL_Server\Functions</Filter>
     </None>
-    <None Include="SQL Server\Functions\Time_DateTime2.sql">
-      <Filter>MS SQL\Functions</Filter>
+    <None Include="SQL_Server\Functions\Time_DateTime2.sql">
+      <Filter>SQL_Server\Functions</Filter>
     </None>
-    <None Include="SQL Server\Tables\RMCObject.sql">
-      <Filter>MS SQL\Tables</Filter>
+    <None Include="SQL_Server\Tables\RMCObject.sql">
+      <Filter>SQL_Server\Tables</Filter>
     </None>
-    <None Include="SQL Server\Tables\RMEvent.sql">
-      <Filter>MS SQL\Tables</Filter>
+    <None Include="SQL_Server\Tables\RMEvent.sql">
+      <Filter>SQL_Server\Tables</Filter>
     </None>
-    <None Include="SQL Server\Tables\RMPObject.sql">
-      <Filter>MS SQL\Tables</Filter>
+    <None Include="SQL_Server\Tables\RMPObject.sql">
+      <Filter>SQL_Server\Tables</Filter>
     </None>
-    <None Include="SQL Server\Tables\RMRoot.sql">
-      <Filter>MS SQL\Tables</Filter>
+    <None Include="SQL_Server\Tables\RMRoot.sql">
+      <Filter>SQL_Server\Tables</Filter>
     </None>
-    <None Include="SQL Server\Tables\RMTMatrix.sql">
-      <Filter>MS SQL\Tables</Filter>
+    <None Include="SQL_Server\Tables\RMTMatrix.sql">
+      <Filter>SQL_Server\Tables</Filter>
     </None>
-    <None Include="SQL Server\Tables\RMTObject.sql">
-      <Filter>MS SQL\Tables</Filter>
+    <None Include="SQL_Server\Tables\RMTObject.sql">
+      <Filter>SQL_Server\Tables</Filter>
     </None>
-    <None Include="SQL Server\Procedures\ETL\call_Event_Push.sql">
-      <Filter>MS SQL\Procedures\ETL</Filter>
+    <None Include="SQL_Server\Procedures\ETL\call_Event_Push.sql">
+      <Filter>SQL_Server\Procedures\ETL</Filter>
     </None>
-    <None Include="SQL Server\Procedures\ETL\etl_Events.sql">
-      <Filter>MS SQL\Procedures\ETL</Filter>
+    <None Include="SQL_Server\Procedures\ETL\etl_Events.sql">
+      <Filter>SQL_Server\Procedures\ETL</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMCObject\call_RMCObject_Event.sql">
-      <Filter>MS SQL\Procedures\RMCObject\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMCObject\call_RMCObject_Event.sql">
+      <Filter>SQL_Server\Procedures\RMCObject\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMCObject\call_RMCObject_Event_Bound.sql">
-      <Filter>MS SQL\Procedures\RMCObject\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMCObject\call_RMCObject_Event_Bound.sql">
+      <Filter>SQL_Server\Procedures\RMCObject\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMCObject\call_RMCObject_Event_Name.sql">
-      <Filter>MS SQL\Procedures\RMCObject\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMCObject\call_RMCObject_Event_Name.sql">
+      <Filter>SQL_Server\Procedures\RMCObject\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMCObject\call_RMCObject_Event_Orbit_Spin.sql">
-      <Filter>MS SQL\Procedures\RMCObject\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMCObject\call_RMCObject_Event_Orbit_Spin.sql">
+      <Filter>SQL_Server\Procedures\RMCObject\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMCObject\call_RMCObject_Event_Owner.sql">
-      <Filter>MS SQL\Procedures\RMCObject\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMCObject\call_RMCObject_Event_Owner.sql">
+      <Filter>SQL_Server\Procedures\RMCObject\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMCObject\call_RMCObject_Event_Properties.sql">
-      <Filter>MS SQL\Procedures\RMCObject\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMCObject\call_RMCObject_Event_Properties.sql">
+      <Filter>SQL_Server\Procedures\RMCObject\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMCObject\call_RMCObject_Event_Resource.sql">
-      <Filter>MS SQL\Procedures\RMCObject\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMCObject\call_RMCObject_Event_Resource.sql">
+      <Filter>SQL_Server\Procedures\RMCObject\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMCObject\call_RMCObject_Event_RMCObject_Close.sql">
-      <Filter>MS SQL\Procedures\RMCObject\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMCObject\call_RMCObject_Event_RMCObject_Close.sql">
+      <Filter>SQL_Server\Procedures\RMCObject\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMCObject\call_RMCObject_Event_RMCObject_Openj.sql">
-      <Filter>MS SQL\Procedures\RMCObject\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMCObject\call_RMCObject_Event_RMCObject_Openj.sql">
+      <Filter>SQL_Server\Procedures\RMCObject\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMCObject\call_RMCObject_Event_RMTObject_Close.sql">
-      <Filter>MS SQL\Procedures\RMCObject\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMCObject\call_RMCObject_Event_RMTObject_Close.sql">
+      <Filter>SQL_Server\Procedures\RMCObject\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMCObject\call_RMCObject_Event_RMTObject_Open.sql">
-      <Filter>MS SQL\Procedures\RMCObject\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMCObject\call_RMCObject_Event_RMTObject_Open.sql">
+      <Filter>SQL_Server\Procedures\RMCObject\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMCObject\call_RMCObject_Event_Transform.sql">
-      <Filter>MS SQL\Procedures\RMCObject\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMCObject\call_RMCObject_Event_Transform.sql">
+      <Filter>SQL_Server\Procedures\RMCObject\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMCObject\call_RMCObject_Event_Type.sql">
-      <Filter>MS SQL\Procedures\RMCObject\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMCObject\call_RMCObject_Event_Type.sql">
+      <Filter>SQL_Server\Procedures\RMCObject\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMCObject\call_RMCObject_Validate.sql">
-      <Filter>MS SQL\Procedures\RMCObject\Call\Validate</Filter>
+    <None Include="SQL_Server\Procedures\RMCObject\call_RMCObject_Validate.sql">
+      <Filter>SQL_Server\Procedures\RMCObject\Call\Validate</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMCObject\call_RMCObject_Validate_Bound.sql">
-      <Filter>MS SQL\Procedures\RMCObject\Call\Validate</Filter>
+    <None Include="SQL_Server\Procedures\RMCObject\call_RMCObject_Validate_Bound.sql">
+      <Filter>SQL_Server\Procedures\RMCObject\Call\Validate</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMCObject\call_RMCObject_Validate_Name.sql">
-      <Filter>MS SQL\Procedures\RMCObject\Call\Validate</Filter>
+    <None Include="SQL_Server\Procedures\RMCObject\call_RMCObject_Validate_Name.sql">
+      <Filter>SQL_Server\Procedures\RMCObject\Call\Validate</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMCObject\call_RMCObject_Validate_Orbit_Spin.sql">
-      <Filter>MS SQL\Procedures\RMCObject\Call\Validate</Filter>
+    <None Include="SQL_Server\Procedures\RMCObject\call_RMCObject_Validate_Orbit_Spin.sql">
+      <Filter>SQL_Server\Procedures\RMCObject\Call\Validate</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMCObject\call_RMCObject_Validate_Owner.sql">
-      <Filter>MS SQL\Procedures\RMCObject\Call\Validate</Filter>
+    <None Include="SQL_Server\Procedures\RMCObject\call_RMCObject_Validate_Owner.sql">
+      <Filter>SQL_Server\Procedures\RMCObject\Call\Validate</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMCObject\call_RMCObject_Validate_Properties.sql">
-      <Filter>MS SQL\Procedures\RMCObject\Call\Validate</Filter>
+    <None Include="SQL_Server\Procedures\RMCObject\call_RMCObject_Validate_Properties.sql">
+      <Filter>SQL_Server\Procedures\RMCObject\Call\Validate</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMCObject\call_RMCObject_Validate_Resource.sql">
-      <Filter>MS SQL\Procedures\RMCObject\Call\Validate</Filter>
+    <None Include="SQL_Server\Procedures\RMCObject\call_RMCObject_Validate_Resource.sql">
+      <Filter>SQL_Server\Procedures\RMCObject\Call\Validate</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMCObject\call_RMCObject_Validate_Transform.sql">
-      <Filter>MS SQL\Procedures\RMCObject\Call\Validate</Filter>
+    <None Include="SQL_Server\Procedures\RMCObject\call_RMCObject_Validate_Transform.sql">
+      <Filter>SQL_Server\Procedures\RMCObject\Call\Validate</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMCObject\call_RMCObject_Validate_Type.sql">
-      <Filter>MS SQL\Procedures\RMCObject\Call\Validate</Filter>
+    <None Include="SQL_Server\Procedures\RMCObject\call_RMCObject_Validate_Type.sql">
+      <Filter>SQL_Server\Procedures\RMCObject\Call\Validate</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMCObject\call_RMCObject_Log.sql">
-      <Filter>MS SQL\Procedures\RMCObject\Call</Filter>
+    <None Include="SQL_Server\Procedures\RMCObject\call_RMCObject_Log.sql">
+      <Filter>SQL_Server\Procedures\RMCObject\Call</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMCObject\call_RMCObject_Select.sql">
-      <Filter>MS SQL\Procedures\RMCObject\Call</Filter>
+    <None Include="SQL_Server\Procedures\RMCObject\call_RMCObject_Select.sql">
+      <Filter>SQL_Server\Procedures\RMCObject\Call</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMCObject\get_RMCObject.sql">
-      <Filter>MS SQL\Procedures\RMCObject\Get</Filter>
+    <None Include="SQL_Server\Procedures\RMCObject\get_RMCObject.sql">
+      <Filter>SQL_Server\Procedures\RMCObject\Get</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMCObject\get_RMCObject_Update.sql">
-      <Filter>MS SQL\Procedures\RMCObject\Get</Filter>
+    <None Include="SQL_Server\Procedures\RMCObject\get_RMCObject_Update.sql">
+      <Filter>SQL_Server\Procedures\RMCObject\Get</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMCObject\search_RMCObject.sql">
-      <Filter>MS SQL\Procedures\RMCObject\Search</Filter>
+    <None Include="SQL_Server\Procedures\RMCObject\search_RMCObject.sql">
+      <Filter>SQL_Server\Procedures\RMCObject\Search</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMCObject\set_RMCObject_Bound.sql">
-      <Filter>MS SQL\Procedures\RMCObject\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMCObject\set_RMCObject_Bound.sql">
+      <Filter>SQL_Server\Procedures\RMCObject\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMCObject\set_RMCObject_Name.sql">
-      <Filter>MS SQL\Procedures\RMCObject\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMCObject\set_RMCObject_Name.sql">
+      <Filter>SQL_Server\Procedures\RMCObject\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMCObject\set_RMCObject_Orbit_Spin.sql">
-      <Filter>MS SQL\Procedures\RMCObject\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMCObject\set_RMCObject_Orbit_Spin.sql">
+      <Filter>SQL_Server\Procedures\RMCObject\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMCObject\set_RMCObject_Owner.sql">
-      <Filter>MS SQL\Procedures\RMCObject\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMCObject\set_RMCObject_Owner.sql">
+      <Filter>SQL_Server\Procedures\RMCObject\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMCObject\set_RMCObject_Properties.sql">
-      <Filter>MS SQL\Procedures\RMCObject\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMCObject\set_RMCObject_Properties.sql">
+      <Filter>SQL_Server\Procedures\RMCObject\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMCObject\set_RMCObject_Resource.sql">
-      <Filter>MS SQL\Procedures\RMCObject\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMCObject\set_RMCObject_Resource.sql">
+      <Filter>SQL_Server\Procedures\RMCObject\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMCObject\set_RMCObject_RMCObject_Close.sql">
-      <Filter>MS SQL\Procedures\RMCObject\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMCObject\set_RMCObject_RMCObject_Close.sql">
+      <Filter>SQL_Server\Procedures\RMCObject\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMCObject\set_RMCObject_RMCObject_Open.sql">
-      <Filter>MS SQL\Procedures\RMCObject\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMCObject\set_RMCObject_RMCObject_Open.sql">
+      <Filter>SQL_Server\Procedures\RMCObject\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMCObject\set_RMCObject_RMTObject_Close.sql">
-      <Filter>MS SQL\Procedures\RMCObject\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMCObject\set_RMCObject_RMTObject_Close.sql">
+      <Filter>SQL_Server\Procedures\RMCObject\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMCObject\set_RMCObject_RMTObject_Open.sql">
-      <Filter>MS SQL\Procedures\RMCObject\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMCObject\set_RMCObject_RMTObject_Open.sql">
+      <Filter>SQL_Server\Procedures\RMCObject\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMCObject\set_RMCObject_Transform.sql">
-      <Filter>MS SQL\Procedures\RMCObject\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMCObject\set_RMCObject_Transform.sql">
+      <Filter>SQL_Server\Procedures\RMCObject\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMCObject\set_RMCObject_Type.sql">
-      <Filter>MS SQL\Procedures\RMCObject\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMCObject\set_RMCObject_Type.sql">
+      <Filter>SQL_Server\Procedures\RMCObject\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMPObject\call_RMPObject_Event.sql">
-      <Filter>MS SQL\Procedures\RMPObject\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMPObject\call_RMPObject_Event.sql">
+      <Filter>SQL_Server\Procedures\RMPObject\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMPObject\call_RMPObject_Event_Bound.sql">
-      <Filter>MS SQL\Procedures\RMPObject\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMPObject\call_RMPObject_Event_Bound.sql">
+      <Filter>SQL_Server\Procedures\RMPObject\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMPObject\call_RMPObject_Event_Owner.sql">
-      <Filter>MS SQL\Procedures\RMPObject\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMPObject\call_RMPObject_Event_Owner.sql">
+      <Filter>SQL_Server\Procedures\RMPObject\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMPObject\call_RMPObject_Event_Resource.sql">
-      <Filter>MS SQL\Procedures\RMPObject\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMPObject\call_RMPObject_Event_Resource.sql">
+      <Filter>SQL_Server\Procedures\RMPObject\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMPObject\call_RMPObject_Event_RMPObject_Close.sql">
-      <Filter>MS SQL\Procedures\RMPObject\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMPObject\call_RMPObject_Event_RMPObject_Close.sql">
+      <Filter>SQL_Server\Procedures\RMPObject\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMPObject\call_RMPObject_Event_RMPObject_Open.sql">
-      <Filter>MS SQL\Procedures\RMPObject\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMPObject\call_RMPObject_Event_RMPObject_Open.sql">
+      <Filter>SQL_Server\Procedures\RMPObject\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMPObject\call_RMPObject_Event_Transform.sql">
-      <Filter>MS SQL\Procedures\RMPObject\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMPObject\call_RMPObject_Event_Transform.sql">
+      <Filter>SQL_Server\Procedures\RMPObject\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMPObject\call_RMPObject_Event_Type.sql">
-      <Filter>MS SQL\Procedures\RMPObject\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMPObject\call_RMPObject_Event_Type.sql">
+      <Filter>SQL_Server\Procedures\RMPObject\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMPObject\call_RMPObject_Validate.sql">
-      <Filter>MS SQL\Procedures\RMPObject\Call\Validate</Filter>
+    <None Include="SQL_Server\Procedures\RMPObject\call_RMPObject_Validate.sql">
+      <Filter>SQL_Server\Procedures\RMPObject\Call\Validate</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMPObject\call_RMPObject_Validate_Bound.sql">
-      <Filter>MS SQL\Procedures\RMPObject\Call\Validate</Filter>
+    <None Include="SQL_Server\Procedures\RMPObject\call_RMPObject_Validate_Bound.sql">
+      <Filter>SQL_Server\Procedures\RMPObject\Call\Validate</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMPObject\call_RMPObject_Validate_Owner.sql">
-      <Filter>MS SQL\Procedures\RMPObject\Call\Validate</Filter>
+    <None Include="SQL_Server\Procedures\RMPObject\call_RMPObject_Validate_Owner.sql">
+      <Filter>SQL_Server\Procedures\RMPObject\Call\Validate</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMPObject\call_RMPObject_Validate_Resource.sql">
-      <Filter>MS SQL\Procedures\RMPObject\Call\Validate</Filter>
+    <None Include="SQL_Server\Procedures\RMPObject\call_RMPObject_Validate_Resource.sql">
+      <Filter>SQL_Server\Procedures\RMPObject\Call\Validate</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMPObject\call_RMPObject_Validate_Transform.sql">
-      <Filter>MS SQL\Procedures\RMPObject\Call\Validate</Filter>
+    <None Include="SQL_Server\Procedures\RMPObject\call_RMPObject_Validate_Transform.sql">
+      <Filter>SQL_Server\Procedures\RMPObject\Call\Validate</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMPObject\call_RMPObject_Validate_Type.sql">
-      <Filter>MS SQL\Procedures\RMPObject\Call\Validate</Filter>
+    <None Include="SQL_Server\Procedures\RMPObject\call_RMPObject_Validate_Type.sql">
+      <Filter>SQL_Server\Procedures\RMPObject\Call\Validate</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMPObject\call_RMPObject_Log.sql">
-      <Filter>MS SQL\Procedures\RMPObject\Call</Filter>
+    <None Include="SQL_Server\Procedures\RMPObject\call_RMPObject_Log.sql">
+      <Filter>SQL_Server\Procedures\RMPObject\Call</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMPObject\call_RMPObject_Select.sql">
-      <Filter>MS SQL\Procedures\RMPObject\Call</Filter>
+    <None Include="SQL_Server\Procedures\RMPObject\call_RMPObject_Select.sql">
+      <Filter>SQL_Server\Procedures\RMPObject\Call</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMPObject\get_RMPObject_Update.sql">
-      <Filter>MS SQL\Procedures\RMPObject\Get</Filter>
+    <None Include="SQL_Server\Procedures\RMPObject\get_RMPObject_Update.sql">
+      <Filter>SQL_Server\Procedures\RMPObject\Get</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMPObject\get_RMPObject.sql">
-      <Filter>MS SQL\Procedures\RMPObject\Get</Filter>
+    <None Include="SQL_Server\Procedures\RMPObject\get_RMPObject.sql">
+      <Filter>SQL_Server\Procedures\RMPObject\Get</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMPObject\set_RMPObject_Bound.sql">
-      <Filter>MS SQL\Procedures\RMPObject\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMPObject\set_RMPObject_Bound.sql">
+      <Filter>SQL_Server\Procedures\RMPObject\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMPObject\set_RMPObject_Owner.sql">
-      <Filter>MS SQL\Procedures\RMPObject\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMPObject\set_RMPObject_Owner.sql">
+      <Filter>SQL_Server\Procedures\RMPObject\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMPObject\set_RMPObject_Resource.sql">
-      <Filter>MS SQL\Procedures\RMPObject\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMPObject\set_RMPObject_Resource.sql">
+      <Filter>SQL_Server\Procedures\RMPObject\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMPObject\set_RMPObject_RMPObject_Close.sql">
-      <Filter>MS SQL\Procedures\RMPObject\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMPObject\set_RMPObject_RMPObject_Close.sql">
+      <Filter>SQL_Server\Procedures\RMPObject\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMPObject\set_RMPObject_RMPObject_Open.sql">
-      <Filter>MS SQL\Procedures\RMPObject\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMPObject\set_RMPObject_RMPObject_Open.sql">
+      <Filter>SQL_Server\Procedures\RMPObject\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMPObject\set_RMPObject_Transform.sql">
-      <Filter>MS SQL\Procedures\RMPObject\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMPObject\set_RMPObject_Transform.sql">
+      <Filter>SQL_Server\Procedures\RMPObject\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMPObject\set_RMPObject_Type.sql">
-      <Filter>MS SQL\Procedures\RMPObject\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMPObject\set_RMPObject_Type.sql">
+      <Filter>SQL_Server\Procedures\RMPObject\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMRoot\call_RMRoot_Event.sql">
-      <Filter>MS SQL\Procedures\RMRoot\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMRoot\call_RMRoot_Event.sql">
+      <Filter>SQL_Server\Procedures\RMRoot\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMRoot\call_RMRoot_Event_Name.sql">
-      <Filter>MS SQL\Procedures\RMRoot\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMRoot\call_RMRoot_Event_Name.sql">
+      <Filter>SQL_Server\Procedures\RMRoot\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMRoot\call_RMRoot_Event_Owner.sql">
-      <Filter>MS SQL\Procedures\RMRoot\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMRoot\call_RMRoot_Event_Owner.sql">
+      <Filter>SQL_Server\Procedures\RMRoot\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMRoot\call_RMRoot_Event_RMCObject_Close.sql">
-      <Filter>MS SQL\Procedures\RMRoot\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMRoot\call_RMRoot_Event_RMCObject_Close.sql">
+      <Filter>SQL_Server\Procedures\RMRoot\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMRoot\call_RMRoot_Event_RMCObject_Open.sql">
-      <Filter>MS SQL\Procedures\RMRoot\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMRoot\call_RMRoot_Event_RMCObject_Open.sql">
+      <Filter>SQL_Server\Procedures\RMRoot\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMRoot\call_RMRoot_Event_RMPObject_Close.sql">
-      <Filter>MS SQL\Procedures\RMRoot\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMRoot\call_RMRoot_Event_RMPObject_Close.sql">
+      <Filter>SQL_Server\Procedures\RMRoot\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMRoot\call_RMRoot_Event_RMPObject_Open.sql">
-      <Filter>MS SQL\Procedures\RMRoot\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMRoot\call_RMRoot_Event_RMPObject_Open.sql">
+      <Filter>SQL_Server\Procedures\RMRoot\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMRoot\call_RMRoot_Event_RMTObject_Close.sql">
-      <Filter>MS SQL\Procedures\RMRoot\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMRoot\call_RMRoot_Event_RMTObject_Close.sql">
+      <Filter>SQL_Server\Procedures\RMRoot\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMRoot\call_RMRoot_Event_RMTObject_Open.sql">
-      <Filter>MS SQL\Procedures\RMRoot\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMRoot\call_RMRoot_Event_RMTObject_Open.sql">
+      <Filter>SQL_Server\Procedures\RMRoot\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMRoot\call_RMRoot_Validate.sql">
-      <Filter>MS SQL\Procedures\RMRoot\Call\Validate</Filter>
+    <None Include="SQL_Server\Procedures\RMRoot\call_RMRoot_Validate.sql">
+      <Filter>SQL_Server\Procedures\RMRoot\Call\Validate</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMRoot\call_RMRoot_Validate_Name.sql">
-      <Filter>MS SQL\Procedures\RMRoot\Call\Validate</Filter>
+    <None Include="SQL_Server\Procedures\RMRoot\call_RMRoot_Validate_Name.sql">
+      <Filter>SQL_Server\Procedures\RMRoot\Call\Validate</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMRoot\call_RMRoot_Validate_Owner.sql">
-      <Filter>MS SQL\Procedures\RMRoot\Call\Validate</Filter>
+    <None Include="SQL_Server\Procedures\RMRoot\call_RMRoot_Validate_Owner.sql">
+      <Filter>SQL_Server\Procedures\RMRoot\Call\Validate</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMRoot\call_RMRoot_Select.sql">
-      <Filter>MS SQL\Procedures\RMRoot\Call</Filter>
+    <None Include="SQL_Server\Procedures\RMRoot\call_RMRoot_Select.sql">
+      <Filter>SQL_Server\Procedures\RMRoot\Call</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMRoot\call_RMRoot_Log.sql">
-      <Filter>MS SQL\Procedures\RMRoot\Call</Filter>
+    <None Include="SQL_Server\Procedures\RMRoot\call_RMRoot_Log.sql">
+      <Filter>SQL_Server\Procedures\RMRoot\Call</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMRoot\get_RMRoot.sql">
-      <Filter>MS SQL\Procedures\RMRoot\Get</Filter>
+    <None Include="SQL_Server\Procedures\RMRoot\get_RMRoot.sql">
+      <Filter>SQL_Server\Procedures\RMRoot\Get</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMRoot\get_RMRoot_Update.sql">
-      <Filter>MS SQL\Procedures\RMRoot\Get</Filter>
+    <None Include="SQL_Server\Procedures\RMRoot\get_RMRoot_Update.sql">
+      <Filter>SQL_Server\Procedures\RMRoot\Get</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMRoot\set_RMRoot_Name.sql">
-      <Filter>MS SQL\Procedures\RMRoot\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMRoot\set_RMRoot_Name.sql">
+      <Filter>SQL_Server\Procedures\RMRoot\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMRoot\set_RMRoot_Owner.sql">
-      <Filter>MS SQL\Procedures\RMRoot\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMRoot\set_RMRoot_Owner.sql">
+      <Filter>SQL_Server\Procedures\RMRoot\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMRoot\set_RMRoot_RMCObject_Close.sql">
-      <Filter>MS SQL\Procedures\RMRoot\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMRoot\set_RMRoot_RMCObject_Close.sql">
+      <Filter>SQL_Server\Procedures\RMRoot\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMRoot\set_RMRoot_RMCObject_Open.sql">
-      <Filter>MS SQL\Procedures\RMRoot\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMRoot\set_RMRoot_RMCObject_Open.sql">
+      <Filter>SQL_Server\Procedures\RMRoot\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMRoot\set_RMRoot_RMPObject_Close.sql">
-      <Filter>MS SQL\Procedures\RMRoot\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMRoot\set_RMRoot_RMPObject_Close.sql">
+      <Filter>SQL_Server\Procedures\RMRoot\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMRoot\set_RMRoot_RMPObject_Open.sql">
-      <Filter>MS SQL\Procedures\RMRoot\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMRoot\set_RMRoot_RMPObject_Open.sql">
+      <Filter>SQL_Server\Procedures\RMRoot\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMRoot\set_RMRoot_RMTObject_Close.sql">
-      <Filter>MS SQL\Procedures\RMRoot\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMRoot\set_RMRoot_RMTObject_Close.sql">
+      <Filter>SQL_Server\Procedures\RMRoot\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMRoot\set_RMRoot_RMTObject_Open.sql">
-      <Filter>MS SQL\Procedures\RMRoot\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMRoot\set_RMRoot_RMTObject_Open.sql">
+      <Filter>SQL_Server\Procedures\RMRoot\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTMatrix\call_RMTMatrix_Translate.sql">
-      <Filter>MS SQL\Procedures\RMTMatrix\Call</Filter>
+    <None Include="SQL_Server\Procedures\RMTMatrix\call_RMTMatrix_Translate.sql">
+      <Filter>SQL_Server\Procedures\RMTMatrix\Call</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTMatrix\call_RMTMatrix_Car.sql">
-      <Filter>MS SQL\Procedures\RMTMatrix\Call</Filter>
+    <None Include="SQL_Server\Procedures\RMTMatrix\call_RMTMatrix_Car.sql">
+      <Filter>SQL_Server\Procedures\RMTMatrix\Call</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTMatrix\call_RMTMatrix_Cyl.sql">
-      <Filter>MS SQL\Procedures\RMTMatrix\Call</Filter>
+    <None Include="SQL_Server\Procedures\RMTMatrix\call_RMTMatrix_Cyl.sql">
+      <Filter>SQL_Server\Procedures\RMTMatrix\Call</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTMatrix\call_RMTMatrix_Geo.sql">
-      <Filter>MS SQL\Procedures\RMTMatrix\Call</Filter>
+    <None Include="SQL_Server\Procedures\RMTMatrix\call_RMTMatrix_Geo.sql">
+      <Filter>SQL_Server\Procedures\RMTMatrix\Call</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTMatrix\call_RMTMatrix_Inverse.sql">
-      <Filter>MS SQL\Procedures\RMTMatrix\Call</Filter>
+    <None Include="SQL_Server\Procedures\RMTMatrix\call_RMTMatrix_Inverse.sql">
+      <Filter>SQL_Server\Procedures\RMTMatrix\Call</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTMatrix\call_RMTMatrix_Mult.sql">
-      <Filter>MS SQL\Procedures\RMTMatrix\Call</Filter>
+    <None Include="SQL_Server\Procedures\RMTMatrix\call_RMTMatrix_Mult.sql">
+      <Filter>SQL_Server\Procedures\RMTMatrix\Call</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTMatrix\call_RMTMatrix_Nul.sql">
-      <Filter>MS SQL\Procedures\RMTMatrix\Call</Filter>
+    <None Include="SQL_Server\Procedures\RMTMatrix\call_RMTMatrix_Nul.sql">
+      <Filter>SQL_Server\Procedures\RMTMatrix\Call</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTMatrix\call_RMTMatrix_Relative.sql">
-      <Filter>MS SQL\Procedures\RMTMatrix\Call</Filter>
+    <None Include="SQL_Server\Procedures\RMTMatrix\call_RMTMatrix_Relative.sql">
+      <Filter>SQL_Server\Procedures\RMTMatrix\Call</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTMatrix\call_RMTMatrix_Rotate.sql">
-      <Filter>MS SQL\Procedures\RMTMatrix\Call</Filter>
+    <None Include="SQL_Server\Procedures\RMTMatrix\call_RMTMatrix_Rotate.sql">
+      <Filter>SQL_Server\Procedures\RMTMatrix\Call</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTMatrix\call_RMTMatrix_Scale.sql">
-      <Filter>MS SQL\Procedures\RMTMatrix\Call</Filter>
+    <None Include="SQL_Server\Procedures\RMTMatrix\call_RMTMatrix_Scale.sql">
+      <Filter>SQL_Server\Procedures\RMTMatrix\Call</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\call_RMTObject_Event.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Event.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\call_RMTObject_Event_Bound.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Event_Bound.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\call_RMTObject_Event_Name.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Event_Name.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\call_RMTObject_Event_Owner.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Event_Owner.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\call_RMTObject_Event_Properties.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Event_Properties.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\call_RMTObject_Event_Resource.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Event_Resource.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\call_RMTObject_Event_RMPObject_Close.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Event_RMPObject_Close.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\call_RMTObject_Event_RMPObject_Open.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Event_RMPObject_Open.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\call_RMTObject_Event_RMTObject_Close.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Event_RMTObject_Close.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\call_RMTObject_Event_RMTObject_Open.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Event_RMTObject_Open.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\call_RMTObject_Event_Transform.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Event_Transform.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\call_RMTObject_Event_Type.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Event_Type.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\call_RMTObject_Validate.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Call\Validate</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Validate.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Call\Validate</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\call_RMTObject_Validate_Bound.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Call\Validate</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Validate_Bound.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Call\Validate</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\call_RMTObject_Validate_Coord_Car.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Call\Validate</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Validate_Coord_Car.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Call\Validate</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\call_RMTObject_Validate_Coord_Cyl.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Call\Validate</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Validate_Coord_Cyl.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Call\Validate</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\call_RMTObject_Validate_Coord_Geo.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Call\Validate</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Validate_Coord_Geo.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Call\Validate</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\call_RMTObject_Validate_Coord_Nul.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Call\Validate</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Validate_Coord_Nul.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Call\Validate</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\call_RMTObject_Validate_Name.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Call\Validate</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Validate_Name.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Call\Validate</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\call_RMTObject_Validate_Owner.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Call\Validate</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Validate_Owner.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Call\Validate</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\call_RMTObject_Validate_Properties.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Call\Validate</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Validate_Properties.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Call\Validate</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\call_RMTObject_Validate_Resource.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Call\Validate</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Validate_Resource.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Call\Validate</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\call_RMTObject_Validate_Transform.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Call\Validate</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Validate_Transform.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Call\Validate</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\call_RMTObject_Validate_Type.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Call\Validate</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Validate_Type.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Call\Validate</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\call_RMTObject_Log.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Call</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Log.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Call</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\call_RMTObject_Select.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Call</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Select.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Call</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\get_RMTObject.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Get</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\get_RMTObject.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Get</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\get_RMTObject_Update.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Get</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\get_RMTObject_Update.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Get</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\search_RMTObject.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Search</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\search_RMTObject.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Search</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\set_RMTObject_Bound.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\set_RMTObject_Bound.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\set_RMTObject_Name.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\set_RMTObject_Name.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\set_RMTObject_Owner.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\set_RMTObject_Owner.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\set_RMTObject_Properties.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\set_RMTObject_Properties.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\set_RMTObject_Resource.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\set_RMTObject_Resource.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\set_RMTObject_RMPObject_Close.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\set_RMTObject_RMPObject_Close.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\set_RMTObject_RMPObject_Open.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\set_RMTObject_RMPObject_Open.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\set_RMTObject_RMTObject_Close.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\set_RMTObject_RMTObject_Close.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\set_RMTObject_RMTObject_Open.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\set_RMTObject_RMTObject_Open.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\set_RMTObject_Transform.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\set_RMTObject_Transform.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\set_RMTObject_Type.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\set_RMTObject_Type.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\call_Error.sql">
-      <Filter>MS SQL\Procedures</Filter>
+    <None Include="SQL_Server\Procedures\call_Error.sql">
+      <Filter>SQL_Server\Procedures</Filter>
     </None>
     <None Include="MySQL\Functions\ArcLength.sql">
       <Filter>MySQL\Functions</Filter>
@@ -1285,35 +1285,35 @@
     <None Include="MySQL\Procedures\RMCObject\set_RMCObject_Type.sql">
       <Filter>MySQL\Procedures\RMCObject\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\set_RMTObject_Fabric_Open_Earth.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\set_RMTObject_Fabric_Open_Earth.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\call_RMTObject_Parent_Geo.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Call</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Parent_Geo.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Call</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\set_RMTObject_Fabric_Close.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\set_RMTObject_Fabric_Close.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\set_RMTObject_Fabric_Open_Misc.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\set_RMTObject_Fabric_Open_Misc.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Set</Filter>
     </None>
     <None Include="MySQL\Functions\Format_Name_P.sql">
       <Filter>MySQL\Functions</Filter>
     </None>
-    <None Include="SQL Server\Functions\Format_Name_P.sql">
-      <Filter>MS SQL\Functions\Format</Filter>
+    <None Include="SQL_Server\Functions\Format_Name_P.sql">
+      <Filter>SQL_Server\Functions\Format</Filter>
     </None>
     <None Include="MySQL\Procedures\RMPObject\call_RMPObject_Validate_Name.sql">
       <Filter>MySQL\Procedures\RMPObjects\Call\Validate</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMPObject\call_RMPObject_Validate_Name.sql">
-      <Filter>MS SQL\Procedures\RMPObject\Call\Validate</Filter>
+    <None Include="SQL_Server\Procedures\RMPObject\call_RMPObject_Validate_Name.sql">
+      <Filter>SQL_Server\Procedures\RMPObject\Call\Validate</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMPObject\set_RMPObject_Name.sql">
-      <Filter>MS SQL\Procedures\RMPObject\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMPObject\set_RMPObject_Name.sql">
+      <Filter>SQL_Server\Procedures\RMPObject\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMPObject\call_RMPObject_Event_Name.sql">
-      <Filter>MS SQL\Procedures\RMPObject\Call\Event</Filter>
+    <None Include="SQL_Server\Procedures\RMPObject\call_RMPObject_Event_Name.sql">
+      <Filter>SQL_Server\Procedures\RMPObject\Call\Event</Filter>
     </None>
     <None Include="MySQL\Procedures\RMPObject\set_RMPObject_Name.sql">
       <Filter>MySQL\Procedures\RMPObjects\Set</Filter>
@@ -1321,32 +1321,32 @@
     <None Include="MySQL\Procedures\RMPObject\call_RMPObject_Event_Name.sql">
       <Filter>MySQL\Procedures\RMPObjects\Call\Event</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMTObject\set_RMTObject_Fabric_Configure.sql">
-      <Filter>MS SQL\Procedures\RMTObject\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMTObject\set_RMTObject_Fabric_Configure.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Set</Filter>
     </None>
-    <None Include="SQL Server\Procedures\RMPObject\set_RMPObject_Parent.sql">
-      <Filter>MS SQL\Procedures\RMPObject\Set</Filter>
+    <None Include="SQL_Server\Procedures\RMPObject\set_RMPObject_Parent.sql">
+      <Filter>SQL_Server\Procedures\RMPObject\Set</Filter>
     </None>
     <None Include="MySQL\Procedures\RMPObject\set_RMPObject_Parent.sql">
       <Filter>MySQL\Procedures\RMPObjects\Set</Filter>
     </None>
-    <None Include="SQL Server\Tables\Admin.sql">
-      <Filter>MS SQL\Tables</Filter>
+    <None Include="SQL_Server\Tables\Admin.sql">
+      <Filter>SQL_Server\Tables</Filter>
     </None>
     <None Include="MySQL\Tables\Admin.sql">
       <Filter>MySQL\Tables</Filter>
     </None>
-    <None Include="SQL Server\Functions\Descendant_T.sql">
-      <Filter>MS SQL\Functions</Filter>
+    <None Include="SQL_Server\Functions\Descendant_T.sql">
+      <Filter>SQL_Server\Functions</Filter>
     </None>
-    <None Include="SQL Server\Functions\Descendant_C.sql">
-      <Filter>MS SQL\Functions</Filter>
+    <None Include="SQL_Server\Functions\Descendant_C.sql">
+      <Filter>SQL_Server\Functions</Filter>
     </None>
-    <None Include="SQL Server\LICENSE">
-      <Filter>MS SQL</Filter>
+    <None Include="SQL_Server\LICENSE">
+      <Filter>SQL_Server</Filter>
     </None>
-    <None Include="SQL Server\NOTICE">
-      <Filter>MS SQL</Filter>
+    <None Include="SQL_Server\NOTICE">
+      <Filter>SQL_Server</Filter>
     </None>
     <None Include="MySQL\LICENSE">
       <Filter>MySQL</Filter>
@@ -1363,14 +1363,17 @@
     <None Include="MySQL\Version\000-Initialize_database.sql">
       <Filter>MySQL\Procedures\Version</Filter>
     </None>
-    <None Include="SQL Server\Version\000-Initialize_database.sql">
-      <Filter>MS SQL\Version</Filter>
+    <None Include="SQL_Server\Version\000-Initialize_database.sql">
+      <Filter>SQL_Server\Version</Filter>
     </None>
-    <None Include="SQL Server\Version\001-Copy_data_from_old_database.sql">
-      <Filter>MS SQL\Version</Filter>
+    <None Include="SQL_Server\Version\001-Copy_data_from_old_database.sql">
+      <Filter>SQL_Server\Version</Filter>
     </None>
-    <None Include="SQL Server\Tables\Version.sql">
-      <Filter>MS SQL\Tables</Filter>
+    <None Include="SQL_Server\Tables\Version.sql">
+      <Filter>SQL_Server\Tables</Filter>
+    </None>
+    <None Include="SQL_Server\Procedures\RMTObject\get_RMTObject_Compute.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Get</Filter>
     </None>
   </ItemGroup>
 </Project>
