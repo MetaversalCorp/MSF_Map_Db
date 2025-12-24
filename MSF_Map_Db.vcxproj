@@ -194,6 +194,7 @@
     <None Include="MySQL\Version\000-Initialize_database.sql" />
     <None Include="MySQL\Version\001-Copy_data_from_old_database.sql" />
     <None Include="MySQL\_Create\Create.bat" />
+    <None Include="MySQL\_Create\Create.sh" />
     <None Include="MySQL\_Create\Database.sql" />
     <None Include="MySQL\_Notes\Constants.sql" />
     <None Include="SQL_Server\Functions\ArcLength.sql" />

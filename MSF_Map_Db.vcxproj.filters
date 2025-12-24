@@ -1375,5 +1375,8 @@
     <None Include="SQL_Server\Procedures\RMTObject\get_RMTObject_Compute.sql">
       <Filter>SQL_Server\Procedures\RMTObject\Get</Filter>
     </None>
+    <None Include="MySQL\_Create\Create.sh">
+      <Filter>MySQL\_Create</Filter>
+    </None>
   </ItemGroup>
 </Project>
