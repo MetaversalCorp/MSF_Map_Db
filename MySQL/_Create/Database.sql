@@ -18,18 +18,23 @@
 
 /* ************************************************************************************************************************** */
 
--- Rename [{MSF_Map}] to your desired database name
--- This script creates a MySQL database with UTF-8 support and appropriate settings
+-- PREREQUISITE --
 
--- Drop database (optional - remove if you want to preserve existing data)
--- DROP DATABASE [{MSF_Map}];
+-- TBD :
+-- Login similar to SQL Server
 
-CREATE DATABASE IF NOT EXISTS MSF_Map;
+/* ************************************************************************************************************************** */
 
-USE MSF_Map;
+-- REQUIRED BEFORE RUNNING THIS SCRIPT --
+
+-- 1. Rename [{MSF_Map}]    to your new database name
+
+-- TBD :
+-- 2. Rename [{Login_Name}] to your server's login (see above) that will be granted execute access to this database
+
+/* ************************************************************************************************************************** */
 
 /*
-**
 ** MySQL Database Creation Notes:
 **
 ** 1. File Management: MySQL handles data files automatically. No need to specify file paths.
@@ -47,8 +52,11 @@ USE MSF_Map;
 ** query_cache_size=32M
 ** log-bin=mysql-bin
 ** binlog_format=ROW
-**
 */
+
+CREATE DATABASE IF NOT EXISTS [{MSF_Map}];
+
+USE [{MSF_Map}];
 
 /* ************************************************************************************************************************** */
 
