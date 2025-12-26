@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP FUNCTION IF EXISTS dbo.Format_Owner
+GO
+
 CREATE FUNCTION dbo.Format_Owner
 (
    @twRPersonaIx                BIGINT

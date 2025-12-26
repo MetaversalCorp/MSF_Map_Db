@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP FUNCTION IF EXISTS dbo.IPstob
+GO
+
 CREATE FUNCTION dbo.IPstob
 (
    @sIPAddress     NVARCHAR (16)
@@ -42,6 +45,11 @@ BEGIN
 
        RETURN CONVERT (BINARY (4), @x)
 END
+GO
+
+/******************************************************************************************************************************/
+
+DROP FUNCTION IF EXISTS dbo.IPbtos
 GO
 
 CREATE FUNCTION dbo.IPbtos

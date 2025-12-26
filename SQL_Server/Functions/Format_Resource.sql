@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP FUNCTION IF EXISTS dbo.Format_Resource
+GO
+
 CREATE FUNCTION dbo.Format_Resource
 (
    @qwResource               BIGINT,

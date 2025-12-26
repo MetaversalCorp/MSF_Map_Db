@@ -18,6 +18,8 @@
 
 /* ************************************************************************************************************************** */
 
+DROP FUNCTION IF EXISTS Format_Properties_T;
+
 DELIMITER $$
 
 CREATE FUNCTION Format_Properties_T

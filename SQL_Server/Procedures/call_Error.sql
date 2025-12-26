@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP PROCEDURE IF EXISTS dbo.call_Error
+GO
+
 CREATE PROCEDURE dbo.call_Error
 (
    @dwError                      INT,

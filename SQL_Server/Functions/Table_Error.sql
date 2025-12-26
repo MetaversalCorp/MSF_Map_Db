@@ -18,7 +18,12 @@
 
 /******************************************************************************************************************************/
 
-CREATE FUNCTION dbo.Table_Error ()
+DROP FUNCTION IF EXISTS dbo.Table_Error
+GO
+
+CREATE FUNCTION dbo.Table_Error
+(
+)
 RETURNS @Error TABLE
 (
    nOrder                        INT             NOT NULL IDENTITY (0, 1),

@@ -18,6 +18,8 @@
 
 /* ************************************************************************************************************************** */
 
+DROP PROCEDURE IF EXISTS set_RMCObject_Type;
+
 DELIMITER $$
 
 CREATE PROCEDURE set_RMCObject_Type

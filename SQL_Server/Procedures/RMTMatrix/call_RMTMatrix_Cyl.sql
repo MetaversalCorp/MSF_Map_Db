@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP PROCEDURE IF EXISTS dbo.call_RMTMatrix_Cyl
+GO
+
 CREATE PROCEDURE dbo.call_RMTMatrix_Cyl
 (
    @twRMTObjectIx                BIGINT,

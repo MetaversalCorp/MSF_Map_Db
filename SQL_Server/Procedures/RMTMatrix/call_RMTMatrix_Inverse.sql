@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP PROCEDURE IF EXISTS dbo.call_RMTMatrix_Inverse
+GO
+
 CREATE PROCEDURE dbo.call_RMTMatrix_Inverse
 (
    @bnMatrix                     BIGINT

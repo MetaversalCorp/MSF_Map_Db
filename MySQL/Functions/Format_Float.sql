@@ -18,6 +18,8 @@
 
 /* ************************************************************************************************************************** */
 
+DROP FUNCTION IF EXISTS Format_Float;
+
 DELIMITER $$
 
 CREATE FUNCTION Format_Float

@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP FUNCTION IF EXISTS dbo.Format_ObjectHead
+GO
+
 CREATE FUNCTION dbo.Format_ObjectHead
 (
    @Parent_wClass           SMALLINT,

@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP PROCEDURE IF EXISTS dbo.set_RMCObject_Resource
+GO
+
 CREATE PROCEDURE dbo.set_RMCObject_Resource
 (
    @sIPAddress                   NVARCHAR (16),

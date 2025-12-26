@@ -20,6 +20,9 @@
 
 -- This function is really Date_Current
 
+DROP FUNCTION IF EXISTS dbo.Time_Current
+GO
+
 CREATE FUNCTION dbo.Time_Current
 (
 )

@@ -18,6 +18,8 @@
 
 /* ************************************************************************************************************************** */
 
+DROP FUNCTION IF EXISTS Format_Double3;
+
 DELIMITER $$
 
 CREATE FUNCTION Format_Double3

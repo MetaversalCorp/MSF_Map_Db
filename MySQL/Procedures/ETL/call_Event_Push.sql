@@ -22,6 +22,8 @@
    Procedures call this function to push events onto the queue.
 */
 
+DROP PROCEDURE IF EXISTS call_Event_Push;
+
 DELIMITER $$
 
 CREATE PROCEDURE call_Event_Push

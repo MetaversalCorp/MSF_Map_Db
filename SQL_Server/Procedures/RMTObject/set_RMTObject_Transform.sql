@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP PROCEDURE IF EXISTS dbo.set_RMTObject_Transform
+GO
+
 CREATE PROCEDURE dbo.set_RMTObject_Transform
 (
    @sIPAddress                   NVARCHAR (16),

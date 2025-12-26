@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP PROCEDURE IF EXISTS dbo.call_RMRoot_Validate_Owner
+GO
+
 CREATE PROCEDURE dbo.call_RMRoot_Validate_Owner
 (
    @ObjectHead_Parent_wClass     SMALLINT,

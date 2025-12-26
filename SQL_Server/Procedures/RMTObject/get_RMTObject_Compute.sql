@@ -37,6 +37,9 @@
 
 /******************************************************************************************************************************/
 
+DROP PROCEDURE IF EXISTS dbo.get_RMTObject_Compute
+GO
+
 CREATE PROCEDURE dbo.get_RMTObject_Compute
 (
 -- @twRMTParentIx             BIGINT,

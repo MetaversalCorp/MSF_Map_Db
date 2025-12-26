@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP FUNCTION IF EXISTS dbo.Format_Type_P
+GO
+
 CREATE FUNCTION dbo.Format_Type_P
 (
    @bType                    TINYINT,

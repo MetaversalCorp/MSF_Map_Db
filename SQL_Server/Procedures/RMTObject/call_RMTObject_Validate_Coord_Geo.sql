@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP PROCEDURE IF EXISTS dbo.call_RMTObject_Validate_Coord_Geo
+GO
+
 CREATE PROCEDURE dbo.call_RMTObject_Validate_Coord_Geo
 (
    @ObjectHead_Parent_wClass     SMALLINT,

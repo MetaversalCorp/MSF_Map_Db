@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP PROCEDURE IF EXISTS dbo.set_RMCObject_Name
+GO
+
 CREATE PROCEDURE dbo.set_RMCObject_Name
 (
    @sIPAddress                   NVARCHAR (16),

@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP FUNCTION IF EXISTS dbo.Format_Float
+GO
+
 CREATE FUNCTION dbo.Format_Float
 (
    @d   FLOAT (24)

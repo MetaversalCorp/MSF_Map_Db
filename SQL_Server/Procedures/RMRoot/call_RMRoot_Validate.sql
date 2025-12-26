@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP PROCEDURE IF EXISTS dbo.call_RMRoot_Validate
+GO
+
 CREATE PROCEDURE dbo.call_RMRoot_Validate
 (
    @twRPersonaIx                 BIGINT,

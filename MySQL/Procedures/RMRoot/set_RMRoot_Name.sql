@@ -18,6 +18,8 @@
 
 /* ************************************************************************************************************************** */
 
+DROP PROCEDURE IF EXISTS set_RMRoot_Name;
+
 DELIMITER $$
 
 CREATE PROCEDURE set_RMRoot_Name

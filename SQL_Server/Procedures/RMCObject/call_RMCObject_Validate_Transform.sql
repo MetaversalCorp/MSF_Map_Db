@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP PROCEDURE IF EXISTS dbo.call_RMCObject_Validate_Transform
+GO
+
 CREATE PROCEDURE dbo.call_RMCObject_Validate_Transform
 (
    @ObjectHead_Parent_wClass     SMALLINT,

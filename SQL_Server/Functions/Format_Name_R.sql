@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP FUNCTION IF EXISTS dbo.Format_Name_R
+GO
+
 CREATE FUNCTION dbo.Format_Name_R
 (
    @wsRMRootId            NVARCHAR (48)

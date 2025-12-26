@@ -18,6 +18,8 @@
 
 /* ************************************************************************************************************************** */
 
+DROP PROCEDURE IF EXISTS call_RMTObject_Select;
+
 DELIMITER $$
 
 CREATE PROCEDURE call_RMTObject_Select

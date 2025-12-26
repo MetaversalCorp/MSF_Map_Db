@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP PROCEDURE IF EXISTS dbo.call_RMTMatrix_Rotate
+GO
+
 CREATE PROCEDURE dbo.call_RMTMatrix_Rotate
 (
    @bnMatrix_L                   BIGINT,

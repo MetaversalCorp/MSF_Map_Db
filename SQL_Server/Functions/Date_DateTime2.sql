@@ -23,6 +23,9 @@
 -- There are  719162 days between Jan 1, 0001 and Jan 1, 1970
 -- There are 86400000 1/1000 sec per day
 
+DROP FUNCTION IF EXISTS dbo.Date_DateTime2
+GO
+
 CREATE FUNCTION dbo.Date_DateTime2
 (
    @dtStamp DATETIME2  -- DATETIME2 values must be in UTC and generally generated from GETUTCDATE ()

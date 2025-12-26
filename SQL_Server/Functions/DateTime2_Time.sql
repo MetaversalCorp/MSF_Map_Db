@@ -25,6 +25,9 @@
 
 -- 134774 * 5529600 = 745246310400
 
+DROP FUNCTION IF EXISTS dbo.DateTime2_Time
+GO
+
 CREATE FUNCTION dbo.DateTime2_Time
 (
    @tmStamp BIGINT

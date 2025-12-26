@@ -18,7 +18,12 @@
 
 /******************************************************************************************************************************/
 
-CREATE FUNCTION dbo.Table_Results ()
+DROP FUNCTION IF EXISTS dbo.Table_Results
+GO
+
+CREATE FUNCTION dbo.Table_Results
+(
+)
 RETURNS @Results TABLE
 (
    nResultSet                    INT,

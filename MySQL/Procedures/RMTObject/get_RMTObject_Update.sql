@@ -18,6 +18,8 @@
 
 /* ************************************************************************************************************************** */
 
+DROP PROCEDURE IF EXISTS get_RMTObject_Update;
+
 DELIMITER $$
 
 CREATE PROCEDURE get_RMTObject_Update

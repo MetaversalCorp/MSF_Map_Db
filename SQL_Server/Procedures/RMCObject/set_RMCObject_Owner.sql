@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP PROCEDURE IF EXISTS dbo.set_RMCObject_Owner
+GO
+
 CREATE PROCEDURE dbo.set_RMCObject_Owner
 (
    @sIPAddress                   NVARCHAR (16),

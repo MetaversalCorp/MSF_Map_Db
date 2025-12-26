@@ -18,6 +18,8 @@
 
 /* ************************************************************************************************************************** */
 
+DROP PROCEDURE IF EXISTS call_RMPObject_Validate_Name;
+
 DELIMITER $$
 
 CREATE PROCEDURE call_RMPObject_Validate_Name

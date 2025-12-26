@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP PROCEDURE IF EXISTS dbo.call_RMPObject_Event_Type
+GO
+
 CREATE PROCEDURE dbo.call_RMPObject_Event_Type
 (
    @twRMPObjectIx                BIGINT,

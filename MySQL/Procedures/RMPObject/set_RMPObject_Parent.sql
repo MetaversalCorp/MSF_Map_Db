@@ -20,6 +20,8 @@
 
 -- Note that this is not a function of the RMPObject itself, but rather a function of the two parents involved.
 
+DROP PROCEDURE IF EXISTS set_RMPObject_Parent;
+
 DELIMITER $$
 
 CREATE PROCEDURE set_RMPObject_Parent

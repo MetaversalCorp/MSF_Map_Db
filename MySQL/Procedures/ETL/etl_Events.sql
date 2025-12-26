@@ -22,6 +22,8 @@
    The NodeJS server calls this function periodically to retrieve events from the queue.
 */
 
+DROP PROCEDURE IF EXISTS etl_Events;
+
 DELIMITER $$
 
 CREATE PROCEDURE etl_Events

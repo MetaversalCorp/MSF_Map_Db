@@ -18,6 +18,8 @@
 
 /* ************************************************************************************************************************** */
 
+DROP FUNCTION IF EXISTS Format_Control;
+
 DELIMITER $$
 
 CREATE FUNCTION Format_Control

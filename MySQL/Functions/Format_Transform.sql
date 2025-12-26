@@ -18,6 +18,8 @@
 
 /* ************************************************************************************************************************** */
 
+DROP FUNCTION IF EXISTS Format_Transform;
+
 DELIMITER $$
 
 CREATE FUNCTION Format_Transform

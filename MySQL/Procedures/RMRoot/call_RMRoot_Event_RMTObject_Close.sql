@@ -18,6 +18,8 @@
 
 /* ************************************************************************************************************************** */
 
+DROP PROCEDURE IF EXISTS call_RMRoot_Event_RMTObject_Close;
+
 DELIMITER $$
 
 CREATE PROCEDURE call_RMRoot_Event_RMTObject_Close

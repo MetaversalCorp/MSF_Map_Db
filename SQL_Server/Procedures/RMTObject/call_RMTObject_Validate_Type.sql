@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP PROCEDURE IF EXISTS dbo.call_RMTObject_Validate_Type
+GO
+
 CREATE PROCEDURE dbo.call_RMTObject_Validate_Type
 (
    @ObjectHead_Parent_wClass     SMALLINT,

@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP FUNCTION IF EXISTS dbo.ArcLength
+GO
+
 CREATE FUNCTION dbo.ArcLength
 (
    @dRadius          FLOAT (53),

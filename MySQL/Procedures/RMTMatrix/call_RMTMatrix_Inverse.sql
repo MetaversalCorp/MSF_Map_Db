@@ -18,6 +18,8 @@
 
 /* ************************************************************************************************************************** */
 
+DROP PROCEDURE IF EXISTS call_RMTMatrix_Inverse;
+
 DELIMITER $$
 
 CREATE PROCEDURE call_RMTMatrix_Inverse

@@ -21,6 +21,9 @@
 /*
 */
 
+DROP PROCEDURE IF EXISTS dbo.get_RMCObject
+GO
+
 CREATE PROCEDURE dbo.get_RMCObject
 (
    @sIPAddress                   NVARCHAR (16),

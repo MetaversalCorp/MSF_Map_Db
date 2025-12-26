@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP PROCEDURE IF EXISTS dbo.call_RMCObject_Validate
+GO
+
 CREATE PROCEDURE dbo.call_RMCObject_Validate
 (
    @twRPersonaIx                 BIGINT,

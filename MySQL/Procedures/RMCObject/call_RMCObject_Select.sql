@@ -18,8 +18,12 @@
 
 /* ************************************************************************************************************************** */
 
+DROP PROCEDURE IF EXISTS call_RMCObject_Select;
+
 DELIMITER $$
-CREATE PROCEDURE call_RMCObject_Select(
+
+CREATE PROCEDURE call_RMCObject_Select
+(
    IN nResultSet                   INT
 )
 BEGIN

@@ -18,6 +18,8 @@
 
 /* ************************************************************************************************************************** */
 
+DROP FUNCTION IF EXISTS Format_ObjectHead;
+
 DELIMITER $$
 
 CREATE FUNCTION Format_ObjectHead

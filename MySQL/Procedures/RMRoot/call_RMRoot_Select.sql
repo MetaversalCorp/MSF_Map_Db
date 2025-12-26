@@ -18,6 +18,8 @@
 
 /* ************************************************************************************************************************** */
 
+DROP PROCEDURE IF EXISTS call_RMRoot_Select;
+
 DELIMITER $$
 
 CREATE PROCEDURE call_RMRoot_Select

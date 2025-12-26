@@ -18,6 +18,8 @@
 
 /* ************************************************************************************************************************** */
 
+DROP FUNCTION IF EXISTS Format_Resource;
+
 DELIMITER $$
 
 CREATE FUNCTION Format_Resource

@@ -18,7 +18,12 @@
 
 /******************************************************************************************************************************/
 
-CREATE FUNCTION dbo.Table_Event ()
+DROP FUNCTION IF EXISTS dbo.Table_Event
+GO
+
+CREATE FUNCTION dbo.Table_Event
+(
+)
 RETURNS @Event TABLE
 (
    nOrder                        INT             NOT NULL IDENTITY (0, 1),

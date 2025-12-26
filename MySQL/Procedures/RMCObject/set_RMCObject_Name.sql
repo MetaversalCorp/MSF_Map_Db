@@ -18,6 +18,8 @@
 
 /* ************************************************************************************************************************** */
 
+DROP PROCEDURE IF EXISTS set_RMCObject_Name;
+
 DELIMITER $$
 
 CREATE PROCEDURE set_RMCObject_Name

@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP FUNCTION IF EXISTS dbo.Descendant_T
+GO
+
 CREATE FUNCTION dbo.Descendant_T
 (
    @Ancestor_wClass            SMALLINT,

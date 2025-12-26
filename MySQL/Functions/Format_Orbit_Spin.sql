@@ -18,6 +18,8 @@
 
 /* ************************************************************************************************************************** */
 
+DROP FUNCTION IF EXISTS Format_Orbit_Spin;
+
 DELIMITER $$
 
 CREATE FUNCTION Format_Orbit_Spin

@@ -18,6 +18,8 @@
 
 /* ************************************************************************************************************************** */
 
+DROP PROCEDURE IF EXISTS call_RMCObject_Event_Orbit_Spin;
+
 DELIMITER $$
 
 CREATE PROCEDURE call_RMCObject_Event_Orbit_Spin

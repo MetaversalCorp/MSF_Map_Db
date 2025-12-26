@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP FUNCTION IF EXISTS dbo.Format_Orbit_Spin
+GO
+
 CREATE FUNCTION dbo.Format_Orbit_Spin
 (
    @tmPeriod                 BIGINT,

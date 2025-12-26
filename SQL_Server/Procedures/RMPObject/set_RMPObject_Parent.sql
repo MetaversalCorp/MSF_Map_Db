@@ -20,6 +20,9 @@
 
 -- Note that this is not a function of the RMPObject itself, but rather a function of the two parents involved.
 
+DROP PROCEDURE IF EXISTS dbo.set_RMPObject_Parent
+GO
+
 CREATE PROCEDURE dbo.set_RMPObject_Parent
 (
    @sIPAddress                   NVARCHAR (16),

@@ -18,6 +18,8 @@
 
 /* ************************************************************************************************************************** */
 
+DROP PROCEDURE IF EXISTS call_RMPObject_Event_RMPObject_Open;
+
 DELIMITER $$
 
 CREATE PROCEDURE call_RMPObject_Event_RMPObject_Open

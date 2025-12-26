@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP PROCEDURE IF EXISTS dbo.call_RMTMatrix_Translate
+GO
+
 CREATE PROCEDURE dbo.call_RMTMatrix_Translate
 (
    @bnMatrix_L                   BIGINT,

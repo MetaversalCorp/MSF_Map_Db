@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP PROCEDURE IF EXISTS dbo.call_RMPObject_Event_RMPObject_Close
+GO
+
 CREATE PROCEDURE dbo.call_RMPObject_Event_RMPObject_Close
 (
    @twRMPObjectIx                BIGINT,

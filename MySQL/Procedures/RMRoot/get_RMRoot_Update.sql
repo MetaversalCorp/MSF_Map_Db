@@ -18,6 +18,8 @@
 
 /* ************************************************************************************************************************** */
 
+DROP PROCEDURE IF EXISTS get_RMRoot_Update;
+
 DELIMITER $$
 
 CREATE PROCEDURE get_RMRoot_Update

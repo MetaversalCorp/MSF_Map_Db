@@ -18,6 +18,8 @@
 
 /* ************************************************************************************************************************** */
 
+DROP FUNCTION IF EXISTS Format_Bound;
+
 DELIMITER $$
 
 CREATE FUNCTION Format_Bound

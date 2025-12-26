@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP PROCEDURE IF EXISTS dbo.call_RMTObject_Event_Properties
+GO
+
 CREATE PROCEDURE dbo.call_RMTObject_Event_Properties
 (
    @twRMTObjectIx                BIGINT,

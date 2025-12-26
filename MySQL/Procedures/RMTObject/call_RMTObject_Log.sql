@@ -18,6 +18,8 @@
 
 /* ************************************************************************************************************************** */
 
+DROP PROCEDURE IF EXISTS call_RMTObject_Log;
+
 DELIMITER $$
 
 CREATE PROCEDURE call_RMTObject_Log

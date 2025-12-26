@@ -25,6 +25,9 @@
 
 -- 584388 * 5529600 = 3231431884800
 
+DROP FUNCTION IF EXISTS dbo.Time_DateTime2
+GO
+
 CREATE FUNCTION dbo.Time_DateTime2
 (
    @dtStamp DATETIME2  -- DATETIME2 values must be in UTC and generally generated from GETUTCDATE ()

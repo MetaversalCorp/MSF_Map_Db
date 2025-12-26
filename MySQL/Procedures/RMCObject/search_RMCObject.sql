@@ -18,6 +18,8 @@
 
 /* ************************************************************************************************************************** */
 
+DROP PROCEDURE IF EXISTS search_RMCObject;
+
 DELIMITER $$
 
 CREATE PROCEDURE search_RMCObject

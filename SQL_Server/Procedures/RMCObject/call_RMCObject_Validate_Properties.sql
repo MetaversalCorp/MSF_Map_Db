@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP PROCEDURE IF EXISTS dbo.call_RMCObject_Validate_Properties
+GO
+
 CREATE PROCEDURE dbo.call_RMCObject_Validate_Properties
 (
    @ObjectHead_Parent_wClass     SMALLINT,

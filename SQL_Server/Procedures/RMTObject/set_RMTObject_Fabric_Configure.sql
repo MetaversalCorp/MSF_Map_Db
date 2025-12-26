@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP PROCEDURE IF EXISTS dbo.set_RMTObject_Fabric_Configure
+GO
+
 CREATE PROCEDURE dbo.set_RMTObject_Fabric_Configure
 (
    @sIPAddress                   NVARCHAR (16),

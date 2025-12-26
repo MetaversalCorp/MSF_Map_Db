@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP PROCEDURE IF EXISTS dbo.call_RMTObject_Log
+GO
+
 CREATE PROCEDURE dbo.call_RMTObject_Log
    @bOp                          TINYINT,
    @sIPAddress                   NVARCHAR (16),

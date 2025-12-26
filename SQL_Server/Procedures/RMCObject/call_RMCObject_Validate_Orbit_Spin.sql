@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP PROCEDURE IF EXISTS dbo.call_RMCObject_Validate_Orbit_Spin
+GO
+
 CREATE PROCEDURE dbo.call_RMCObject_Validate_Orbit_Spin
 (
    @ObjectHead_Parent_wClass     SMALLINT,

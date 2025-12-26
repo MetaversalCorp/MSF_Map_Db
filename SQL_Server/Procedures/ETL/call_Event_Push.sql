@@ -22,6 +22,9 @@
 ** Procedures call this function to push events onto the queue.
 */
 
+DROP PROCEDURE IF EXISTS dbo.call_Event_Push
+GO
+
 CREATE PROCEDURE dbo.call_Event_Push
 AS
 BEGIN

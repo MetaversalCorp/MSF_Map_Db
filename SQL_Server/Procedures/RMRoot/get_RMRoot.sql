@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP PROCEDURE IF EXISTS dbo.get_RMRoot
+GO
+
 CREATE PROCEDURE dbo.get_RMRoot
 (
    @sIPAddress                   NVARCHAR (16),

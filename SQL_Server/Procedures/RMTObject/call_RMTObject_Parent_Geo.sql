@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP PROCEDURE IF EXISTS dbo.call_RMTObject_Parent_Geo
+GO
+
 CREATE PROCEDURE dbo.call_RMTObject_Parent_Geo
 (
    @twRMTObjectIx_Root           BIGINT,

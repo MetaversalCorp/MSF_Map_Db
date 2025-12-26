@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP FUNCTION IF EXISTS dbo.Format_Bound
+GO
+
 CREATE FUNCTION dbo.Format_Bound
 (
    @dX                      FLOAT (53),

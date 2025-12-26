@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP FUNCTION IF EXISTS dbo.Format_Properties_C
+GO
+
 CREATE FUNCTION dbo.Format_Properties_C
 (
    @fMass                    FLOAT (24),

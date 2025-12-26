@@ -18,6 +18,8 @@
 
 /* ************************************************************************************************************************** */
 
+DROP PROCEDURE IF EXISTS set_RMTObject_Owner;
+
 DELIMITER $$
 
 CREATE PROCEDURE set_RMTObject_Owner

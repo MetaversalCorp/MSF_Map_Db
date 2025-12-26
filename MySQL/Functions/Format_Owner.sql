@@ -18,6 +18,8 @@
 
 /* ************************************************************************************************************************** */
 
+DROP FUNCTION IF EXISTS Format_Owner;
+
 DELIMITER $$
 
 CREATE FUNCTION Format_Owner

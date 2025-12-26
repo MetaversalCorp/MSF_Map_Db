@@ -18,6 +18,8 @@
 
 /* ************************************************************************************************************************** */
 
+DROP PROCEDURE IF EXISTS call_RMTMatrix_Scale;
+
 DELIMITER $$
 
 CREATE PROCEDURE call_RMTMatrix_Scale

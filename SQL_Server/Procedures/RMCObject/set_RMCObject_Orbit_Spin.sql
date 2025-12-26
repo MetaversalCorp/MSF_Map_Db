@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP PROCEDURE IF EXISTS dbo.set_RMCObject_Orbit_Spin
+GO
+
 CREATE PROCEDURE dbo.set_RMCObject_Orbit_Spin
 (
    @sIPAddress                   NVARCHAR (16),

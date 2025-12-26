@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP PROCEDURE IF EXISTS dbo.call_RMCObject_Event_Bound
+GO
+
 CREATE PROCEDURE dbo.call_RMCObject_Event_Bound
 (
    @twRMCObjectIx                BIGINT,

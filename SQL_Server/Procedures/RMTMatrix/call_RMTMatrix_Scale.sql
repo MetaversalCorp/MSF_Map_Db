@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP PROCEDURE IF EXISTS dbo.call_RMTMatrix_Scale
+GO
+
 CREATE PROCEDURE dbo.call_RMTMatrix_Scale
 (
    @bnMatrix_L                   BIGINT,

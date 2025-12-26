@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP FUNCTION IF EXISTS dbo.Format_Properties_T
+GO
+
 CREATE FUNCTION dbo.Format_Properties_T
 (
    @bLockToGround            TINYINT,

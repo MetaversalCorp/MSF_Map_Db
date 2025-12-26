@@ -18,6 +18,8 @@
 
 /* ************************************************************************************************************************** */
 
+DROP FUNCTION IF EXISTS Format_Type_T;
+
 DELIMITER $$
 
 CREATE FUNCTION Format_Type_T

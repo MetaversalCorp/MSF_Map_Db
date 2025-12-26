@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP PROCEDURE IF EXISTS dbo.call_RMTMatrix_Mult
+GO
+
 CREATE PROCEDURE dbo.call_RMTMatrix_Mult
 (
    @bnMatrix_R                   BIGINT,

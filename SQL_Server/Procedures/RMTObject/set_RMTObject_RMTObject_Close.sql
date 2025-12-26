@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP PROCEDURE IF EXISTS dbo.set_RMTObject_RMTObject_Close
+GO
+
 CREATE PROCEDURE dbo.set_RMTObject_RMTObject_Close
 (
    @sIPAddress                   NVARCHAR (16),

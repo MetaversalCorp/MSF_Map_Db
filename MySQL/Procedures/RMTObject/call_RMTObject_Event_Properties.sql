@@ -18,6 +18,8 @@
 
 /* ************************************************************************************************************************** */
 
+DROP PROCEDURE IF EXISTS call_RMTObject_Event_Properties;
+
 DELIMITER $$
 
 CREATE PROCEDURE call_RMTObject_Event_Properties

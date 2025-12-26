@@ -18,6 +18,8 @@
 
 /* ************************************************************************************************************************** */
 
+DROP PROCEDURE IF EXISTS set_RMTObject_Bound;
+
 DELIMITER $$
 
 CREATE PROCEDURE set_RMTObject_Bound

@@ -18,6 +18,8 @@
 
 /* ************************************************************************************************************************** */
 
+DROP PROCEDURE IF EXISTS call_RMPObject_Event_Bound;
+
 DELIMITER $$
 
 CREATE PROCEDURE call_RMPObject_Event_Bound

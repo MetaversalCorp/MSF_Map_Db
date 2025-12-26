@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP PROCEDURE IF EXISTS dbo.call_RMTObject_Validate_Coord_Nul
+GO
+
 CREATE PROCEDURE dbo.call_RMTObject_Validate_Coord_Nul
 (
    @ObjectHead_Parent_wClass     SMALLINT,

@@ -18,6 +18,8 @@
 
 /* ************************************************************************************************************************** */
 
+DROP PROCEDURE IF EXISTS search_RMTObject;
+
 DELIMITER $$
 
 CREATE PROCEDURE search_RMTObject

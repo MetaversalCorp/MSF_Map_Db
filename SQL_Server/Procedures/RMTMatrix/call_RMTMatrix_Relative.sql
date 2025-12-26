@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP PROCEDURE IF EXISTS dbo.call_RMTMatrix_Relative
+GO
+
 CREATE PROCEDURE dbo.call_RMTMatrix_Relative
 (
    @ObjectHead_Parent_wClass     SMALLINT,

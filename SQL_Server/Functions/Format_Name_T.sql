@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP FUNCTION IF EXISTS dbo.Format_Name_T
+GO
+
 CREATE FUNCTION dbo.Format_Name_T
 (
    @wsRMTObjectId            NVARCHAR (48)

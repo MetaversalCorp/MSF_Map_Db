@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP PROCEDURE IF EXISTS dbo.call_RMPObject_Select
+GO
+
 CREATE PROCEDURE dbo.call_RMPObject_Select
 (
    @nResultSet                   INT

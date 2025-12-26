@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP FUNCTION IF EXISTS dbo.Format_Transform
+GO
+
 CREATE FUNCTION dbo.Format_Transform
 (
    @Position_dX               FLOAT (53),

@@ -20,6 +20,8 @@
 
 -- This function is really Date_Current
 
+DROP FUNCTION IF EXISTS Time_Current;
+
 DELIMITER $$
 
 CREATE FUNCTION Time_Current

@@ -22,6 +22,9 @@
 ** The NodeJS server calls this function periodically to retrieve events from the queue.
 */
 
+DROP PROCEDURE IF EXISTS dbo.etl_Events
+GO
+
 CREATE PROCEDURE dbo.etl_Events
 AS
 BEGIN

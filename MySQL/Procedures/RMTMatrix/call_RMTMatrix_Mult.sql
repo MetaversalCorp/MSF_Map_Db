@@ -18,6 +18,8 @@
 
 /* ************************************************************************************************************************** */
 
+DROP PROCEDURE IF EXISTS call_RMTMatrix_Mult;
+
 DELIMITER $$
 
 CREATE PROCEDURE call_RMTMatrix_Mult

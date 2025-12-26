@@ -18,6 +18,8 @@
 
 /* ************************************************************************************************************************** */
 
+DROP PROCEDURE IF EXISTS call_RMTObject_Validate_Coord_Geo;
+
 DELIMITER $$
 
 CREATE PROCEDURE call_RMTObject_Validate_Coord_Geo

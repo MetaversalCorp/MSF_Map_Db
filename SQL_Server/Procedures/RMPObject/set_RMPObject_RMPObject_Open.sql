@@ -18,6 +18,9 @@
 
 /******************************************************************************************************************************/
 
+DROP PROCEDURE IF EXISTS dbo.set_RMPObject_RMPObject_Open
+GO
+
 CREATE PROCEDURE dbo.set_RMPObject_RMPObject_Open
 (
    @sIPAddress                   NVARCHAR (16),

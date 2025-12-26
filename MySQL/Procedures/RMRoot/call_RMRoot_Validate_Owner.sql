@@ -18,6 +18,8 @@
 
 /* ************************************************************************************************************************** */
 
+DROP PROCEDURE IF EXISTS call_RMRoot_Validate_Owner;
+
 DELIMITER $$
 
 CREATE PROCEDURE call_RMRoot_Validate_Owner
