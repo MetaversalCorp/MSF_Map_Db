@@ -392,6 +392,7 @@
     <None Include="SQL_Server\Version\000-Initialize_database.sql" />
     <None Include="SQL_Server\Version\001-Copy_data_from_old_database.sql" />
     <None Include="SQL_Server\_Create\Create.bat" />
+    <None Include="SQL_Server\_Create\Create.sh" />
     <None Include="SQL_Server\_Create\Database.sql" />
     <None Include="SQL_Server\_Notes\Constants.sql" />
   </ItemGroup>

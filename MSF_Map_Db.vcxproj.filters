@@ -1378,5 +1378,8 @@
     <None Include="MySQL\_Create\Create.sh">
       <Filter>MySQL\_Create</Filter>
     </None>
+    <None Include="SQL_Server\_Create\Create.sh">
+      <Filter>SQL_Server\_Create</Filter>
+    </None>
   </ItemGroup>
 </Project>

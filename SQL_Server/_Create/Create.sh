@@ -16,16 +16,13 @@
 #
 #  SPDX-License-Identifier: Apache-2.0
 
-# Ensure script stops on error
-set -e
-
 # Copy Database.sql to _Distrib/MSF_Map.sql
 cp ./Database.sql ../_Distrib/MSF_Map.sql
 
 # Append contents of all .sql files from each directory to MSF_Map.sql
-cat ../Users/*.sql                >> ../_Distrib/MSF_Map.sql
+#cat ../Users/*.sql                >> ../_Distrib/MSF_Map.sql
 cat ../Tables/*.sql               >> ../_Distrib/MSF_Map.sql
-cat ../Views/*.sql                >> ../_Distrib/MSF_Map.sql
+#cat ../Views/*.sql                >> ../_Distrib/MSF_Map.sql
 cat ../Functions/*.sql            >> ../_Distrib/MSF_Map.sql
 cat ../Procedures/*.sql           >> ../_Distrib/MSF_Map.sql
 cat ../Procedures/ETL/*.sql       >> ../_Distrib/MSF_Map.sql
@@ -34,5 +31,5 @@ cat ../Procedures/RMTMatrix/*.sql >> ../_Distrib/MSF_Map.sql
 cat ../Procedures/RMTObject/*.sql >> ../_Distrib/MSF_Map.sql
 cat ../Procedures/RMCObject/*.sql >> ../_Distrib/MSF_Map.sql
 cat ../Procedures/RMRoot/*.sql    >> ../_Distrib/MSF_Map.sql
-cat ../Jobs/*.sql                 >> ../_Distrib/MSF_Map.sql
+#cat ../Jobs/*.sql                 >> ../_Distrib/MSF_Map.sql
 cat ../Version/*.sql              >> ../_Distrib/MSF_Map.sql
