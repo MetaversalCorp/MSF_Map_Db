@@ -41,16 +41,16 @@ BEGIN
 
            SET nResult = 0;
 
-        SELECT d00, d01, d02, d03,
-               d10, d11, d12, d13,
-               d20, d21, d22, d23,
-               d30, d31, d32, d33
-          INTO d00, d01, d02, d03,
-               d10, d11, d12, d13,
-               d20, d21, d22, d23,
-               d30, d31, d32, d33
-          FROM RMTMatrix
-         WHERE bnMatrix = bnMatrix;
+        SELECT m.d00, m.d01, m.d02, m.d03,
+               m.d10, m.d11, m.d12, m.d13,
+               m.d20, m.d21, m.d22, m.d23,
+               m.d30, m.d31, m.d32, m.d33
+          INTO d00,   d01,   d02,   d03,
+               d10,   d11,   d12,   d13,
+               d20,   d21,   d22,   d23,
+               d30,   d31,   d32,   d33
+          FROM RMTMatrix AS m
+         WHERE m.bnMatrix = bnMatrix;
 
            SET s0 = d00 * d11 - d10 * d01;
            SET s1 = d00 * d12 - d10 * d02;
@@ -70,29 +70,29 @@ BEGIN
 
             IF dDeterminant <> 0
           THEN
-                SET dDeterminant_ = 1 / dDeterminant;
+                    SET dDeterminant_ = 1 / dDeterminant;
            
-                 UPDATE RMTMatrix
-                    SET d00 = ( d11 * c5 - d12 * c4 + d13 * c3) * dDeterminant_,
-                        d01 = (-d01 * c5 + d02 * c4 - d03 * c3) * dDeterminant_,
-                        d02 = ( d31 * s5 - d32 * s4 + d33 * s3) * dDeterminant_,
-                        d03 = (-d21 * s5 + d22 * s4 - d23 * s3) * dDeterminant_,
+                 UPDATE RMTMatrix AS m
+                    SET m.d00 = ( d11 * c5 - d12 * c4 + d13 * c3) * dDeterminant_,
+                        m.d01 = (-d01 * c5 + d02 * c4 - d03 * c3) * dDeterminant_,
+                        m.d02 = ( d31 * s5 - d32 * s4 + d33 * s3) * dDeterminant_,
+                        m.d03 = (-d21 * s5 + d22 * s4 - d23 * s3) * dDeterminant_,
            
-                        d10 = (-d10 * c5 + d12 * c2 - d13 * c1) * dDeterminant_,
-                        d11 = ( d00 * c5 - d02 * c2 + d03 * c1) * dDeterminant_,
-                        d12 = (-d30 * s5 + d32 * s2 - d33 * s1) * dDeterminant_,
-                        d13 = ( d20 * s5 - d22 * s2 + d23 * s1) * dDeterminant_,
+                        m.d10 = (-d10 * c5 + d12 * c2 - d13 * c1) * dDeterminant_,
+                        m.d11 = ( d00 * c5 - d02 * c2 + d03 * c1) * dDeterminant_,
+                        m.d12 = (-d30 * s5 + d32 * s2 - d33 * s1) * dDeterminant_,
+                        m.d13 = ( d20 * s5 - d22 * s2 + d23 * s1) * dDeterminant_,
            
-                        d20 = ( d10 * c4 - d11 * c2 + d13 * c0) * dDeterminant_,
-                        d21 = (-d00 * c4 + d01 * c2 - d03 * c0) * dDeterminant_,
-                        d22 = ( d30 * s4 - d31 * s2 + d33 * s0) * dDeterminant_,
-                        d23 = (-d20 * s4 + d21 * s2 - d23 * s0) * dDeterminant_,
+                        m.d20 = ( d10 * c4 - d11 * c2 + d13 * c0) * dDeterminant_,
+                        m.d21 = (-d00 * c4 + d01 * c2 - d03 * c0) * dDeterminant_,
+                        m.d22 = ( d30 * s4 - d31 * s2 + d33 * s0) * dDeterminant_,
+                        m.d23 = (-d20 * s4 + d21 * s2 - d23 * s0) * dDeterminant_,
            
-                        d30 = (-d10 * c3 + d11 * c1 - d12 * c0) * dDeterminant_,
-                        d31 = ( d00 * c3 - d01 * c1 + d02 * c0) * dDeterminant_,
-                        d32 = (-d30 * s3 + d31 * s1 - d32 * s0) * dDeterminant_,
-                        d33 = ( d20 * s3 - d21 * s1 + d22 * s0) * dDeterminant_
-                  WHERE bnMatrix = 0 - bnMatrix;
+                        m.d30 = (-d10 * c3 + d11 * c1 - d12 * c0) * dDeterminant_,
+                        m.d31 = ( d00 * c3 - d01 * c1 + d02 * c0) * dDeterminant_,
+                        m.d32 = (-d30 * s3 + d31 * s1 - d32 * s0) * dDeterminant_,
+                        m.d33 = ( d20 * s3 - d21 * s1 + d22 * s0) * dDeterminant_
+                  WHERE m.bnMatrix = 0 - bnMatrix;
 
                     SET nResult = 1;
         END IF ;

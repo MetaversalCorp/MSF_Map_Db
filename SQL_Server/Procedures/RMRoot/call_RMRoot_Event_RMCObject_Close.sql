@@ -24,7 +24,7 @@ GO
 CREATE PROCEDURE dbo.call_RMRoot_Event_RMCObject_Close
 (
    @twRMRootIx                   BIGINT,
-   @twRMCObjectIx                BIGINT
+   @twRMCObjectIx_Close          BIGINT
 )
 AS
 BEGIN
@@ -37,36 +37,52 @@ BEGIN
        DECLARE @bError    INT,
                @twEventIz BIGINT
 
+            -- Create the temp CObject table
+        SELECT * INTO #CObject FROM dbo.Table_Object ()
+
+            -- Create the temp TObject table
+        SELECT * INTO #TObject FROM dbo.Table_Object ()
+
+            -- Create the temp PObject table
+        SELECT * INTO #PObject FROM dbo.Table_Object ()
+
           EXEC @bError = dbo.call_RMRoot_Event @twRMRootIx, @twEventIz OUTPUT
 
             IF @bError = 0
          BEGIN
-               DELETE dbo.RMCObject                                        -- we actually want to delete the entire tree - all the way down to the pobject!
-                WHERE ObjectHead_Self_twObjectIx = @twRMCObjectIx
+                   EXEC @bError = dbo.call_RMCObject_Delete_Descendants @twRMCObjectIx_Close
+           END
 
-                  SET @bError = IIF (@@ROWCOUNT = 1, @@ERROR, 1)
+            IF @bError = 0
+         BEGIN
+                   EXEC @bError = dbo.call_RMTObject_Delete_Descendants NULL
+           END
 
-                   IF @bError = 0
-                BEGIN
-                      INSERT #Event
-                             (sType, Self_wClass, Self_twObjectIx, Child_wClass, Child_twObjectIx, wFlags, twEventIz, sJSON_Object, sJSON_Child, sJSON_Change)
-                      SELECT 'RMCOBJECT_CLOSE',
+            IF @bError = 0
+         BEGIN
+                   EXEC @bError = dbo.call_RMPObject_Delete_Descendants NULL
+           END
 
-                             @SBO_CLASS_RMROOT,
-                             @twRMRootIx,
-                             @SBO_CLASS_RMCOBJECT,
-                             @twRMCObjectIx,
-                             @SBA_SUBSCRIBE_REFRESH_EVENT_EX_FLAG_CLOSE,
-                             @twEventIz,
+            IF @bError = 0
+         BEGIN
+                 INSERT #Event
+                        (sType, Self_wClass, Self_twObjectIx, Child_wClass, Child_twObjectIx, wFlags, twEventIz, sJSON_Object, sJSON_Child, sJSON_Change)
+                 SELECT 'RMCOBJECT_CLOSE',
 
-                             '{ }',
+                        @SBO_CLASS_RMROOT,
+                        @twRMRootIx,
+                        @SBO_CLASS_RMCOBJECT,
+                        @twRMCObjectIx_Close,
+                        @SBA_SUBSCRIBE_REFRESH_EVENT_EX_FLAG_CLOSE,
+                        @twEventIz,
 
-                             '{ }',
+                        '{ }',
 
-                             '{ }'
+                        '{ }',
 
-                         SET @bError = IIF (@@ROWCOUNT = 1, @@ERROR, 1)
-                  END
+                        '{ }'
+
+                    SET @bError = IIF (@@ROWCOUNT = 1, @@ERROR, 1)
            END
 
         RETURN @bError

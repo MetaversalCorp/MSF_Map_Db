@@ -1204,7 +1204,7 @@
     <None Include="MySQL\Procedures\RMCObject\call_RMCObject_Event_RMCObject_Close.sql">
       <Filter>MySQL\Procedures\RMCObject\Call\Event</Filter>
     </None>
-    <None Include="MySQL\Procedures\RMCObject\call_RMCObject_Event_RMCObject_Openj.sql">
+    <None Include="MySQL\Procedures\RMCObject\call_RMCObject_Event_RMCObject_Open.sql">
       <Filter>MySQL\Procedures\RMCObject\Call\Event</Filter>
     </None>
     <None Include="MySQL\Procedures\RMCObject\call_RMCObject_Event_RMTObject_Close.sql">
@@ -1336,12 +1336,6 @@
     <None Include="MySQL\Tables\Admin.sql">
       <Filter>MySQL\Tables</Filter>
     </None>
-    <None Include="SQL_Server\Functions\Descendant_T.sql">
-      <Filter>SQL_Server\Functions</Filter>
-    </None>
-    <None Include="SQL_Server\Functions\Descendant_C.sql">
-      <Filter>SQL_Server\Functions</Filter>
-    </None>
     <None Include="SQL_Server\LICENSE">
       <Filter>SQL_Server</Filter>
     </None>
@@ -1380,6 +1374,45 @@
     </None>
     <None Include="SQL_Server\_Create\Create.sh">
       <Filter>SQL_Server\_Create</Filter>
+    </None>
+    <None Include="SQL_Server\Functions\Table_Object.sql">
+      <Filter>SQL_Server\Functions\Table</Filter>
+    </None>
+    <None Include="SQL_Server\Functions\Descendant_T.sql">
+      <Filter>SQL_Server\Functions</Filter>
+    </None>
+    <None Include="SQL_Server\Functions\Descendant_C.sql">
+      <Filter>SQL_Server\Functions</Filter>
+    </None>
+    <None Include="SQL_Server\Procedures\RMCObject\call_RMCObject_Delete_Descendants.sql">
+      <Filter>SQL_Server\Procedures\RMCObject\Call</Filter>
+    </None>
+    <None Include="SQL_Server\Procedures\RMPObject\call_RMPObject_Delete_Descendants.sql">
+      <Filter>SQL_Server\Procedures\RMPObject\Call</Filter>
+    </None>
+    <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Delete_Descendants.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Call</Filter>
+    </None>
+    <None Include="MySQL\Functions\Descendant_C.sql">
+      <Filter>MySQL\Functions</Filter>
+    </None>
+    <None Include="MySQL\Functions\Descendant_T.sql">
+      <Filter>MySQL\Functions</Filter>
+    </None>
+    <None Include="MySQL\Functions\Table_Object.sql">
+      <Filter>MySQL\Functions</Filter>
+    </None>
+    <None Include="MySQL\Procedures\RMCObject\call_RMCObject_Delete_Descendants.sql">
+      <Filter>MySQL\Procedures\RMCObject\Call</Filter>
+    </None>
+    <None Include="MySQL\Procedures\RMPObject\call_RMPObject_Delete_Descendants.sql">
+      <Filter>MySQL\Procedures\RMPObjects\Call</Filter>
+    </None>
+    <None Include="MySQL\Procedures\RMTObject\call_RMTObject_Delete_Descendants.sql">
+      <Filter>MySQL\Procedures\RMTObject\Call</Filter>
+    </None>
+    <None Include="MySQL\Procedures\RMTObject\get_RMTObject_Compute.sql">
+      <Filter>MySQL\Procedures\RMTObject\Get</Filter>
     </None>
   </ItemGroup>
 </Project>

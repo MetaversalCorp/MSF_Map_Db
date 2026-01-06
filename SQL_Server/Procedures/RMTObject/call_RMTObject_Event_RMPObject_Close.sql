@@ -38,39 +38,36 @@ BEGIN
        DECLARE @bError    INT,
                @twEventIz BIGINT
 
+            -- Create the temp PObject table
+        SELECT * INTO #PObject FROM dbo.Table_Object ()
+
           EXEC @bError = dbo.call_RMTObject_Event @twRMTObjectIx, @twEventIz OUTPUT
+
+            IF @bError = 0  AND  @bReparent = 0
+         BEGIN
+                   EXEC @bError = dbo.call_RMPObject_Delete_Descendants @twRMPObjectIx_Close
+           END
 
             IF @bError = 0
          BEGIN
-                   IF @bReparent = 0
-                BEGIN
-                        DELETE dbo.RMPObject                                        -- we actually want to delete the entire tree - all the way down to the pobject!
-                         WHERE ObjectHead_Self_twObjectIx = @twRMPObjectIx_Close
-         
-                           SET @bError = IIF (@@ROWCOUNT = 1, @@ERROR, 1)
-                  END
+                 INSERT #Event
+                        (sType, Self_wClass, Self_twObjectIx, Child_wClass, Child_twObjectIx, wFlags, twEventIz, sJSON_Object, sJSON_Child, sJSON_Change)
+                 SELECT 'RMPOBJECT_CLOSE',
 
-                   IF @bError = 0
-                BEGIN
-                      INSERT #Event
-                             (sType, Self_wClass, Self_twObjectIx, Child_wClass, Child_twObjectIx, wFlags, twEventIz, sJSON_Object, sJSON_Child, sJSON_Change)
-                      SELECT 'RMPOBJECT_CLOSE',
+                        @SBO_CLASS_RMTOBJECT,
+                        @twRMTObjectIx,
+                        @SBO_CLASS_RMPOBJECT,
+                        @twRMPObjectIx_Close,
+                        @SBA_SUBSCRIBE_REFRESH_EVENT_EX_FLAG_CLOSE,
+                        @twEventIz,
 
-                             @SBO_CLASS_RMTOBJECT,
-                             @twRMTObjectIx,
-                             @SBO_CLASS_RMPOBJECT,
-                             @twRMPObjectIx_Close,
-                             @SBA_SUBSCRIBE_REFRESH_EVENT_EX_FLAG_CLOSE,
-                             @twEventIz,
+                        '{ }',
 
-                             '{ }',
+                        '{ }',
 
-                             '{ }',
+                        '{ }'
 
-                             '{ }'
-
-                         SET @bError = IIF (@@ROWCOUNT = 1, @@ERROR, 1)
-                  END
+                    SET @bError = IIF (@@ROWCOUNT = 1, @@ERROR, 1)
            END
 
         RETURN @bError

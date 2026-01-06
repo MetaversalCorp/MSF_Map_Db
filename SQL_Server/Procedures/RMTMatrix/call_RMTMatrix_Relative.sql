@@ -104,7 +104,7 @@ BEGIN
                @dTY = @d13,
                @dTZ = @d23
 
---SELECT 'T', @dTX, @dTY, @dTZ
+-- SELECT 'T', @dTX, @dTY, @dTZ
 
             -- Extract the rotation (quaternion) from the matrix
 
@@ -158,7 +158,7 @@ BEGIN
                @dRZ /= @dN,
                @dRW /= @dN
 
---SELECT 'R', @dRX, @dRY, @dRZ, @dRW
+-- SELECT 'R', @dRX, @dRY, @dRZ, @dRW
 
             -- Extract the scale from the matrix
 

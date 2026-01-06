@@ -34,36 +34,66 @@ BEGIN
 
        DECLARE twEventIz BIGINT;
 
+            -- Create the temp CObject table
+        CREATE TEMPORARY TABLE CObject
+               (
+                  ObjectHead_Self_twObjectIx    BIGINT          NOT NULL
+               );
+
+            -- Create the temp TObject table
+        CREATE TEMPORARY TABLE TObject
+               (
+                  ObjectHead_Self_twObjectIx    BIGINT          NOT NULL
+               );
+
+            -- Create the temp PObject table
+        CREATE TEMPORARY TABLE PObject
+               (
+                  ObjectHead_Self_twObjectIx    BIGINT          NOT NULL
+               );
+
           CALL call_RMCObject_Event (twRMCObjectIx, twEventIz, bError);
+
             IF bError = 0
           THEN
-                 DELETE FROM RMCObject                                        -- we actually want to delete the entire tree - all the way down to the pobject!
-                  WHERE ObjectHead_Self_twObjectIx = twRMCObjectIx_Close;
+                   CALL call_RMCObject_Delete_Descendants (twRMCObjectIx_Close, bError);
+        END IF ;
+
+            IF bError = 0
+          THEN
+                   CALL call_RMTObject_Delete_Descendants (NULL, bError);
+        END IF ;
+
+            IF bError = 0
+          THEN
+                   CALL call_RMPObject_Delete_Descendants (NULL, bError);
+        END IF ;
+
+            IF bError = 0
+          THEN
+                 INSERT INTO Event
+                        (sType, Self_wClass, Self_twObjectIx, Child_wClass, Child_twObjectIx, wFlags, twEventIz, sJSON_Object, sJSON_Child, sJSON_Change)
+                 SELECT 'RMCOBJECT_CLOSE',
+
+                        SBO_CLASS_RMCOBJECT,
+                        twRMCObjectIx,
+                        SBO_CLASS_RMCOBJECT,
+                        twRMCObjectIx_Close,
+                        SBA_SUBSCRIBE_REFRESH_EVENT_EX_FLAG_CLOSE,
+                        twEventIz,
+
+                        '{ }',
+
+                        '{ }',
+
+                        '{ }';
 
                     SET bError = IF (ROW_COUNT () = 1, 0, 1);
-
-                     IF bError = 0
-                   THEN
-                          INSERT INTO Event
-                                 (sType, Self_wClass, Self_twObjectIx, Child_wClass, Child_twObjectIx, wFlags, twEventIz, sJSON_Object, sJSON_Child, sJSON_Change)
-                          SELECT 'RMCOBJECT_CLOSE',
-
-                                 SBO_CLASS_RMCOBJECT,
-                                 twRMCObjectIx,
-                                 SBO_CLASS_RMCOBJECT,
-                                 twRMCObjectIx_Close,
-                                 SBA_SUBSCRIBE_REFRESH_EVENT_EX_FLAG_CLOSE,
-                                 twEventIz,
-
-                                 '{ }',
-
-                                 '{ }',
-
-                                 '{ }';
-
-                             SET bError = IF (ROW_COUNT () = 1, 0, 1);
-                 END IF ;
         END IF ;
+
+          DROP TEMPORARY TABLE CObject;
+          DROP TEMPORARY TABLE TObject;
+          DROP TEMPORARY TABLE PObject;
 END$$
 
 DELIMITER ;

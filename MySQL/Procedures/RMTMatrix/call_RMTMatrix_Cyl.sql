@@ -48,9 +48,9 @@ BEGIN
 
             IF dRad < 0
           THEN
-               SET dRad = dRad * -1;
-               SET dOI = dOI * -1;
-            END IF ;
+                    SET dRad = dRad * -1;
+                    SET dOI = dOI * -1;
+        END IF ;
 
             -- MXform_Identity     (MXform);
             -- MXform_Translate    (MXform, dRad * dCLat * dSThe, dRad * dSLat, dRad * dCLat * dCThe);
@@ -65,7 +65,7 @@ BEGIN
             -- [ 0   0   1   0 ]     [ 0   0   1   Z ]     [ -dSThe   0   dCThe   0 ]     [ 0   1    0   0 ]     [ 0     0     1   0 ]
             -- [ 0   0   0   1 ]     [ 0   0   0   1 ]     [  0       0   0       1 ]     [ 0   0    0   1 ]     [ 0     0     0   1 ]
 
-        SET nResult = 0;
+           SET nResult = 0;
 
         INSERT INTO RMTSubsurface
                ( twRMTObjectIx, tnGeometry,          dA,     dB, dC      )
@@ -91,7 +91,7 @@ BEGIN
                ( bnMatrix           )
         VALUES ( 0 - twRMTObjectIx );
 
-          CALL call_RMTMatrix_Inverse(twRMTObjectIx, nResult);
+          CALL call_RMTMatrix_Inverse (twRMTObjectIx, nResult);
 END$$
   
 DELIMITER ;

@@ -30,8 +30,8 @@
 
 -- CREATE TABLE #Node
 -- (
---    fLatitude                     FLOAT (53),
---    fLongitude                    FLOAT (53)
+--    dLatitude                     FLOAT (53),
+--    dLongitude                    FLOAT (53)
 -- )
 -- GO
 
@@ -55,8 +55,8 @@ BEGIN
                 @bDone   INT = 0,
                 @bIter   INT = 0
 
-        DECLARE @twRMTObjectIx  BIGINT = 999999999
-        DECLARE @twRMTObjectIx_ BIGINT = 0 - @twRMTObjectIx
+        DECLARE @twRMTObjectIx  BIGINT = 999999999,
+                @twRMTObjectIx_ BIGINT = 0 - @twRMTObjectIx
 
         DECLARE @Node TABLE
                 (
@@ -83,15 +83,15 @@ BEGIN
 
         DECLARE @dX_Bound FLOAT (53), @dY_Bound FLOAT (53), @dZ_Bound FLOAT (53)
 
-             -- Add all way nodes into the @Node table, and convert to cartesian coordinates (relative to the surface)
+             -- Add all boundary nodes into the @Node table, and convert to cartesian coordinates (relative to the surface)
 
          INSERT @Node
                 ( dLatitude, dLongitude, dX, dY, dZ )
-         SELECT fLatitude, 
-                fLongitude,
-                @dRad * COS (RADIANS (fLatitude)) * SIN (RADIANS (fLongitude)),
-                @dRad * SIN (RADIANS (fLatitude)),
-                @dRad * COS (RADIANS (fLatitude)) * COS (RADIANS (fLongitude))
+         SELECT dLatitude, 
+                dLongitude,
+                @dRad * COS (RADIANS (dLatitude)) * SIN (RADIANS (dLongitude)),
+                @dRad * SIN (RADIANS (dLatitude)),
+                @dRad * COS (RADIANS (dLatitude)) * COS (RADIANS (dLongitude))
            FROM #Node
 
              -- Choose an origin based on the middle of the latitude and longitude (will need to be corrected in a second round)
@@ -106,7 +106,7 @@ BEGIN
          
              SET @dLat_Mid = (@dLat_Min + @dLat_Max) / 2
          
-          -- IF (@dLon_Min = -180  AND @dLon_Max = 180)
+          -- IF (@dLon_Min = -180  AND  @dLon_Max = 180)
              IF (@dLon_Max - @dLon_Min > 270)
           BEGIN
                   SELECT @dLon_Min = MIN (dLongitude) 
@@ -117,16 +117,16 @@ BEGIN
                     FROM @Node
                    WHERE dLongitude < 0
          
-                SET @dLon_Mid = (@dLon_Min + @dLon_Max + 360) / 2
+                     SET @dLon_Mid = (@dLon_Min + @dLon_Max + 360) / 2
          
-                 IF @dLon_Mid > 180
-                    SET @dLon_Mid -= 360
+                      IF @dLon_Mid > 180
+                              SET @dLon_Mid -= 360
             END
-           ELSE SET @dLon_Mid = (@dLon_Min + @dLon_Max) / 2
+           ELSE      SET @dLon_Mid = (@dLon_Min + @dLon_Max) / 2
          
---SELECT 0, @dLat_Mid AS dLat_Mid, @dLon_Mid AS dLon_Mid
+-- SELECT 0, @dLat_Mid AS dLat_Mid, @dLon_Mid AS dLon_Mid
 
-          WHILE @bDone = 0  AND @bIter < 10
+          WHILE @bDone = 0  AND  @bIter < 10
           BEGIN
                       -- Delete any past attempts
 
@@ -156,15 +156,15 @@ BEGIN
                          @dZ_Max = MAX (dZ_)
                     FROM @Node
                   
-                  SELECT @dX_Mid = (@dX_Min + @dX_Max) / 2,
+                     SET @dX_Mid = (@dX_Min + @dX_Max) / 2,
                       -- @dY_Mid = (@dY_Min + @dX_Max) / 2,
                          @dZ_Mid = (@dZ_Min + @dZ_Max) / 2
 
---SELECT 1, @bIter, @dX_Mid AS dX_Mid, @dZ_Mid AS dZ_Mid
+-- SELECT 1, @bIter, @dX_Mid AS dX_Mid, @dZ_Mid AS dZ_Mid
                   
                       IF @dY_Min < 0 - @dRad
                    BEGIN
-                         SET @dY_Min = @dY_Min
+                              SET @dY_Min = @dY_Min
                      END
 
                       -- Check to see if the origin is close to the middle of the bounding box
@@ -173,12 +173,12 @@ BEGIN
                    BEGIN
                           -- Convert the midpoint back to a surface relative coordinate
 
-                           SELECT @dX_Mid *= 0.97,
+                              SET @dX_Mid *= 0.97,
                                   @dZ_Mid *= 0.97
 
-                           SELECT @dY_Mid = 0
+                              SET @dY_Mid = 0
 
---SELECT 2, @dX_Mid AS dX_Mid, @dZ_Mid AS dZ_Mid, @dY_Mid AS dY_Mid
+-- SELECT 2, @dX_Mid AS dX_Mid, @dZ_Mid AS dZ_Mid, @dY_Mid AS dY_Mid
                   
                            SELECT @dX = (m.d00 * @dX_Mid) + (m.d01 * @dY_Mid) + (m.d02 * @dZ_Mid) + (m.d03 * 1),
                                   @dY = (m.d10 * @dX_Mid) + (m.d11 * @dY_Mid) + (m.d12 * @dZ_Mid) + (m.d13 * 1),
@@ -186,41 +186,41 @@ BEGIN
                              FROM dbo.RMTMatrix AS m
                             WHERE m.bnMatrix = @twRMTObjectIx
 
---SELECT 3, @dX AS dX, @dZ AS dZ, @dY AS dY
+-- SELECT 3, @dX AS dX, @dZ AS dZ, @dY AS dY
 
-                           SELECT @dY = SQRT ((@dRad * @dRad) - (@dX * @dX) - (@dZ * @dZ)) * (CASE WHEN @dY < 0 THEN -1 ELSE 1 END)
+                              SET @dY = SQRT ((@dRad * @dRad) - (@dX * @dX) - (@dZ * @dZ)) * (CASE WHEN @dY < 0 THEN -1 ELSE 1 END)
                   
---SELECT 4, @dX AS dX, @dZ AS dZ, @dY AS dY
+-- SELECT 4, @dX AS dX, @dZ AS dZ, @dY AS dY
 
                                -- Convert the midpoint back to latitude and longitude
 
-                           SELECT @dLat_Mid = DEGREES (asin (@dY / @dRad)),
-                                  @dLon_Mid = DEGREES (atn2 (@dX, @dZ))
+                              SET @dLat_Mid = DEGREES (ASIN (@dY / @dRad)),
+                                  @dLon_Mid = DEGREES (ATN2 (@dX, @dZ))
 
---SELECT 5, @dLat_Mid AS dLat_Mid, @dLon_Mid AS dLon_Mid
+-- SELECT 5, @dLat_Mid AS dLat_Mid, @dLon_Mid AS dLon_Mid
 
                               SET @bIter += 1
                      END
-                    ELSE SET @bDone = 1
+                    ELSE      SET @bDone = 1
             END
 
              -- Calculate the bounding box dimensions
 
-         SELECT @dX = (@dX_Max - @dX_Min) / 2,
+            SET @dX = (@dX_Max - @dX_Min) / 2,
                 @dZ = (@dZ_Max - @dZ_Min) / 2
 
-         SELECT @dX_Bound = @dX * (@dRad + @dHeight) / @dRad,
+            SET @dX_Bound = @dX * (@dRad + @dHeight) / @dRad,
                 @dZ_Bound = @dZ * (@dRad + @dHeight) / @dRad
 
-         SELECT @dY = IIF (@dX > @dZ, @dX, @dZ)
+            SET @dY = IIF (@dX > @dZ, @dX, @dZ)
 
-         SELECT @dY = @dY * (@dRad - @dDepth) / @dRad
+            SET @dY = @dY * (@dRad - @dDepth) / @dRad
 
-         SELECT @dY = SQRT (((@dRad - @dDepth) * (@dRad - @dDepth)) - (@dY * @dY))
+            SET @dY = SQRT (((@dRad - @dDepth) * (@dRad - @dDepth)) - (@dY * @dY))
 
-         SELECT @dY_Bound = @dRad + @dHeight - @dY
+            SET @dY_Bound = @dRad + @dHeight - @dY
 
---SELECT 6, @dX AS dX, @dY AS dY, @dZ AS dZ, @dX_Bound AS dX_Bound, @dY_Bound AS dY_Bound, @dZ_Bound AS dZ_Bound
+--  SELECT 6, @dX AS dX, @dY AS dY, @dZ AS dZ, @dX_Bound AS dX_Bound, @dY_Bound AS dY_Bound, @dZ_Bound AS dZ_Bound
 
              -- Now that we have the coordinates of the origin, we need to call call_RMTMatrix_Geo one last time
 

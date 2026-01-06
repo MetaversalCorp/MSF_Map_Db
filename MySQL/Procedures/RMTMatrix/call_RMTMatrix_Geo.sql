@@ -53,9 +53,9 @@ BEGIN
 
             IF dRad < 0
           THEN
-               SET dRad = dRad * -1;
-               SET dOI = dOI * -1;
-            END IF ;
+                     SET dRad = dRad * -1;
+                     SET dOI  = dOI  * -1;
+        END IF ; 
 
             -- MXform_Identity     (MXform);
             -- MXform_Translate    (MXform, dRad * dCLat * dSLon, dRad * dSLat, dRad * dCLat * dCLon);
@@ -94,7 +94,7 @@ BEGIN
                ( bnMatrix          )
         VALUES ( 0 - twRMTObjectIx );
 
-          CALL call_RMTMatrix_Inverse(twRMTObjectIx, nResult);
+          CALL call_RMTMatrix_Inverse (twRMTObjectIx, nResult);
 END$$
 
 DELIMITER ;

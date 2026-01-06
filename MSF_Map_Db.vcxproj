@@ -14,6 +14,8 @@
     <None Include="MySQL\Functions\ArcLength.sql" />
     <None Include="MySQL\Functions\DateTime2_Time.sql" />
     <None Include="MySQL\Functions\Date_DateTime2.sql" />
+    <None Include="MySQL\Functions\Descendant_C.sql" />
+    <None Include="MySQL\Functions\Descendant_T.sql" />
     <None Include="MySQL\Functions\Format_Bound.sql" />
     <None Include="MySQL\Functions\Format_Control.sql" />
     <None Include="MySQL\Functions\Format_Double.sql" />
@@ -37,6 +39,7 @@
     <None Include="MySQL\Functions\IPstob.sql" />
     <None Include="MySQL\Functions\Table_Error.sql" />
     <None Include="MySQL\Functions\Table_Event.sql" />
+    <None Include="MySQL\Functions\Table_Object.sql" />
     <None Include="MySQL\Functions\Table_Results.sql" />
     <None Include="MySQL\Functions\Time_Current.sql" />
     <None Include="MySQL\Functions\Time_DateTime2.sql" />
@@ -45,6 +48,7 @@
     <None Include="MySQL\Procedures\call_Error.sql" />
     <None Include="MySQL\Procedures\ETL\call_Event_Push.sql" />
     <None Include="MySQL\Procedures\ETL\etl_Events.sql" />
+    <None Include="MySQL\Procedures\RMCObject\call_RMCObject_Delete_Descendants.sql" />
     <None Include="MySQL\Procedures\RMCObject\call_RMCObject_Event.sql" />
     <None Include="MySQL\Procedures\RMCObject\call_RMCObject_Event_Bound.sql" />
     <None Include="MySQL\Procedures\RMCObject\call_RMCObject_Event_Name.sql" />
@@ -53,7 +57,7 @@
     <None Include="MySQL\Procedures\RMCObject\call_RMCObject_Event_Properties.sql" />
     <None Include="MySQL\Procedures\RMCObject\call_RMCObject_Event_Resource.sql" />
     <None Include="MySQL\Procedures\RMCObject\call_RMCObject_Event_RMCObject_Close.sql" />
-    <None Include="MySQL\Procedures\RMCObject\call_RMCObject_Event_RMCObject_Openj.sql" />
+    <None Include="MySQL\Procedures\RMCObject\call_RMCObject_Event_RMCObject_Open.sql" />
     <None Include="MySQL\Procedures\RMCObject\call_RMCObject_Event_RMTObject_Close.sql" />
     <None Include="MySQL\Procedures\RMCObject\call_RMCObject_Event_RMTObject_Open.sql" />
     <None Include="MySQL\Procedures\RMCObject\call_RMCObject_Event_Transform.sql" />
@@ -83,6 +87,7 @@
     <None Include="MySQL\Procedures\RMCObject\set_RMCObject_RMTObject_Open.sql" />
     <None Include="MySQL\Procedures\RMCObject\set_RMCObject_Transform.sql" />
     <None Include="MySQL\Procedures\RMCObject\set_RMCObject_Type.sql" />
+    <None Include="MySQL\Procedures\RMPObject\call_RMPObject_Delete_Descendants.sql" />
     <None Include="MySQL\Procedures\RMPObject\call_RMPObject_Event.sql" />
     <None Include="MySQL\Procedures\RMPObject\call_RMPObject_Event_Bound.sql" />
     <None Include="MySQL\Procedures\RMPObject\call_RMPObject_Event_Name.sql" />
@@ -144,6 +149,7 @@
     <None Include="MySQL\Procedures\RMTMatrix\call_RMTMatrix_Rotate.sql" />
     <None Include="MySQL\Procedures\RMTMatrix\call_RMTMatrix_Scale.sql" />
     <None Include="MySQL\Procedures\RMTMatrix\call_RMTMatrix_Translate.sql" />
+    <None Include="MySQL\Procedures\RMTObject\call_RMTObject_Delete_Descendants.sql" />
     <None Include="MySQL\Procedures\RMTObject\call_RMTObject_Event.sql" />
     <None Include="MySQL\Procedures\RMTObject\call_RMTObject_Event_Bound.sql" />
     <None Include="MySQL\Procedures\RMTObject\call_RMTObject_Event_Name.sql" />
@@ -170,6 +176,7 @@
     <None Include="MySQL\Procedures\RMTObject\call_RMTObject_Validate_Resource.sql" />
     <None Include="MySQL\Procedures\RMTObject\call_RMTObject_Validate_Transform.sql" />
     <None Include="MySQL\Procedures\RMTObject\call_RMTObject_Validate_Type.sql" />
+    <None Include="MySQL\Procedures\RMTObject\get_RMTObject_Compute.sql" />
     <None Include="MySQL\Procedures\RMTObject\get_RMTObject_Update.sql" />
     <None Include="MySQL\Procedures\RMTObject\search_RMTObject.sql" />
     <None Include="MySQL\Procedures\RMTObject\set_RMTObject_Bound.sql" />
@@ -225,6 +232,7 @@
     <None Include="SQL_Server\Functions\IPstob.sql" />
     <None Include="SQL_Server\Functions\Table_Error.sql" />
     <None Include="SQL_Server\Functions\Table_Event.sql" />
+    <None Include="SQL_Server\Functions\Table_Object.sql" />
     <None Include="SQL_Server\Functions\Table_Results.sql" />
     <None Include="SQL_Server\Functions\Time_Current.sql" />
     <None Include="SQL_Server\Functions\Time_DateTime2.sql" />
@@ -233,6 +241,7 @@
     <None Include="SQL_Server\Procedures\call_Error.sql" />
     <None Include="SQL_Server\Procedures\ETL\call_Event_Push.sql" />
     <None Include="SQL_Server\Procedures\ETL\etl_Events.sql" />
+    <None Include="SQL_Server\Procedures\RMCObject\call_RMCObject_Delete_Descendants.sql" />
     <None Include="SQL_Server\Procedures\RMCObject\call_RMCObject_Event.sql" />
     <None Include="SQL_Server\Procedures\RMCObject\call_RMCObject_Event_Bound.sql" />
     <None Include="SQL_Server\Procedures\RMCObject\call_RMCObject_Event_Name.sql" />
@@ -272,6 +281,7 @@
     <None Include="SQL_Server\Procedures\RMCObject\set_RMCObject_RMTObject_Open.sql" />
     <None Include="SQL_Server\Procedures\RMCObject\set_RMCObject_Transform.sql" />
     <None Include="SQL_Server\Procedures\RMCObject\set_RMCObject_Type.sql" />
+    <None Include="SQL_Server\Procedures\RMPObject\call_RMPObject_Delete_Descendants.sql" />
     <None Include="SQL_Server\Procedures\RMPObject\call_RMPObject_Event.sql" />
     <None Include="SQL_Server\Procedures\RMPObject\call_RMPObject_Event_Bound.sql" />
     <None Include="SQL_Server\Procedures\RMPObject\call_RMPObject_Event_Name.sql" />
@@ -335,6 +345,7 @@
     <None Include="SQL_Server\Procedures\RMTMatrix\call_RMTMatrix_Rotate.sql" />
     <None Include="SQL_Server\Procedures\RMTMatrix\call_RMTMatrix_Scale.sql" />
     <None Include="SQL_Server\Procedures\RMTMatrix\call_RMTMatrix_Translate.sql" />
+    <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Delete_Descendants.sql" />
     <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Event.sql" />
     <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Event_Bound.sql" />
     <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Event_Name.sql" />

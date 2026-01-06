@@ -36,39 +36,42 @@ BEGIN
 
        DECLARE twEventIz BIGINT;
 
+            -- Create the temp PObject table
+        CREATE TEMPORARY TABLE PObject
+               (
+                  ObjectHead_Self_twObjectIx    BIGINT          NOT NULL
+               );
+
           CALL call_RMRoot_Event (twRMRootIx, twEventIz, bError);
+
+            IF bError = 0  AND  bReparent = 0
+          THEN
+                   CALL call_RMPObject_Delete_Descendants (twRMPObjectIx_Close, bError);
+        END IF ;
+
             IF bError = 0
           THEN
-                     IF bReparent = 0
-                   THEN
-                          DELETE FROM RMPObject                                        -- we actually want to delete the entire tree - all the way down to the pobject!
-                           WHERE ObjectHead_Self_twObjectIx = twRMPObjectIx_Close;
-         
-                             SET bError = IF (ROW_COUNT () = 1, 0, 1);
-                 END IF ;
+                 INSERT INTO Event
+                        (sType, Self_wClass, Self_twObjectIx, Child_wClass, Child_twObjectIx, wFlags, twEventIz, sJSON_Object, sJSON_Child, sJSON_Change)
+                 SELECT 'RMPOBJECT_CLOSE',
 
-                     IF bError = 0
-                   THEN
-                          INSERT INTO Event
-                                 (sType, Self_wClass, Self_twObjectIx, Child_wClass, Child_twObjectIx, wFlags, twEventIz, sJSON_Object, sJSON_Child, sJSON_Change)
-                          SELECT 'RMPOBJECT_CLOSE',
+                        SBO_CLASS_RMROOT,
+                        twRMRootIx,
+                        SBO_CLASS_RMPOBJECT,
+                        twRMPObjectIx_Close,
+                        SBA_SUBSCRIBE_REFRESH_EVENT_EX_FLAG_CLOSE,
+                        twEventIz,
 
-                                 SBO_CLASS_RMROOT,
-                                 twRMRootIx,
-                                 SBO_CLASS_RMPOBJECT,
-                                 twRMPObjectIx_Close,
-                                 SBA_SUBSCRIBE_REFRESH_EVENT_EX_FLAG_CLOSE,
-                                 twEventIz,
+                        '{ }',
 
-                                 '{ }',
+                        '{ }',
 
-                                 '{ }',
+                        '{ }';
 
-                                 '{ }';
-
-                             SET bError = IF (ROW_COUNT () = 1, 0, 1);
-                 END IF ;
+                    SET bError = IF (ROW_COUNT () = 1, 0, 1);
         END IF ;
+
+          DROP TEMPORARY TABLE PObject;
 END$$
   
 DELIMITER ;
