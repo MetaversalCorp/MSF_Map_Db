@@ -35,14 +35,14 @@
                         ORDER BY ObjectHead_Self_twObjectIx
                
                           INSERT RMTSubsurface
-                               ( bnMatrix, d00, d01, d02, d03, d10, d11, d12, d13, d20, d21, d22, d23, d30, d31, d32, d33 )
-                          SELECT bnMatrix, d00, d01, d02, d03, d10, d11, d12, d13, d20, d21, d22, d23, d30, d31, d32, d33
+                               ( twRMTObjectIx, tnGeometry, dA, dB, dC )
+                          SELECT twRMTObjectIx, tnGeometry, dA, dB, dC
                             FROM MVD_RP1_Map.dbo.RMTSubsurface
                         ORDER BY twRMTObjectIx
       
                           INSERT RMTMatrix
-                               ( twRMTObjectIx, tnGeometry, dA, dB, dC )
-                          SELECT twRMTObjectIx, tnGeometry, dA, dB, dC
+                               ( bnMatrix, d00, d01, d02, d03, d10, d11, d12, d13, d20, d21, d22, d23, d30, d31, d32, d33 )
+                          SELECT bnMatrix, d00, d01, d02, d03, d10, d11, d12, d13, d20, d21, d22, d23, d30, d31, d32, d33
                             FROM MVD_RP1_Map.dbo.RMTMatrix
                         ORDER BY bnMatrix
       

@@ -39,7 +39,7 @@ BEGIN
             -- this is a special case of the geographic coordiate system with latitude = 0
 
        DECLARE dThe    DOUBLE DEFAULT RADIANS (dTheta);
-            -- dY      DOUBLE DEFAULT          dY;
+    -- DECLARE dY      DOUBLE DEFAULT          dY;
        DECLARE dRad    DOUBLE DEFAULT          dRadius;
        DECLARE dOI     DOUBLE DEFAULT 1;
 

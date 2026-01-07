@@ -53,8 +53,8 @@ BEGIN
 
             IF dRad < 0
           THEN
-                     SET dRad = dRad * -1;
-                     SET dOI  = dOI  * -1;
+                    SET dRad = dRad * -1;
+                    SET dOI  = dOI  * -1;
         END IF ; 
 
             -- MXform_Identity     (MXform);
