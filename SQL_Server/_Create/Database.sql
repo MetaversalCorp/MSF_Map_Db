@@ -39,8 +39,9 @@
 
 -- REQUIRED BEFORE RUNNING THIS SCRIPT --
 
--- 1. Rename [{MSF_Map}]    to your new database name
--- 2. Rename [{Login_Name}] to your server's login (see above) that will be granted execute access to this database
+-- 1. Rename [{Pathname}]   to the full pathname (without the trailing backslash) of your new database's data and log files.
+-- 2. Rename [{MSF_Map}]    to your new database name.
+-- 3. Rename [{Login_Name}] to your server's login (see above) that will be granted execute access to this database.
 
 /******************************************************************************************************************************/
 
@@ -52,7 +53,7 @@ BEGIN
          CREATE DATABASE [{MSF_Map}] ON PRIMARY
          (
             NAME       = N'[{MSF_Map}]',
-            FILENAME   = N'D:\MSSQL\Data\[{MSF_Map}].mdf',
+            FILENAME   = N'[{Pathname}]\[{MSF_Map}].mdf',
             SIZE       = 4096KB,
             MAXSIZE    = UNLIMITED,
             FILEGROWTH = 10%
@@ -60,7 +61,7 @@ BEGIN
          LOG ON
          (
             NAME       = N'[{MSF_Map}]_log',
-            FILENAME   = N'D:\MSSQL\Data\[{MSF_Map}]_log.ldf',
+            FILENAME   = N'[{Pathname}]\[{MSF_Map}]_log.ldf',
             SIZE       = 4096KB,
             MAXSIZE    = 2048GB,
             FILEGROWTH = 10%
@@ -102,7 +103,10 @@ GO
 USE [{MSF_Map}]
 GO
 
-CREATE USER WebService FOR LOGIN [{Login_Name}] WITH DEFAULT_SCHEMA = dbo
+   IF NOT EXISTS (SELECT 1 FROM sys.database_principals WHERE name = 'WebService')
+BEGIN
+        CREATE USER WebService FOR LOGIN [{Login_Name}] WITH DEFAULT_SCHEMA = dbo
+  END
 GO
 
 /******************************************************************************************************************************/

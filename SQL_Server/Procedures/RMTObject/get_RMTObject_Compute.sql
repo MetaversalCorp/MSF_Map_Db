@@ -55,8 +55,8 @@ BEGIN
                 @bDone   INT = 0,
                 @bIter   INT = 0
 
-        DECLARE @twRMTObjectIx  BIGINT = 999999999,
-                @twRMTObjectIx_ BIGINT = 0 - @twRMTObjectIx
+        DECLARE @twRMTObjectIx  BIGINT = 999999999
+        DECLARE @twRMTObjectIx_ BIGINT = 0 - @twRMTObjectIx
 
         DECLARE @Node TABLE
                 (
@@ -104,7 +104,7 @@ BEGIN
                 @dLon_Max = MAX (dLongitude)
            FROM @Node
          
-             SET @dLat_Mid = (@dLat_Min + @dLat_Max) / 2
+         SELECT @dLat_Mid = (@dLat_Min + @dLat_Max) / 2
          
           -- IF (@dLon_Min = -180  AND  @dLon_Max = 180)
              IF (@dLon_Max - @dLon_Min > 270)
@@ -117,12 +117,12 @@ BEGIN
                     FROM @Node
                    WHERE dLongitude < 0
          
-                     SET @dLon_Mid = (@dLon_Min + @dLon_Max + 360) / 2
+                  SELECT @dLon_Mid = (@dLon_Min + @dLon_Max + 360) / 2
          
                       IF @dLon_Mid > 180
-                              SET @dLon_Mid -= 360
+                           SELECT @dLon_Mid -= 360
             END
-           ELSE      SET @dLon_Mid = (@dLon_Min + @dLon_Max) / 2
+           ELSE   SELECT @dLon_Mid = (@dLon_Min + @dLon_Max) / 2
          
 -- SELECT 0, @dLat_Mid AS dLat_Mid, @dLon_Mid AS dLon_Mid
 
@@ -156,7 +156,7 @@ BEGIN
                          @dZ_Max = MAX (dZ_)
                     FROM @Node
                   
-                     SET @dX_Mid = (@dX_Min + @dX_Max) / 2,
+                  SELECT @dX_Mid = (@dX_Min + @dX_Max) / 2,
                       -- @dY_Mid = (@dY_Min + @dX_Max) / 2,
                          @dZ_Mid = (@dZ_Min + @dZ_Max) / 2
 
@@ -164,7 +164,7 @@ BEGIN
                   
                       IF @dY_Min < 0 - @dRad
                    BEGIN
-                              SET @dY_Min = @dY_Min
+                           SELECT @dY_Min = @dY_Min
                      END
 
                       -- Check to see if the origin is close to the middle of the bounding box
@@ -173,10 +173,10 @@ BEGIN
                    BEGIN
                           -- Convert the midpoint back to a surface relative coordinate
 
-                              SET @dX_Mid *= 0.97,
+                           SELECT @dX_Mid *= 0.97,
                                   @dZ_Mid *= 0.97
 
-                              SET @dY_Mid = 0
+                           SELECT @dY_Mid = 0
 
 -- SELECT 2, @dX_Mid AS dX_Mid, @dZ_Mid AS dZ_Mid, @dY_Mid AS dY_Mid
                   
@@ -188,37 +188,37 @@ BEGIN
 
 -- SELECT 3, @dX AS dX, @dZ AS dZ, @dY AS dY
 
-                              SET @dY = SQRT ((@dRad * @dRad) - (@dX * @dX) - (@dZ * @dZ)) * (CASE WHEN @dY < 0 THEN -1 ELSE 1 END)
+                           SELECT @dY = SQRT ((@dRad * @dRad) - (@dX * @dX) - (@dZ * @dZ)) * (CASE WHEN @dY < 0 THEN -1 ELSE 1 END)
                   
 -- SELECT 4, @dX AS dX, @dZ AS dZ, @dY AS dY
 
                                -- Convert the midpoint back to latitude and longitude
 
-                              SET @dLat_Mid = DEGREES (ASIN (@dY / @dRad)),
+                           SELECT @dLat_Mid = DEGREES (ASIN (@dY / @dRad)),
                                   @dLon_Mid = DEGREES (ATN2 (@dX, @dZ))
 
 -- SELECT 5, @dLat_Mid AS dLat_Mid, @dLon_Mid AS dLon_Mid
 
-                              SET @bIter += 1
+                           SELECT @bIter += 1
                      END
-                    ELSE      SET @bDone = 1
+                    ELSE   SELECT @bDone = 1
             END
 
              -- Calculate the bounding box dimensions
 
-            SET @dX = (@dX_Max - @dX_Min) / 2,
+         SELECT @dX = (@dX_Max - @dX_Min) / 2,
                 @dZ = (@dZ_Max - @dZ_Min) / 2
 
-            SET @dX_Bound = @dX * (@dRad + @dHeight) / @dRad,
+         SELECT @dX_Bound = @dX * (@dRad + @dHeight) / @dRad,
                 @dZ_Bound = @dZ * (@dRad + @dHeight) / @dRad
 
-            SET @dY = IIF (@dX > @dZ, @dX, @dZ)
+         SELECT @dY = IIF (@dX > @dZ, @dX, @dZ)
 
-            SET @dY = @dY * (@dRad - @dDepth) / @dRad
+         SELECT @dY = @dY * (@dRad - @dDepth) / @dRad
 
-            SET @dY = SQRT (((@dRad - @dDepth) * (@dRad - @dDepth)) - (@dY * @dY))
+         SELECT @dY = SQRT (((@dRad - @dDepth) * (@dRad - @dDepth)) - (@dY * @dY))
 
-            SET @dY_Bound = @dRad + @dHeight - @dY
+         SELECT @dY_Bound = @dRad + @dHeight - @dY
 
 --  SELECT 6, @dX AS dX, @dY AS dY, @dZ AS dZ, @dX_Bound AS dX_Bound, @dY_Bound AS dY_Bound, @dZ_Bound AS dZ_Bound
 
