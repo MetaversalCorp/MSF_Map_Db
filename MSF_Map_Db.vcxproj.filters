@@ -115,9 +115,6 @@
     <Filter Include="MySQL\Procedures\RMRoot\Call\Validate">
       <UniqueIdentifier>{58a08d4c-c94a-410e-a73d-365aa4df820f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="MySQL\Procedures\Version">
-      <UniqueIdentifier>{5475d2a2-f0a1-4552-af91-9402421ef569}</UniqueIdentifier>
-    </Filter>
     <Filter Include="SQL_Server">
       <UniqueIdentifier>{36113cea-c3ea-4be1-a640-b6188696335f}</UniqueIdentifier>
     </Filter>
@@ -226,6 +223,9 @@
     <Filter Include="SQL_Server\Users" />
     <Filter Include="SQL_Server\Version">
       <UniqueIdentifier>{764f0b82-7f60-4f18-8139-529886fc6932}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySQL\Version">
+      <UniqueIdentifier>{5475d2a2-f0a1-4552-af91-9402421ef569}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -1352,10 +1352,10 @@
       <Filter>MySQL\Tables</Filter>
     </None>
     <None Include="MySQL\Version\001-Copy_data_from_old_database.sql">
-      <Filter>MySQL\Procedures\Version</Filter>
+      <Filter>MySQL\Version</Filter>
     </None>
     <None Include="MySQL\Version\000-Initialize_database.sql">
-      <Filter>MySQL\Procedures\Version</Filter>
+      <Filter>MySQL\Version</Filter>
     </None>
     <None Include="SQL_Server\Version\000-Initialize_database.sql">
       <Filter>SQL_Server\Version</Filter>
