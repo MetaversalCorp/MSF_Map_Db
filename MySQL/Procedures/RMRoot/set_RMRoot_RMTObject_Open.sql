@@ -69,6 +69,7 @@ BEGIN
        DECLARE nError  INT DEFAULT 0;
        DECLARE bCommit INT DEFAULT 0;
        DECLARE bError  INT;
+       DECLARE nResult INT;
 
        DECLARE ObjectHead_Parent_wClass     SMALLINT;
        DECLARE ObjectHead_Parent_twObjectIx BIGINT;
@@ -139,16 +140,16 @@ BEGIN
                    THEN
                               IF bCoord = 3 -- RMTMATRIX_COORD_NUL
                             THEN
-                                 CALL call_RMTMatrix_Nul (SBO_CLASS_RMROOT, twRMRootIx, twRMTObjectIx_Open, Transform_Position_dX, Transform_Position_dY, Transform_Position_dZ, Transform_Rotation_dX, Transform_Rotation_dY, Transform_Rotation_dZ, Transform_Rotation_dW, Transform_Scale_dX, Transform_Scale_dY, Transform_Scale_dZ);
+                                 CALL call_RMTMatrix_Nul (SBO_CLASS_RMROOT, twRMRootIx, twRMTObjectIx_Open, Transform_Position_dX, Transform_Position_dY, Transform_Position_dZ, Transform_Rotation_dX, Transform_Rotation_dY, Transform_Rotation_dZ, Transform_Rotation_dW, Transform_Scale_dX, Transform_Scale_dY, Transform_Scale_dZ, nResult);
                           ELSEIF bCoord = 2 -- RMTMATRIX_COORD_CAR
                             THEN
-                                 CALL call_RMTMatrix_Car (twRMTObjectIx_Open, dA, dB, dC);
+                                 CALL call_RMTMatrix_Car (twRMTObjectIx_Open, dA, dB, dC, nResult);
                           ELSEIF bCoord = 1 -- RMTMATRIX_COORD_CYL
                             THEN
-                                 CALL call_RMTMatrix_Cyl (twRMTObjectIx_Open, dA, dB, dC);
+                                 CALL call_RMTMatrix_Cyl (twRMTObjectIx_Open, dA, dB, dC, nResult);
                           ELSEIF bCoord = 0 -- RMTMATRIX_COORD_GEO
                             THEN
-                                 CALL call_RMTMatrix_Geo (twRMTObjectIx_Open, dA, dB, dC);
+                                 CALL call_RMTMatrix_Geo (twRMTObjectIx_Open, dA, dB, dC, nResult);
                           END IF ;
 
                             CALL call_RMTMatrix_Relative (SBO_CLASS_RMROOT, twRMRootIx, twRMTObjectIx_Open);
