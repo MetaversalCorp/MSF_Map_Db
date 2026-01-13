@@ -9,3 +9,4 @@ package-lock.json
 
 *.vcxproj.user
 *.bak
+.DS_Store
