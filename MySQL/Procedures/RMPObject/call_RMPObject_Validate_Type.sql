@@ -45,7 +45,7 @@ BEGIN
 
             IF ObjectHead_Parent_wClass = SBO_CLASS_RMTOBJECT
           THEN
-                 SELECT Type_bType
+                 SELECT o.Type_bType
                    INTO Parent_bType
                    FROM RMTObject AS o
                   WHERE o.ObjectHead_Self_twObjectIx = ObjectHead_Parent_twObjectIx;
