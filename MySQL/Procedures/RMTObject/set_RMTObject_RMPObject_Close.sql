@@ -80,7 +80,7 @@ BEGIN
           THEN
                  SELECT COUNT(*) INTO nCount
                    FROM RMTObject AS o
-                  WHERE o.ObjectHead_Parent_wClass     = SBO_CLASS_RMTOBJECT
+                  WHERE o.ObjectHead_Parent_wClass     = SBO_CLASS_RMPOBJECT
                     AND o.ObjectHead_Parent_twObjectIx = twRMPObjectIx_Close;
 
                      IF twRMPObjectIx_Close <= 0

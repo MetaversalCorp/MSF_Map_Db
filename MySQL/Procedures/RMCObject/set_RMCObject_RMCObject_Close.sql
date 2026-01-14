@@ -78,12 +78,14 @@ BEGIN
           CALL call_RMCObject_Validate (twRPersonaIx, twRMCObjectIx, ObjectHead_Parent_wClass, ObjectHead_Parent_twObjectIx, nError);
             IF nError = 0
           THEN
-                 SELECT COUNT(*) INTO nCount
+                 SELECT COUNT(*)
+                   INTO nCount
                    FROM RMCObject AS o
                   WHERE o.ObjectHead_Parent_wClass     = SBO_CLASS_RMCOBJECT
                     AND o.ObjectHead_Parent_twObjectIx = twRMCObjectIx_Close;
 
-                 SELECT COUNT(*) + nCount INTO nCount
+                 SELECT COUNT(*) + nCount
+                   INTO nCount
                    FROM RMTObject AS o
                   WHERE o.ObjectHead_Parent_wClass     = SBO_CLASS_RMCOBJECT
                     AND o.ObjectHead_Parent_twObjectIx = twRMCObjectIx_Close;

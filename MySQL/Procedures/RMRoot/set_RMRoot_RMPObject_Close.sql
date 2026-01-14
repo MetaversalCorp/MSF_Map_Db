@@ -78,7 +78,8 @@ BEGIN
           CALL call_RMRoot_Validate (twRPersonaIx, twRMRootIx, ObjectHead_Parent_wClass, ObjectHead_Parent_twObjectIx, nError);
             IF nError = 0
           THEN
-                 SELECT COUNT(*) INTO nCount
+                 SELECT COUNT(*)
+                   INTO nCount
                    FROM RMPObject AS o
                   WHERE o.ObjectHead_Parent_wClass     = SBO_CLASS_RMPOBJECT
                     AND o.ObjectHead_Parent_twObjectIx = twRMPObjectIx_Close;

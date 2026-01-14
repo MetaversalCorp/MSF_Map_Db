@@ -66,6 +66,11 @@ BEGIN
                   WHERE o.ObjectHead_Parent_wClass     = @SBO_CLASS_RMCOBJECT
                     AND o.ObjectHead_Parent_twObjectIx = @twRMCObjectIx_Close
 
+                 SELECT @nCount += COUNT (*)
+                   FROM dbo.RMTObject AS o
+                  WHERE o.ObjectHead_Parent_wClass     = @SBO_CLASS_RMCOBJECT
+                    AND o.ObjectHead_Parent_twObjectIx = @twRMCObjectIx_Close
+
                      IF @twRMCObjectIx_Close <= 0
                         EXEC dbo.call_Error 5,  'twRMCObjectIx_Close is invalid',   @nError OUTPUT
                 ELSE IF @bDeleteAll = 0  AND  @nCount > 0
