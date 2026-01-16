@@ -40,12 +40,12 @@ BEGIN
           CALL call_RMPObject_Event (twRMPObjectIx, twEventIz, bError);
             IF bError = 0
           THEN
-                 UPDATE RMPObject
-                    SET Type_bType    = Type_bType,
-                        Type_bSubtype = Type_bSubtype,
-                        Type_bFiction = Type_bFiction,
-                        Type_bMovable = Type_bMovable
-                  WHERE ObjectHead_Self_twObjectIx = twRMPObjectIx;
+                 UPDATE RMPObject AS o
+                    SET o.Type_bType    = Type_bType,
+                        o.Type_bSubtype = Type_bSubtype,
+                        o.Type_bFiction = Type_bFiction,
+                        o.Type_bMovable = Type_bMovable
+                  WHERE o.ObjectHead_Self_twObjectIx = twRMPObjectIx;
 
                     SET bError = IF (ROW_COUNT () = 1, 0, 1);
 

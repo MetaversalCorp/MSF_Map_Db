@@ -40,12 +40,12 @@ BEGIN
           CALL call_RMTObject_Event (twRMTObjectIx, twEventIz, bError);
             IF bError = 0
           THEN
-                 UPDATE RMTObject
-                    SET Properties_bLockToGround = Properties_bLockToGround,
-                        Properties_bYouth        = Properties_bYouth,
-                        Properties_bAdult        = Properties_bAdult,
-                        Properties_bAvatar       = Properties_bAvatar
-                  WHERE ObjectHead_Self_twObjectIx = twRMTObjectIx;
+                 UPDATE RMTObject AS o
+                    SET o.Properties_bLockToGround = Properties_bLockToGround,
+                        o.Properties_bYouth        = Properties_bYouth,
+                        o.Properties_bAdult        = Properties_bAdult,
+                        o.Properties_bAvatar       = Properties_bAvatar
+                  WHERE o.ObjectHead_Self_twObjectIx = twRMTObjectIx;
 
                     SET bError = IF (ROW_COUNT () = 1, 0, 1);
 

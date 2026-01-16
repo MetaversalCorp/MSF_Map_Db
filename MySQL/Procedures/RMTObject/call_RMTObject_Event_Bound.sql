@@ -39,11 +39,11 @@ BEGIN
           CALL call_RMTObject_Event (twRMTObjectIx, twEventIz, bError);
             IF bError = 0
           THEN
-                 UPDATE RMTObject
-                    SET Bound_dX = Bound_dX,
-                        Bound_dY = Bound_dY,
-                        Bound_dZ = Bound_dZ
-                  WHERE ObjectHead_Self_twObjectIx = twRMTObjectIx;
+                 UPDATE RMTObject AS o
+                    SET o.Bound_dX = Bound_dX,
+                        o.Bound_dY = Bound_dY,
+                        o.Bound_dZ = Bound_dZ
+                  WHERE o.ObjectHead_Self_twObjectIx = twRMTObjectIx;
 
                     SET bError = IF (ROW_COUNT () = 1, 0, 1);
 

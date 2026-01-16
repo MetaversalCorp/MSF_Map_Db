@@ -37,9 +37,9 @@ BEGIN
           CALL call_RMPObject_Event (twRMPObjectIx, twEventIz, bError);
             IF bError = 0
           THEN
-                 UPDATE RMPObject
-                    SET Owner_twRPersonaIx = Owner_twRPersonaIx
-                  WHERE ObjectHead_Self_twObjectIx = twRMPObjectIx;
+                 UPDATE RMPObject AS o
+                    SET o.Owner_twRPersonaIx = Owner_twRPersonaIx
+                  WHERE o.ObjectHead_Self_twObjectIx = twRMPObjectIx;
 
                     SET bError = IF (ROW_COUNT () = 1, 0, 1);
 

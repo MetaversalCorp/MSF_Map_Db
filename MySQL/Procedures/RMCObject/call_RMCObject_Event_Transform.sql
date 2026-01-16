@@ -46,18 +46,18 @@ BEGIN
           CALL call_RMCObject_Event (twRMCObjectIx, twEventIz, bError);
             IF bError = 0
           THEN
-                 UPDATE RMCObject
-                    SET Transform_Position_dX = Transform_Position_dX,
-                        Transform_Position_dY = Transform_Position_dY,
-                        Transform_Position_dZ = Transform_Position_dZ,
-                        Transform_Rotation_dX = Transform_Rotation_dX,
-                        Transform_Rotation_dY = Transform_Rotation_dY,
-                        Transform_Rotation_dZ = Transform_Rotation_dZ,
-                        Transform_Rotation_dW = Transform_Rotation_dW,
-                        Transform_Scale_dX    = Transform_Scale_dX,
-                        Transform_Scale_dY    = Transform_Scale_dY,
-                        Transform_Scale_dZ    = Transform_Scale_dZ
-                  WHERE ObjectHead_Self_twObjectIx = twRMCObjectIx;
+                 UPDATE RMCObject AS o
+                    SET o.Transform_Position_dX = Transform_Position_dX,
+                        o.Transform_Position_dY = Transform_Position_dY,
+                        o.Transform_Position_dZ = Transform_Position_dZ,
+                        o.Transform_Rotation_dX = Transform_Rotation_dX,
+                        o.Transform_Rotation_dY = Transform_Rotation_dY,
+                        o.Transform_Rotation_dZ = Transform_Rotation_dZ,
+                        o.Transform_Rotation_dW = Transform_Rotation_dW,
+                        o.Transform_Scale_dX    = Transform_Scale_dX,
+                        o.Transform_Scale_dY    = Transform_Scale_dY,
+                        o.Transform_Scale_dZ    = Transform_Scale_dZ
+                  WHERE o.ObjectHead_Self_twObjectIx = twRMCObjectIx;
 
                     SET bError = IF (ROW_COUNT () = 1, 0, 1);
 

@@ -37,9 +37,9 @@ BEGIN
           CALL call_RMRoot_Event (twRMRootIx, twEventIz, bError);
             IF bError = 0
           THEN
-                 UPDATE RMRoot
-                    SET Owner_twRPersonaIx = Owner_twRPersonaIx
-                  WHERE ObjectHead_Self_twObjectIx = twRMRootIx;
+                 UPDATE RMRoot AS o
+                    SET o.Owner_twRPersonaIx = Owner_twRPersonaIx
+                  WHERE o.ObjectHead_Self_twObjectIx = twRMRootIx;
 
                     SET bError = IF (ROW_COUNT () = 1, 0, 1);
 

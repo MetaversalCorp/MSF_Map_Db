@@ -37,9 +37,9 @@ BEGIN
           CALL call_RMRoot_Event (twRMRootIx, twEventIz, bError);
             IF bError = 0
           THEN
-                 UPDATE RMRoot
-                    SET Name_wsRMRootId = Name_wsRMRootId
-                  WHERE ObjectHead_Self_twObjectIx = twRMRootIx;
+                 UPDATE RMRoot AS o
+                    SET o.Name_wsRMRootId = Name_wsRMRootId
+                  WHERE o.ObjectHead_Self_twObjectIx = twRMRootIx;
 
                     SET bError = IF (ROW_COUNT () = 1, 0, 1);
 

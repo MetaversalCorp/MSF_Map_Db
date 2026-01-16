@@ -39,11 +39,11 @@ BEGIN
           CALL call_RMTObject_Event (twRMTObjectIx, twEventIz, bError);
             IF bError = 0
           THEN
-                 UPDATE RMTObject
-                    SET Type_bType    = Type_bType,
-                        Type_bSubtype = Type_bSubtype,
-                        Type_bFiction = Type_bFiction
-                  WHERE ObjectHead_Self_twObjectIx = twRMTObjectIx;
+                 UPDATE RMTObject AS o
+                    SET o.Type_bType    = Type_bType,
+                        o.Type_bSubtype = Type_bSubtype,
+                        o.Type_bFiction = Type_bFiction
+                  WHERE o.ObjectHead_Self_twObjectIx = twRMTObjectIx;
 
                     SET bError = IF (ROW_COUNT () = 1, 0, 1);
 

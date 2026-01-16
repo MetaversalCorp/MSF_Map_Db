@@ -202,10 +202,10 @@ SET nLock = GET_LOCK ('parent', 10);
 
                      IF bError = 0
                    THEN
-                          UPDATE RMPObject
-                             SET ObjectHead_Parent_wClass     = wClass,
-                                 ObjectHead_Parent_twObjectIx = twObjectIx
-                           WHERE ObjectHead_Self_twObjectIx = twRMPObjectIx;
+                          UPDATE RMPObject AS o
+                             SET o.ObjectHead_Parent_wClass     = wClass,
+                                 o.ObjectHead_Parent_twObjectIx = twObjectIx
+                           WHERE o.ObjectHead_Self_twObjectIx = twRMPObjectIx;
 
                              SET bError = IF (ROW_COUNT () = 1, 0, 1);
 

@@ -37,9 +37,9 @@ BEGIN
           CALL call_RMTObject_Event (twRMTObjectIx, twEventIz, bError);
             IF bError = 0
           THEN
-                 UPDATE RMTObject
-                    SET Name_wsRMTObjectId = Name_wsRMTObjectId
-                  WHERE ObjectHead_Self_twObjectIx = twRMTObjectIx;
+                 UPDATE RMTObject AS o
+                    SET o.Name_wsRMTObjectId = Name_wsRMTObjectId
+                  WHERE o.ObjectHead_Self_twObjectIx = twRMTObjectIx;
 
                     SET bError = IF (ROW_COUNT () = 1, 0, 1);
 

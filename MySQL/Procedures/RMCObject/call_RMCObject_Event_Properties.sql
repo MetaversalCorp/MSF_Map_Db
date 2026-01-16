@@ -41,13 +41,13 @@ BEGIN
           CALL call_RMCObject_Event (twRMCObjectIx, twEventIz, bError);
             IF bError = 0
           THEN
-                 UPDATE RMCObject
-                    SET Properties_fMass         = Properties_fMass,
-                        Properties_fGravity      = Properties_fGravity,
-                        Properties_fColor        = Properties_fColor,
-                        Properties_fBrightness   = Properties_fBrightness,
-                        Properties_fReflectivity = Properties_fReflectivity
-                  WHERE ObjectHead_Self_twObjectIx = twRMCObjectIx;
+                 UPDATE RMCObject AS o
+                    SET o.Properties_fMass         = Properties_fMass,
+                        o.Properties_fGravity      = Properties_fGravity,
+                        o.Properties_fColor        = Properties_fColor,
+                        o.Properties_fBrightness   = Properties_fBrightness,
+                        o.Properties_fReflectivity = Properties_fReflectivity
+                  WHERE o.ObjectHead_Self_twObjectIx = twRMCObjectIx;
 
                     SET bError = IF (ROW_COUNT () = 1, 0, 1);
 

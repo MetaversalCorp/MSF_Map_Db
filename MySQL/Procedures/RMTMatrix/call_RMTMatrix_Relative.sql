@@ -170,18 +170,18 @@ BEGIN
 
             -- Update the relative transform in the object
 
-        UPDATE RMTObject
-           SET Transform_Position_dX = dTX,
-               Transform_Position_dY = dTY,
-               Transform_Position_dZ = dTZ,
-               Transform_Rotation_dX = dRX,
-               Transform_Rotation_dY = dRY,
-               Transform_Rotation_dZ = dRZ,
-               Transform_Rotation_dW = dRW,
-               Transform_Scale_dX    = dSX,
-               Transform_Scale_dY    = dSY,
-               Transform_Scale_dZ    = dSZ
-         WHERE ObjectHead_Self_twObjectIx = twRMTObjectIx;
+        UPDATE RMTObject AS o
+           SET o.Transform_Position_dX = dTX,
+               o.Transform_Position_dY = dTY,
+               o.Transform_Position_dZ = dTZ,
+               o.Transform_Rotation_dX = dRX,
+               o.Transform_Rotation_dY = dRY,
+               o.Transform_Rotation_dZ = dRZ,
+               o.Transform_Rotation_dW = dRW,
+               o.Transform_Scale_dX    = dSX,
+               o.Transform_Scale_dY    = dSY,
+               o.Transform_Scale_dZ    = dSZ
+         WHERE o.ObjectHead_Self_twObjectIx = twRMTObjectIx;
 END$$
 
 DELIMITER ;
