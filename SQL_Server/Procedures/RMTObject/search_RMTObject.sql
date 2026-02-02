@@ -66,7 +66,8 @@ BEGIN
                             -- positions must be normalized to the surface
 
                        DECLARE @dRadius FLOAT (53) = 6371000 -- where do we get this?
-                       DECLARE @dNormal FLOAT (53) = @dRadius / SQRT ((@dX * @dX) + (@dY * @dY) + (@dZ * @dZ))
+                       DECLARE @dHeight FLOAT (53) = SQRT ((@dX * @dX) + (@dY * @dY) + (@dZ * @dZ))
+                       DECLARE @dNormal FLOAT (53) = IIF (@dHeight > 0, @dRadius / @dHeight, 1.0)
 
                            SET @dX *= @dNormal
                            SET @dY *= @dNormal
@@ -93,7 +94,7 @@ BEGIN
                           FROM dbo.RMTObject AS o
                           JOIN dbo.RMTMatrix AS m ON m.bnMatrix = o.ObjectHead_Self_twObjectIx
                    CROSS APPLY (SELECT POWER (CAST (4.0 AS FLOAT (53)), o.Type_bType - 7)                                                              AS dFactor    ) AS f
-                   CROSS APPLY (SELECT dbo.ArcLength (@dRadius, @dX, @dY, @dZ, m.d03, m.d13, m.d23)                                                    AS dDistance  ) AS d
+                   CROSS APPLY (SELECT IIF (@dHeight > 0, @dRadius, dbo.ArcLength (@dRadius, @dX, @dY, @dZ, m.d03, m.d13, m.d23))                      AS dDistance  ) AS d
                    CROSS APPLY (SELECT dbo.Descendant_T (@SBO_CLASS_RMTOBJECT, @twRMTObjectIx, o.ObjectHead_Self_wClass, o.ObjectHead_Self_twObjectIx) AS bDescendant) AS i
                          WHERE o.Name_wsRMTObjectId LIKE @sText + '%'
                            AND    (o.Type_bType  BETWEEN @bType + 1 AND @MVO_RMTOBJECT_TYPE_COMMUNITY

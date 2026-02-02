@@ -44,7 +44,10 @@ BEGIN
        DECLARE nCount  INT DEFAULT 0;
 
        DECLARE dRadius DOUBLE DEFAULT 6371000; -- where do we get this?
-       DECLARE dNormal DOUBLE DEFAULT dRadius / SQRT ((dX * dX) + (dY * dY) + (dZ * dZ));
+       DECLARE dHeight DOUBLE DEFAULT SQRT ((dX * dX) + (dY * dY) + (dZ * dZ));
+       DECLARE dNormal DOUBLE DEFAULT IF (dHeight > 0, dRadius / dHeight, 1.0);
+       
+       dRadius / SQRT ((dX * dX) + (dY * dY) + (dZ * dZ));
 
             -- Create the temp Error table
         CREATE TEMPORARY TABLE Error
@@ -93,7 +96,7 @@ BEGIN
                           SELECT 
                                  o.ObjectHead_Self_twObjectIx, 
                                  POW (4.0, o.Type_bType - 7) AS dFactor, 
-                                 ArcLength (dRadius, dX, dY, dZ, m.d03, m.d13, m.d23) AS dDistance
+                                 IF (dHeight > 0, dRadius, ArcLength (dRadius, dX, dY, dZ, m.d03, m.d13, m.d23)) AS dDistance
                             FROM RMTObject AS o
                             JOIN RMTMatrix AS m ON m.bnMatrix = o.ObjectHead_Self_twObjectIx
 
