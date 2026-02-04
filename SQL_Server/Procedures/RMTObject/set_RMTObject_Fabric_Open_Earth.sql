@@ -67,7 +67,7 @@ BEGIN
        DECLARE @SBO_CLASS_RMTOBJECT                       INT = 72
        DECLARE @SBO_CLASS_RMPOBJECT                       INT = 73
        DECLARE @MVO_RMTOBJECT_TYPE_PARCEL                 INT = 11
-       DECLARE @RMTOBJECT_OP_RMTOBJECT_OPEN               INT = 14
+       DECLARE @RMTOBJECT_OP_FABRIC_OPEN                  INT = 18
        DECLARE @RMTMATRIX_COORD_NUL                       INT = 0
        DECLARE @RMTMATRIX_COORD_CAR                       INT = 1
        DECLARE @RMTMATRIX_COORD_CYL                       INT = 2
@@ -137,9 +137,9 @@ BEGIN
             IF @nError = 0
          BEGIN
                    EXEC dbo.call_RMTObject_Validate_Name       @SBO_CLASS_RMTOBJECT, @twRMTObjectIx, 0, @Name_wsRMTObjectId, @nError OUTPUT
-                -- EXEC dbo.call_RMTObject_Validate_Type       @SBO_CLASS_RMTOBJECT, @twRMTObjectIx, 0, @Type_bType, @Type_bSubtype, @Type_bFiction, @nError OUTPUT
-                   EXEC dbo.call_RMTObject_Validate_Owner      @SBO_CLASS_RMTOBJECT, @twRMTObjectIx, 0, @Owner_twRPersonaIx, @nError OUTPUT
-                   EXEC dbo.call_RMTObject_Validate_Resource   @SBO_CLASS_RMTOBJECT, @twRMTObjectIx, 0, @Resource_qwResource, @Resource_sName, @Resource_sReference, @nError OUTPUT
+                -- EXEC dbo.call_RMPObject_Validate_Type       @SBO_CLASS_RMPOBJECT, 0,              0, @Type_bType, @Type_bSubtype, @Type_bFiction, @nError OUTPUT
+                   EXEC dbo.call_RMPObject_Validate_Owner      @SBO_CLASS_RMPOBJECT, 0,              0, @Owner_twRPersonaIx, @nError OUTPUT
+                   EXEC dbo.call_RMPObject_Validate_Resource   @SBO_CLASS_RMPOBJECT, 0,              0, @Resource_qwResource, @Resource_sName, @Resource_sReference, @nError OUTPUT
                 -- EXEC dbo.call_RMTObject_Validate_Transform  @SBO_CLASS_RMTOBJECT, @twRMTObjectIx, 0, @Transform_Position_dX, @Transform_Position_dY, @Transform_Position_dZ, @Transform_Rotation_dX, @Transform_Rotation_dY, @Transform_Rotation_dZ, @Transform_Rotation_dW, @Transform_Scale_dX, @Transform_Scale_dY, @Transform_Scale_dZ, @nError OUTPUT
                 -- EXEC dbo.call_RMTObject_Validate_Bound      @SBO_CLASS_RMTOBJECT, @twRMTObjectIx, 0, @Bound_dX, @Bound_dY, @Bound_dZ, @nError OUTPUT
                 -- EXEC dbo.call_RMTObject_Validate_Properties @SBO_CLASS_RMTOBJECT, @twRMTObjectIx, 0, @Properties_bLockToGround, @Properties_bYouth, @Properties_bAdult, @Properties_bAvatar, @nError OUTPUT
@@ -217,7 +217,7 @@ BEGIN
    
                                       SET @bCommit = 1
                              END
-                            ELSE EXEC dbo.call_Error -1, 'Failed to insert RMPObject'
+                            ELSE EXEC dbo.call_Error -2, 'Failed to insert RMPObject'
                     END
                    ELSE EXEC dbo.call_Error -1, 'Failed to insert RMTObject'
            END
@@ -228,7 +228,7 @@ BEGIN
          BEGIN
                     SET @bCommit = 0
                  
-                   EXEC @bError = dbo.call_RMTObject_Log @RMTOBJECT_OP_RMTOBJECT_OPEN, @sIPAddress, @twRPersonaIx, @twRMTObjectIx
+                   EXEC @bError = dbo.call_RMTObject_Log @RMTOBJECT_OP_FABRIC_OPEN, @sIPAddress, @twRPersonaIx, @twRMTObjectIx
                      IF @bError = 0
                   BEGIN
                          EXEC @bError = dbo.call_Event_Push

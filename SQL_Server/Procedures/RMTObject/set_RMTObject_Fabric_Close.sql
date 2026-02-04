@@ -38,7 +38,7 @@ BEGIN
        DECLARE @SBO_CLASS_RMTOBJECT                       INT = 72
        DECLARE @SBO_CLASS_RMPOBJECT                       INT = 73
        DECLARE @MVO_RMTOBJECT_TYPE_PARCEL                 INT = 11
-       DECLARE @RMTOBJECT_OP_RMTOBJECT_CLOSE              INT = 15
+       DECLARE @RMTOBJECT_OP_FABRIC_CLOSE                 INT = 19
 
             -- Create the temp Error table
         SELECT * INTO #Error FROM dbo.Table_Error ()
@@ -53,8 +53,8 @@ BEGIN
                @ObjectHead_Parent_twObjectIx BIGINT,
                @ObjectHead_Self_wClass       SMALLINT,
                @ObjectHead_Self_twObjectIx   BIGINT,
-               @Type_bType                   TINYINT,
-               @Type_bSubtype                TINYINT
+               @Parent_Type_bType            TINYINT,
+               @Self_Type_bSubtype           TINYINT
 
             -- Create the temp Event table
         SELECT * INTO #Event FROM dbo.Table_Event ()
@@ -65,10 +65,10 @@ BEGIN
                @ObjectHead_Grand_twObjectIx  = t.ObjectHead_Parent_twObjectIx,
                @ObjectHead_Parent_wClass     = t.ObjectHead_Self_wClass,
                @ObjectHead_Parent_twObjectIx = t.ObjectHead_Self_twObjectIx,
-               @Type_bType                   = t.Type_bType,
+               @Parent_Type_bType            = t.Type_bType,
                @ObjectHead_Self_wClass       = p.ObjectHead_Self_wClass,
                @ObjectHead_Self_twObjectIx   = p.ObjectHead_Self_twObjectIx,
-               @Type_bSubtype                = p.Type_bSubtype
+               @Self_Type_bSubtype           = p.Type_bSubtype
           FROM dbo.RMPObject AS p
           JOIN dbo.RMTObject AS t  ON t.ObjectHead_Self_wClass     = p.ObjectHead_Parent_wClass
                                   AND t.ObjectHead_Self_twObjectIx = p.ObjectHead_Parent_twObjectIx
@@ -77,9 +77,9 @@ BEGIN
 
             IF @ObjectHead_Grand_wClass IS NULL
                EXEC dbo.call_Error 1, 'Unknown Object', @nError OUTPUT
-       ELSE IF @ObjectHead_Grand_wClass <> @SBO_CLASS_RMTOBJECT  OR  @ObjectHead_Parent_wClass <> @SBO_CLASS_RMTOBJECT  OR  @Type_bType <> @MVO_RMTOBJECT_TYPE_PARCEL
+       ELSE IF @ObjectHead_Grand_wClass <> @SBO_CLASS_RMTOBJECT  OR  @ObjectHead_Parent_wClass <> @SBO_CLASS_RMTOBJECT  OR  @Parent_Type_bType <> @MVO_RMTOBJECT_TYPE_PARCEL
                EXEC dbo.call_Error 2, 'Invalid Object', @nError OUTPUT
-       ELSE IF @Type_bSubtype <> 255
+       ELSE IF @Self_Type_bSubtype <> 255
                EXEC dbo.call_Error 3, 'Invalid Object', @nError OUTPUT
 
       -- EXEC dbo.call_RMTObject_Validate @twRPersonaIx, @twRMTObjectIx, @ObjectHead_Parent_wClass OUTPUT, @ObjectHead_Parent_twObjectIx OUTPUT, @nError OUTPUT
@@ -103,7 +103,7 @@ BEGIN
          BEGIN
                     SET @bCommit = 0
                  
-                   EXEC @bError = dbo.call_RMTObject_Log @RMTOBJECT_OP_RMTOBJECT_CLOSE, @sIPAddress, @twRPersonaIx, @ObjectHead_Grand_twObjectIx
+                   EXEC @bError = dbo.call_RMTObject_Log @RMTOBJECT_OP_FABRIC_CLOSE, @sIPAddress, @twRPersonaIx, @ObjectHead_Grand_twObjectIx
                      IF @bError = 0
                   BEGIN
                          EXEC @bError = dbo.call_Event_Push
