@@ -46,8 +46,6 @@ BEGIN
        DECLARE dRadius DOUBLE DEFAULT 6371000; -- where do we get this?
        DECLARE dHeight DOUBLE DEFAULT SQRT ((dX * dX) + (dY * dY) + (dZ * dZ));
        DECLARE dNormal DOUBLE DEFAULT IF (dHeight > 0, dRadius / dHeight, 1.0);
-       
-       dRadius / SQRT ((dX * dX) + (dY * dY) + (dZ * dZ));
 
             -- Create the temp Error table
         CREATE TEMPORARY TABLE Error
