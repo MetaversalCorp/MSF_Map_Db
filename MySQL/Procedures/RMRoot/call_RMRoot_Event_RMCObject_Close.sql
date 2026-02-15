@@ -57,7 +57,7 @@ BEGIN
 
             IF bError = 0
           THEN
-                   CALL call_RMCObject_Delete_Descendants (twRMCObjectIx_Close, bError);
+                   CALL call_RMCObject_Delete_Descendants (twRMCObjectIx, bError);
         END IF ;
 
             IF bError = 0
