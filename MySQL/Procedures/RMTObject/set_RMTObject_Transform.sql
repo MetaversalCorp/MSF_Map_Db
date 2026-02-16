@@ -118,8 +118,8 @@ BEGIN
 
                           -- SET nCount += @@ROWCOUNT -- 2
 
-                          DELETE FROM RMTSubsurface
-                           WHERE twRMTObjectIx = twRMTObjectIx;
+                          DELETE s FROM RMTSubsurface s
+                           WHERE s.twRMTObjectIx = twRMTObjectIx;
 
                           -- SET nCount += @@ROWCOUNT -- 1
 
