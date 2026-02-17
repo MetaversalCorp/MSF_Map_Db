@@ -25,7 +25,7 @@ DELIMITER $$
 CREATE PROCEDURE call_RMRoot_Event_RMCObject_Close
 (
    IN    twRMRootIx                    BIGINT,
-   IN    twRMCObjectIx                 BIGINT,
+   IN    twRMCObjectIx_Close           BIGINT,
    OUT   bError                        INT
 )
 BEGIN

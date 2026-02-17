@@ -42,43 +42,28 @@ BEGIN
             -- Create the temp Results table
         SELECT * INTO #Results FROM dbo.Table_Results ()
 
-         BEGIN TRANSACTION
+            -- validate input
 
---        EXEC @nError = dbo.call_
-           SET @nError = 0
-            IF @nError = 0
+            IF (@bError = 0)
          BEGIN
-                  -- validate input
+               INSERT #Results
+               SELECT 0,
+                      ObjectHead_Self_twObjectIx
+                 FROM dbo.RMRoot
+                WHERE ObjectHead_Self_twObjectIx = @twRMRootIx
 
-                  IF (@bError = 0)
-               BEGIN
-                     INSERT #Results
-                     SELECT 0,
-                            ObjectHead_Self_twObjectIx
-                       FROM dbo.RMRoot
-                      WHERE ObjectHead_Self_twObjectIx = @twRMRootIx
+               INSERT #Results
+               SELECT 1,
+                      ObjectHead_Self_twObjectIx
+                 FROM dbo.RMCObject
+                WHERE ObjectHead_Parent_wClass     = @SBO_CLASS_RMROOT
+                  AND ObjectHead_Parent_twObjectIx = @twRMRootIx
 
-                     INSERT #Results
-                     SELECT 1,
-                            ObjectHead_Self_twObjectIx
-                       FROM dbo.RMCObject
-                      WHERE ObjectHead_Parent_wClass     = @SBO_CLASS_RMROOT
-                        AND ObjectHead_Parent_twObjectIx = @twRMRootIx
+                 EXEC dbo.call_RMRoot_Select    0
+                 EXEC dbo.call_RMCObject_Select 1
 
-                       EXEC dbo.call_RMRoot_Select    0
-                       EXEC dbo.call_RMCObject_Select 1
-
-                        SET @bCommit = 1
-                 END
+                  SET @bCommit = 1
            END
-
-            IF (@bCommit = 0)
-         BEGIN
-                 SELECT dwError, sError FROM #Error
-
-               ROLLBACK TRANSACTION
-           END
-          ELSE COMMIT TRANSACTION
 
         RETURN @bCommit - @bError - 1
   END

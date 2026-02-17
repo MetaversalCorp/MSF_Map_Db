@@ -39,55 +39,40 @@ BEGIN
                @bCommit INT = 0,
                @nError  INT
 
+       DECLARE @bType TINYINT
+
             -- Create the temp Results table
         SELECT * INTO #Results FROM dbo.Table_Results ()
 
-         BEGIN TRANSACTION
+            -- validate input
 
---        EXEC @nError = dbo.call_
-           SET @nError = 0
-            IF @nError = 0
+        SELECT @bType = Type_bType
+          FROM dbo.RMPObject
+         WHERE ObjectHead_Self_twObjectIx = @twRMPObjectIx
+
+            IF @bType IS NULL
+               SET @bError = 1
+
+            IF (@bError = 0)
          BEGIN
-                  -- validate input
-
-               DECLARE @bType TINYINT
-
-               SELECT @bType = Type_bType
+               INSERT #Results
+               SELECT 0,
+                      ObjectHead_Self_twObjectIx
                  FROM dbo.RMPObject
                 WHERE ObjectHead_Self_twObjectIx = @twRMPObjectIx
-
-                   IF @bType IS NULL
-                      SET @bError = 1
-
-                  IF (@bError = 0)
-               BEGIN
-                     INSERT #Results
-                     SELECT 0,
-                            ObjectHead_Self_twObjectIx
-                       FROM dbo.RMPObject
-                      WHERE ObjectHead_Self_twObjectIx = @twRMPObjectIx
-
-                     INSERT #Results
-                     SELECT 1,
-                            ObjectHead_Self_twObjectIx
-                       FROM dbo.RMPObject
-                      WHERE ObjectHead_Parent_wClass     = @SBO_CLASS_RMPOBJECT
-                        AND ObjectHead_Parent_twObjectIx = @twRMPObjectIx
-
-                      EXEC dbo.call_RMPObject_Select 0
-                      EXEC dbo.call_RMPObject_Select 1
-
-                       SET @bCommit = 1
-                 END
+ 
+               INSERT #Results
+               SELECT 1,
+                      ObjectHead_Self_twObjectIx
+                 FROM dbo.RMPObject
+                WHERE ObjectHead_Parent_wClass     = @SBO_CLASS_RMPOBJECT
+                  AND ObjectHead_Parent_twObjectIx = @twRMPObjectIx
+ 
+                 EXEC dbo.call_RMPObject_Select 0
+                 EXEC dbo.call_RMPObject_Select 1
+ 
+                  SET @bCommit = 1
            END
-
-            IF (@bCommit = 0)
-         BEGIN
-                 SELECT dwError, sError FROM #Error
-
-               ROLLBACK TRANSACTION
-           END
-          ELSE COMMIT TRANSACTION
 
         RETURN @bCommit - @bError - 1
   END

@@ -22,7 +22,7 @@
 -- This would need to be implemented as a stored procedure that creates a temporary table
 -- For now, this is converted to a comment indicating the table structure
 
--- CREATE TEMPORARY TABLE Error
+-- CREATE TEMPORARY TABLE #Error
 -- (
 --    nOrder                        INT             NOT NULL AUTO_INCREMENT PRIMARY KEY,
 --    dwError                       INT             NOT NULL,

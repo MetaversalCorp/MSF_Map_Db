@@ -69,7 +69,6 @@ BEGIN
        DECLARE nError  INT DEFAULT 0;
        DECLARE bCommit INT DEFAULT 0;
        DECLARE bError  INT;
-       DECLARE nResult INT;
 
        DECLARE ObjectHead_Parent_wClass     SMALLINT;
        DECLARE ObjectHead_Parent_twObjectIx BIGINT;

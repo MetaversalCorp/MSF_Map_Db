@@ -53,8 +53,7 @@ BEGIN
        DECLARE nError  INT DEFAULT 0;
        DECLARE bCommit INT DEFAULT 0;
        DECLARE bError  INT;
-       DECLARE nResult INT;
-
+       
        DECLARE ObjectHead_Parent_wClass     SMALLINT;
        DECLARE ObjectHead_Parent_twObjectIx BIGINT;
 
@@ -112,14 +111,14 @@ BEGIN
                    CALL call_RMTObject_Event_Transform (twRMTObjectIx, Transform_Position_dX, Transform_Position_dY, Transform_Position_dZ, Transform_Rotation_dX, Transform_Rotation_dY, Transform_Rotation_dZ, Transform_Rotation_dW, Transform_Scale_dX, Transform_Scale_dY, Transform_Scale_dZ, bError);
                      IF bError = 0
                    THEN
-                          DELETE FROM RMTMatrix
-                           WHERE bnMatrix = twRMTObjectIx
-                              OR bnMatrix = 0 - twRMTObjectIx;
+                          DELETE FROM RMTMatrix AS m
+                           WHERE m.bnMatrix = twRMTObjectIx
+                              OR m.bnMatrix = 0 - twRMTObjectIx;
 
                           -- SET nCount += @@ROWCOUNT -- 2
 
-                          DELETE FROM RMTSubsurface
-                           WHERE twRMTObjectIx = twRMTObjectIx;
+                          DELETE FROM RMTSubsurface AS s
+                           WHERE s.twRMTObjectIx = twRMTObjectIx;
 
                           -- SET nCount += @@ROWCOUNT -- 1
 
