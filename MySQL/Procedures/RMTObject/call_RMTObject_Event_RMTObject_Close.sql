@@ -30,7 +30,7 @@ CREATE PROCEDURE call_RMTObject_Event_RMTObject_Close
 )
 BEGIN
        DECLARE SBO_CLASS_RMTOBJECT                        INT DEFAULT 72;
-       DECLARE SBA_SUBSCRIBE_REFRESH_EVENT_EX_FLAG_CLOSE  INT DEFAULT 0x02;
+       DECLARE SUBSCRIBE_REFRESH_EVENT_EX_FLAG_CLOSE      INT DEFAULT 0x02;
 
        DECLARE twEventIz BIGINT;
 
@@ -70,7 +70,7 @@ BEGIN
                         twRMTObjectIx,
                         SBO_CLASS_RMTOBJECT,
                         twRMTObjectIx_Close,
-                        SBA_SUBSCRIBE_REFRESH_EVENT_EX_FLAG_CLOSE,
+                        SUBSCRIBE_REFRESH_EVENT_EX_FLAG_CLOSE,
                         twEventIz,
 
                         '{ }',

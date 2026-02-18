@@ -31,6 +31,7 @@ CREATE PROCEDURE call_RMRoot_Event_Name
 BEGIN
        DECLARE SBO_CLASS_NULL                             INT DEFAULT 0;
        DECLARE SBO_CLASS_RMROOT                           INT DEFAULT 70;
+       DECLARE SUBSCRIBE_REFRESH_EVENT_EX_FLAG_PARTIAL    INT DEFAULT 0x10;
 
        DECLARE twEventIz BIGINT;
 
@@ -53,7 +54,7 @@ BEGIN
                                  twRMRootIx,
                                  SBO_CLASS_NULL,
                                  0,
-                                 0,
+                                 SUBSCRIBE_REFRESH_EVENT_EX_FLAG_PARTIAL,
                                  twEventIz,
 
                                  CONCAT

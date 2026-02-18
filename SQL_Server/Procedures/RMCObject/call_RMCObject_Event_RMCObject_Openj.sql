@@ -61,7 +61,7 @@ BEGIN
            SET NOCOUNT ON
 
        DECLARE @SBO_CLASS_RMCOBJECT                       INT = 71
-       DECLARE @SBA_SUBSCRIBE_REFRESH_EVENT_EX_FLAG_OPEN  INT = 0x01
+       DECLARE @SUBSCRIBE_REFRESH_EVENT_EX_FLAG_OPEN      INT = 0x01
 
        DECLARE @bError    INT,
                @twEventIz BIGINT
@@ -88,7 +88,7 @@ BEGIN
                              @twRMCObjectIx,
                              @SBO_CLASS_RMCOBJECT,
                              @twRMCObjectIx_Open,
-                             @SBA_SUBSCRIBE_REFRESH_EVENT_EX_FLAG_OPEN,
+                             @SUBSCRIBE_REFRESH_EVENT_EX_FLAG_OPEN,
                              @twEventIz,
 
                              '{ }',

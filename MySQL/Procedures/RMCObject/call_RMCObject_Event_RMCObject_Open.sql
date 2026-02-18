@@ -60,7 +60,7 @@ CREATE PROCEDURE call_RMCObject_Event_RMCObject_Open
 )
 BEGIN
        DECLARE SBO_CLASS_RMCOBJECT                        INT DEFAULT 71;
-       DECLARE SBA_SUBSCRIBE_REFRESH_EVENT_EX_FLAG_OPEN   INT DEFAULT 0x01;
+       DECLARE SUBSCRIBE_REFRESH_EVENT_EX_FLAG_OPEN       INT DEFAULT 0x01;
 
        DECLARE twEventIz BIGINT;
 
@@ -85,7 +85,7 @@ BEGIN
                                  twRMCObjectIx,
                                  SBO_CLASS_RMCOBJECT,
                                  twRMCObjectIx_Open,
-                                 SBA_SUBSCRIBE_REFRESH_EVENT_EX_FLAG_OPEN,
+                                 SUBSCRIBE_REFRESH_EVENT_EX_FLAG_OPEN,
                                  twEventIz,
     
                                  '{ }',

@@ -55,7 +55,7 @@ BEGIN
 
 
        DECLARE @SBO_CLASS_RMPOBJECT                       INT = 73
-       DECLARE @SBA_SUBSCRIBE_REFRESH_EVENT_EX_FLAG_OPEN  INT = 0x01
+       DECLARE @SUBSCRIBE_REFRESH_EVENT_EX_FLAG_OPEN      INT = 0x01
 
        DECLARE @bError    INT,
                @twEventIz BIGINT
@@ -85,7 +85,7 @@ BEGIN
                                @twRMPObjectIx,
                                @SBO_CLASS_RMPOBJECT,
                                @twRMPObjectIx_Open,
-                               @SBA_SUBSCRIBE_REFRESH_EVENT_EX_FLAG_OPEN,
+                               @SUBSCRIBE_REFRESH_EVENT_EX_FLAG_OPEN,
                                @twEventIz,
 
                                '{ }',

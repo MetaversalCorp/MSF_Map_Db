@@ -35,6 +35,7 @@ BEGIN
 
        DECLARE @SBO_CLASS_NULL                            INT = 0
        DECLARE @SBO_CLASS_RMCOBJECT                       INT = 71
+       DECLARE @SUBSCRIBE_REFRESH_EVENT_EX_FLAG_PARTIAL   INT = 0x10
 
        DECLARE @bError    INT,
                @twEventIz BIGINT
@@ -62,7 +63,7 @@ BEGIN
                              @twRMCObjectIx,
                              @SBO_CLASS_NULL,
                              0,
-                             0,
+                             SUBSCRIBE_REFRESH_EVENT_EX_FLAG_PARTIAL,
                              @twEventIz,
 
                              CONCAT

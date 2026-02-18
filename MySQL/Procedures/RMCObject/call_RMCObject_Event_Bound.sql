@@ -33,6 +33,7 @@ CREATE PROCEDURE call_RMCObject_Event_Bound
 BEGIN
        DECLARE SBO_CLASS_NULL                             INT DEFAULT 0;
        DECLARE SBO_CLASS_RMCOBJECT                        INT DEFAULT 71;
+       DECLARE SUBSCRIBE_REFRESH_EVENT_EX_FLAG_PARTIAL    INT DEFAULT 0x10;
 
        DECLARE twEventIz BIGINT;
 
@@ -57,7 +58,7 @@ BEGIN
                                  twRMCObjectIx,
                                  SBO_CLASS_NULL,
                                  0,
-                                 0,
+                                 SUBSCRIBE_REFRESH_EVENT_EX_FLAG_PARTIAL,
                                  twEventIz,
 
                                  CONCAT

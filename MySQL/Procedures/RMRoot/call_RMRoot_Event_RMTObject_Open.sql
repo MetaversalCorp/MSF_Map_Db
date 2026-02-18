@@ -56,7 +56,7 @@ CREATE PROCEDURE call_RMRoot_Event_RMTObject_Open
 BEGIN
        DECLARE SBO_CLASS_RMROOT                           INT DEFAULT 70;
        DECLARE SBO_CLASS_RMTOBJECT                        INT DEFAULT 72;
-       DECLARE SBA_SUBSCRIBE_REFRESH_EVENT_EX_FLAG_OPEN   INT DEFAULT 0x01;
+       DECLARE SUBSCRIBE_REFRESH_EVENT_EX_FLAG_OPEN       INT DEFAULT 0x01;
 
        DECLARE twEventIz BIGINT;
 
@@ -81,7 +81,7 @@ BEGIN
                                  twRMRootIx,
                                  SBO_CLASS_RMTOBJECT,
                                  twRMTObjectIx,
-                                 SBA_SUBSCRIBE_REFRESH_EVENT_EX_FLAG_OPEN,
+                                 SUBSCRIBE_REFRESH_EVENT_EX_FLAG_OPEN,
                                  twEventIz,
 
                                  '{ }',
