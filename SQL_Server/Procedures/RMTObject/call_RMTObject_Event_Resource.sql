@@ -61,7 +61,7 @@ BEGIN
                              @twRMTObjectIx,
                              @SBO_CLASS_NULL,
                              0,
-                             SUBSCRIBE_REFRESH_EVENT_EX_FLAG_PARTIAL,
+                             @SUBSCRIBE_REFRESH_EVENT_EX_FLAG_PARTIAL,
                              @twEventIz,
 
                              CONCAT
