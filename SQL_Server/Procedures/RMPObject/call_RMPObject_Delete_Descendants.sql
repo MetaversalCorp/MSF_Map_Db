@@ -48,8 +48,9 @@ BEGIN
                
                          SELECT ob.ObjectHead_Self_twObjectIx
                            FROM Tree          AS t
-                           JOIN dbo.RMPObject AS ob ON ob.ObjectHead_Parent_wClass     = @SBO_CLASS_RMPOBJECT
-                                                   AND ob.ObjectHead_Parent_twObjectIx = t.ObjectHead_Self_twObjectIx
+                           JOIN dbo.RMPObject AS ob WITH (INDEX (IX_RMPObject_ObjectHead_Parent_twObjectIx))
+                                                      ON ob.ObjectHead_Parent_wClass     = @SBO_CLASS_RMPOBJECT
+                                                     AND ob.ObjectHead_Parent_twObjectIx = t.ObjectHead_Self_twObjectIx
                        )
                 INSERT #PObject
                      ( ObjectHead_Self_twObjectIx )
@@ -73,8 +74,9 @@ BEGIN
                
                          SELECT ob.ObjectHead_Self_twObjectIx
                            FROM Tree          AS t
-                           JOIN dbo.RMPObject AS ob ON ob.ObjectHead_Parent_wClass     = @SBO_CLASS_RMPOBJECT
-                                                   AND ob.ObjectHead_Parent_twObjectIx = t.ObjectHead_Self_twObjectIx
+                           JOIN dbo.RMPObject AS ob WITH (INDEX (IX_RMPObject_ObjectHead_Parent_twObjectIx))
+                                                      ON ob.ObjectHead_Parent_wClass     = @SBO_CLASS_RMPOBJECT
+                                                     AND ob.ObjectHead_Parent_twObjectIx = t.ObjectHead_Self_twObjectIx
                        )
                 INSERT #PObject
                      ( ObjectHead_Self_twObjectIx )

@@ -48,8 +48,9 @@ BEGIN
                
                          SELECT ob.ObjectHead_Self_twObjectIx
                            FROM Tree          AS t
-                           JOIN dbo.RMTObject AS ob ON ob.ObjectHead_Parent_wClass     = @SBO_CLASS_RMTOBJECT
-                                                   AND ob.ObjectHead_Parent_twObjectIx = t.ObjectHead_Self_twObjectIx
+                           JOIN dbo.RMTObject AS ob WITH (INDEX (IX_RMTObject_ObjectHead_Parent_twObjectIx))
+                                                      ON ob.ObjectHead_Parent_wClass     = @SBO_CLASS_RMTOBJECT
+                                                     AND ob.ObjectHead_Parent_twObjectIx = t.ObjectHead_Self_twObjectIx
                        )
                 INSERT #TObject
                      ( ObjectHead_Self_twObjectIx )
@@ -73,8 +74,9 @@ BEGIN
                
                          SELECT ob.ObjectHead_Self_twObjectIx
                            FROM Tree          AS t
-                           JOIN dbo.RMTObject AS ob ON ob.ObjectHead_Parent_wClass     = @SBO_CLASS_RMTOBJECT
-                                                   AND ob.ObjectHead_Parent_twObjectIx = t.ObjectHead_Self_twObjectIx
+                           JOIN dbo.RMTObject AS ob WITH (INDEX (IX_RMTObject_ObjectHead_Parent_twObjectIx))
+                                                      ON ob.ObjectHead_Parent_wClass     = @SBO_CLASS_RMTOBJECT
+                                                     AND ob.ObjectHead_Parent_twObjectIx = t.ObjectHead_Self_twObjectIx
                        )
                 INSERT #TObject
                      ( ObjectHead_Self_twObjectIx )
@@ -88,26 +90,26 @@ BEGIN
 
             IF @bError = 0
          BEGIN
-                 DELETE o
-                   FROM #TObject      AS p
-                   JOIN dbo.RMTMatrix AS m ON m.bnMatrix =     p.ObjectHead_Self_twObjectIx
-                                           OR m.bnMatrix = 0 - p.ObjectHead_Self_twObjectIx
+                 DELETE m
+                   FROM #TObject      AS t
+                   JOIN dbo.RMTMatrix AS m ON m.bnMatrix =     t.ObjectHead_Self_twObjectIx
+                                           OR m.bnMatrix = 0 - t.ObjectHead_Self_twObjectIx
          
                     SET @bError = IIF (@@ROWCOUNT >= @nCount, @@ERROR, 1)
          
                      IF @bError = 0
                   BEGIN
-                          DELETE o
-                            FROM #TObject          AS p
-                            JOIN dbo.RMTSubsurface AS s ON s.twRMTObjectIx = p.ObjectHead_Self_twObjectIx
+                          DELETE s
+                            FROM #TObject          AS t
+                            JOIN dbo.RMTSubsurface AS s ON s.twRMTObjectIx = t.ObjectHead_Self_twObjectIx
          
                              SET @bError = IIF (@@ROWCOUNT >= @nCount, @@ERROR, 1)
          
                               IF @bError = 0
                            BEGIN
                                    DELETE o
-                                     FROM #TObject      AS p
-                                     JOIN dbo.RMTObject AS o ON o.ObjectHead_Self_twObjectIx = p.ObjectHead_Self_twObjectIx
+                                     FROM #TObject      AS t
+                                     JOIN dbo.RMTObject AS o ON o.ObjectHead_Self_twObjectIx = t.ObjectHead_Self_twObjectIx
          
                                       SET @bError = IIF (@@ROWCOUNT >= @nCount, @@ERROR, 1)
                              END

@@ -48,8 +48,9 @@ BEGIN
                
                          SELECT ob.ObjectHead_Self_twObjectIx
                            FROM Tree          AS t
-                           JOIN dbo.RMCObject AS ob ON ob.ObjectHead_Parent_wClass     = @SBO_CLASS_RMCOBJECT
-                                                   AND ob.ObjectHead_Parent_twObjectIx = t.ObjectHead_Self_twObjectIx
+                           JOIN dbo.RMCObject AS ob WITH (INDEX (IX_RMCObject_ObjectHead_Parent_twObjectIx))
+                                                      ON ob.ObjectHead_Parent_wClass     = @SBO_CLASS_RMCOBJECT
+                                                     AND ob.ObjectHead_Parent_twObjectIx = t.ObjectHead_Self_twObjectIx
                        )
                 INSERT #CObject
                      ( ObjectHead_Self_twObjectIx )
@@ -73,8 +74,9 @@ BEGIN
                
                          SELECT ob.ObjectHead_Self_twObjectIx
                            FROM Tree          AS t
-                           JOIN dbo.RMCObject AS ob ON ob.ObjectHead_Parent_wClass     = @SBO_CLASS_RMCOBJECT
-                                                   AND ob.ObjectHead_Parent_twObjectIx = t.ObjectHead_Self_twObjectIx
+                           JOIN dbo.RMCObject AS ob WITH (INDEX (IX_RMCObject_ObjectHead_Parent_twObjectIx))
+                                                      ON ob.ObjectHead_Parent_wClass     = @SBO_CLASS_RMCOBJECT
+                                                     AND ob.ObjectHead_Parent_twObjectIx = t.ObjectHead_Self_twObjectIx
                        )
                 INSERT #CObject
                      ( ObjectHead_Self_twObjectIx )
@@ -89,8 +91,8 @@ BEGIN
             IF @bError = 0
          BEGIN
                  DELETE o
-                   FROM #CObject      AS p
-                   JOIN dbo.RMCObject AS o ON o.ObjectHead_Self_twObjectIx = p.ObjectHead_Self_twObjectIx
+                   FROM #CObject      AS c
+                   JOIN dbo.RMCObject AS o ON o.ObjectHead_Self_twObjectIx = c.ObjectHead_Self_twObjectIx
          
                     SET @bError = IIF (@@ROWCOUNT >= @nCount, @@ERROR, 1)
            END
