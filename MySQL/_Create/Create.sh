@@ -33,4 +33,3 @@ cat ../Procedures/RMTObject/*.sql >> ../_Distrib/MSF_Map.sql
 cat ../Procedures/RMCObject/*.sql >> ../_Distrib/MSF_Map.sql
 cat ../Procedures/RMRoot/*.sql    >> ../_Distrib/MSF_Map.sql
 #cat ../Jobs/*.sql                 >> ../_Distrib/MSF_Map.sql
-
