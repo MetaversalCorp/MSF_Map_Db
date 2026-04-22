@@ -79,7 +79,7 @@ BEGIN
                         SBO_CLASS_RMROOT,
                         twRMRootIx,
                         SBO_CLASS_RMCOBJECT,
-                        twRMCObjectIx,
+                        twRMCObjectIx_Close,
                         SUBSCRIBE_REFRESH_EVENT_EX_FLAG_CLOSE,
                         twEventIz,
 
