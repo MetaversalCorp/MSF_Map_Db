@@ -86,8 +86,8 @@ BEGIN
 
                         @d20 = mr.d20,
                         @d21 = mr.d21,
-                        @d23 = mr.d23,
                         @d22 = mr.d22,
+                        @d23 = mr.d23,
 
                         @d30 = mr.d30,
                         @d31 = mr.d31,

@@ -30,14 +30,15 @@ CREATE PROCEDURE search_RMTObject
    IN    dX                            DOUBLE,
    IN    dY                            DOUBLE,
    IN    dZ                            DOUBLE,
-   IN    sText                         VARCHAR (48)
+   IN    sText                         VARCHAR (48),
+   OUT   nResult                       BIGINT
 )
 BEGIN
        DECLARE MVO_RMTOBJECT_TYPE_COMMUNITY              INT DEFAULT 9;
 
-       DECLARE bError  INT;
+       DECLARE bError  INT DEFAULT 0;
        DECLARE bCommit INT DEFAULT 0;
-       DECLARE nError  INT;
+       DECLARE nError  INT DEFAULT 0;
 
        DECLARE bType   TINYINT UNSIGNED;
        DECLARE dRange  DOUBLE;
@@ -75,7 +76,7 @@ BEGIN
 
             IF bError = 0
           THEN
-                    SET sText = TRIM (IFNULL (sText, ''));
+                    SET sText = TRIM(IFNULL(sText, ''));
 
                      IF sText <> ''
                    THEN
@@ -98,7 +99,7 @@ BEGIN
                             FROM RMTObject AS o
                             JOIN RMTMatrix AS m ON m.bnMatrix = o.ObjectHead_Self_twObjectIx
 
-                           WHERE o.Name_wsRMTObjectId LIKE CONCAT(sText, '%')
+                           WHERE o.Name_wsRMTObjectId LIKE CONCAT(sText, '%') COLLATE utf8mb4_unicode_ci
                              AND o.Type_bType BETWEEN bType + 1 AND MVO_RMTOBJECT_TYPE_COMMUNITY
                         ORDER BY POW (4.0, o.Type_bType - 7) * ArcLength (dRadius, dX, dY, dZ, m.d03, m.d13, m.d23), o.Name_wsRMTObjectId
                            LIMIT 10;
@@ -179,6 +180,9 @@ BEGIN
 
           DROP TEMPORARY TABLE Error;
           DROP TEMPORARY TABLE Result;
+
+           SET nResult = bCommit - 1 - nError;
+
 END$$
   
 DELIMITER ;

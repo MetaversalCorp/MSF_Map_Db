@@ -91,8 +91,8 @@ BEGIN
 
                         mr.d20,
                         mr.d21,
-                        mr.d23,
                         mr.d22,
+                        mr.d23,
 
                         mr.d30,
                         mr.d31,
