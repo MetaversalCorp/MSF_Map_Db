@@ -30,12 +30,13 @@ CREATE PROCEDURE search_RMCObject
    IN    dX                           DOUBLE,
    IN    dY                           DOUBLE,
    IN    dZ                           DOUBLE,
-   IN    sText                        VARCHAR (48)
+   IN    sText                        VARCHAR (48),
+   OUT   nResult                      BIGINT
 )
 BEGIN
        DECLARE MVO_RMCOBJECT_TYPE_SATELLITE              INT DEFAULT 15;
 
-       DECLARE bError  INT;
+       DECLARE bError  INT DEFAULT 0;
        DECLARE bCommit INT DEFAULT 0;
        DECLARE nError  INT DEFAULT 0;
 
@@ -62,7 +63,7 @@ BEGIN
 
             IF bError = 0
           THEN
-                 SET sText = TRIM (IFNULL (sText, ''));
+                 SET sText = TRIM(IFNULL(sText, ''));
 
                   IF sText <> ''
                 THEN
@@ -85,7 +86,7 @@ BEGIN
                               POW(4.0, o.Type_bType - 7) AS dFactor, 
                               -1 AS dDistance
                          FROM RMCObject AS o
-                        WHERE o.Name_wsRMCObjectId LIKE CONCAT(sText, '%')
+                        WHERE o.Name_wsRMCObjectId LIKE CONCAT(sText, '%') COLLATE utf8mb4_unicode_ci
                           AND o.Type_bType BETWEEN bType + 1 AND MVO_RMCOBJECT_TYPE_SATELLITE
                      ORDER BY POW(4.0, o.Type_bType - 7) * (-1) DESC, o.Name_wsRMCObjectId
                         LIMIT 10;
@@ -164,7 +165,7 @@ BEGIN
 
         DROP TEMPORARY TABLE Error;
 
-        SET nError = bCommit - bError - 1;
+        SET nResult = bCommit - 1 - nError;
 END$$
 DELIMITER ;
 
