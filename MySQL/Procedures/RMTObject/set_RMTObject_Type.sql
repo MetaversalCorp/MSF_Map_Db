@@ -74,7 +74,7 @@ BEGIN
           CALL call_RMTObject_Validate (twRPersonaIx, twRMTObjectIx, ObjectHead_Parent_wClass, ObjectHead_Parent_twObjectIx, nError);
             IF nError = 0
           THEN
-                   CALL call_RMTObject_Validate_Type (twRMTObjectIx, Type_bType, Type_bSubtype, Type_bFiction, nError);
+                   CALL call_RMTObject_Validate_Type (ObjectHead_Parent_wClass, ObjectHead_Parent_twObjectIx, twRMTObjectIx, Type_bType, Type_bSubtype, Type_bFiction, nError);
         END IF ;
 
             IF nError = 0
