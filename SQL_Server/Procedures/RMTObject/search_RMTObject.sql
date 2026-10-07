@@ -37,6 +37,7 @@ BEGIN
 
        DECLARE @SBO_CLASS_RMTOBJECT                       INT = 72
        DECLARE @MVO_RMTOBJECT_TYPE_COMMUNITY              INT = 9
+       DECLARE @MVO_RMTOBJECT_TYPE_SECTOR                 INT = 10
        DECLARE @MVO_RMTOBJECT_TYPE_PARCEL                 INT = 11
 
             -- Create the temp Error table
@@ -98,6 +99,7 @@ BEGIN
                    CROSS APPLY (SELECT dbo.Descendant_T (@SBO_CLASS_RMTOBJECT, @twRMTObjectIx, o.ObjectHead_Self_wClass, o.ObjectHead_Self_twObjectIx) AS bDescendant) AS i
                          WHERE o.Name_wsRMTObjectId LIKE @sText + '%'
                            AND    (o.Type_bType  BETWEEN @bType + 1 AND @MVO_RMTOBJECT_TYPE_COMMUNITY
+                               OR (o.Type_bType        =                @MVO_RMTOBJECT_TYPE_SECTOR  AND  o.Name_wsRMTObjectId NOT LIKE 'Sector (%')
                                OR  o.Type_bType        =                @MVO_RMTOBJECT_TYPE_PARCEL)
                            AND i.bDescendant           = 1
                       ORDER BY f.dFactor * d.dDistance, o.Name_wsRMTObjectId

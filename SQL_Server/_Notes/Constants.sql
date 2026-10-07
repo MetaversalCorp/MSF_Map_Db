@@ -83,6 +83,7 @@
 -- RMTObject
 
        DECLARE @MVO_RMTOBJECT_TYPE_COMMUNITY              INT = 9
+       DECLARE @MVO_RMTOBJECT_TYPE_SECTOR                 INT = 10
        DECLARE @MVO_RMTOBJECT_TYPE_PARCEL                 INT = 11
 
        DECLARE @RMTOBJECT_OP_NULL                         INT = 0
@@ -106,6 +107,9 @@
        DECLARE @RMTOBJECT_OP_FABRIC_OPEN                  INT = 18
        DECLARE @RMTOBJECT_OP_FABRIC_CLOSE                 INT = 19
        DECLARE @RMTOBJECT_OP_FABRIC_CONFIGURE             INT = 20
+       DECLARE @RMTOBJECT_OP_CAMPUS_OPEN                  INT = 21
+       DECLARE @RMTOBJECT_OP_CAMPUS_CLOSE                 INT = 22
+       DECLARE @RMTOBJECT_OP_CAMPUS_CONFIGURE             INT = 23
 
 -- RMPObject
 

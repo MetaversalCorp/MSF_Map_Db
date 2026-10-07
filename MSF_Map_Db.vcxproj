@@ -346,6 +346,7 @@
     <None Include="SQL_Server\Procedures\RMTMatrix\call_RMTMatrix_Rotate.sql" />
     <None Include="SQL_Server\Procedures\RMTMatrix\call_RMTMatrix_Scale.sql" />
     <None Include="SQL_Server\Procedures\RMTMatrix\call_RMTMatrix_Translate.sql" />
+    <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Compute.sql" />
     <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Delete_Descendants.sql" />
     <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Event.sql" />
     <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Event_Bound.sql" />
@@ -367,6 +368,7 @@
     <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Validate_Coord_Car.sql" />
     <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Validate_Coord_Cyl.sql" />
     <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Validate_Coord_Geo.sql" />
+    <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Validate_Campus.sql" />
     <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Validate_Coord_Nul.sql" />
     <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Validate_Name.sql" />
     <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Validate_Owner.sql" />
@@ -379,6 +381,9 @@
     <None Include="SQL_Server\Procedures\RMTObject\get_RMTObject_Update.sql" />
     <None Include="SQL_Server\Procedures\RMTObject\search_RMTObject.sql" />
     <None Include="SQL_Server\Procedures\RMTObject\set_RMTObject_Bound.sql" />
+    <None Include="SQL_Server\Procedures\RMTObject\set_RMTObject_Campus_Close.sql" />
+    <None Include="SQL_Server\Procedures\RMTObject\set_RMTObject_Campus_Configure.sql" />
+    <None Include="SQL_Server\Procedures\RMTObject\set_RMTObject_Campus_Open_Earth.sql" />
     <None Include="SQL_Server\Procedures\RMTObject\set_RMTObject_Fabric_Close.sql" />
     <None Include="SQL_Server\Procedures\RMTObject\set_RMTObject_Fabric_Configure.sql" />
     <None Include="SQL_Server\Procedures\RMTObject\set_RMTObject_Fabric_Open_Earth.sql" />

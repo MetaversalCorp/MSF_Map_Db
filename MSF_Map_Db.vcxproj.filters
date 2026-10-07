@@ -1420,5 +1420,20 @@
     <None Include="MySQL\Version\002-Rename_tmStart_to_tmOrigin.sql">
       <Filter>MySQL\Version</Filter>
     </None>
+    <None Include="SQL_Server\Procedures\RMTObject\set_RMTObject_Campus_Open_Earth.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Set</Filter>
+    </None>
+    <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Validate_Campus.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Call\Validate</Filter>
+    </None>
+    <None Include="SQL_Server\Procedures\RMTObject\call_RMTObject_Compute.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Call</Filter>
+    </None>
+    <None Include="SQL_Server\Procedures\RMTObject\set_RMTObject_Campus_Close.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Set</Filter>
+    </None>
+    <None Include="SQL_Server\Procedures\RMTObject\set_RMTObject_Campus_Configure.sql">
+      <Filter>SQL_Server\Procedures\RMTObject\Set</Filter>
+    </None>
   </ItemGroup>
 </Project>
